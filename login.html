@@ -11,7 +11,7 @@
     <title>Redso-Login</title>
   </head>
   <body >
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#e05a51">
+    <nav class="navbar navbar-expand-lg navbar-light">
   <a class="navbar-brand" href="#">RedSo</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -43,18 +43,11 @@
 
 <div class="login-page">
   <div class="form">
-    <form class="register-form">
-      <input type="text" placeholder="name"/>
-      <input type="password" placeholder="password"/>
-      <input type="text" placeholder="email address"/>
-      <button>create</button>
-      <p class="message">Already registered? <a href="#">Sign In</a></p>
-    </form>
-    <form class="login-form">
-      <input type="text" placeholder="username"/>
-      <input type="password" placeholder="password"/>
-      <button>login</button>
-      <p class="message">Not registered? <a href="#">Create an account</a></p>
+    <form class="login-form" method="post" action="perfil.html">
+      <input type="text" placeholder="Usuario"/>
+      <input type="password" placeholder="Contraseña"/>
+      <button>Entrar</button>
+      <p class="message">¿No está registrado? <a href="registrar.html">Crear una cuenta</a></p>
     </form>
   </div>
 </div>
