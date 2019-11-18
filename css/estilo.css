@@ -105,3 +105,93 @@ body {
 .container .info span .fa {
   color: #EF3B3A;
 }
+
+.containerh {
+   height: 85vh;
+   text-align: center;
+   border-bottom:3px black solid;
+   width: 100%;
+   height:90vh;
+   background-color:white;
+}
+.containerh h2{
+  text-align: center;
+}
+.titulo-home{
+ font-size: 60px;
+ text-align: center;
+ color: #EF3B3A;
+ padding: 10px;
+ border:3px #4e6994 solid;
+}
+
+.botonh{
+  position: absolute;
+  top:70%;
+  margin:auto;
+  right: 43%;
+}
+
+.container-int{
+  display:flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  position:relative;
+  background-color:white;
+  width: 100%;
+  height:50vh;
+  font-size:40px;
+  color:black;
+  text-align: center;
+ 
+}
+
+.container-obj{
+  font-size:25px;
+  width:100%;
+  background-color:#ad5e5e;
+  height:85vh;
+  box-sizing: border-box;
+  border-bottom:black 2px solid;
+}
+ 
+.container-obj>h2{
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.car
+{
+  position:relative;
+  top:10%;
+  display:flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  width: 100%;
+}
+
+.datos{
+ margin: 5px;
+ background-color: #4e6994;
+ border:1px black solid; 
+ color: white; 
+ width: 40%;
+ text-align: center;
+
+}
+
+
+.datos-int{
+  margin:5px;
+  background-color: #4e6994;
+  text-align: center;
+  border: 1px black solid;
+  width: 30%;
+  color:white;
+  height: 50%;
+  font-size:25px;
+  position:relative;
+  top:10%;
+
+
+}
