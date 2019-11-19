@@ -43,7 +43,7 @@ body, .respuesta {
   box-sizing: border-box;
   font-size: 14px;
 }
-.form button {
+.form button, .submit {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
@@ -75,7 +75,7 @@ body, .respuesta {
 .container {
   position: relative;
   z-index: 1;
-  max-width: 300px;
+  /* max-width: 300px; */
   margin: 0 auto;
 }
 .container:before, .container:after {
