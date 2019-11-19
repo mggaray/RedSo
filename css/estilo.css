@@ -6,7 +6,7 @@ nav {
     color: #f8f9fa;
 }
 
-body, .respuesta{
+body {
   background-color: #4e6994;; /* fallback for old browsers */
   font-family: "Roboto", sans-serif;
   color:white;
@@ -43,7 +43,7 @@ body, .respuesta{
   box-sizing: border-box;
   font-size: 14px;
 }
-.form button, .pregunta {
+.form button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
@@ -75,7 +75,7 @@ body, .respuesta{
 .container {
   position: relative;
   z-index: 1;
-  /* max-width: 300px; */
+  max-width: 300px;
   margin: 0 auto;
 }
 .container:before, .container:after {
@@ -105,28 +105,93 @@ body, .respuesta{
 .container .info span .fa {
   color: #EF3B3A;
 }
-.pregunta{
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  outline: 0;
-  background-color: #ad5e5e;
-  color: #FFFFFF;
-  font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer;
+
+.containerh {
+   height: 85vh;
+   text-align: center;
+   border-bottom:3px black solid;
+   width: 100%;
+   height:90vh;
+   background-color:white;
 }
-.card{
-  border: none;
+.containerh h2{
+  text-align: center;
 }
-a:link {
-  text-decoration: none;
-  color: rgba(0,0,0,.5);
+.titulo-home{
+ font-size: 60px;
+ text-align: center;
+ color: #EF3B3A;
+ padding: 10px;
+ border:3px #4e6994 solid;
 }
-a:hover {
-  text-decoration: none;
-  color: rgba(0,0,0,.9);
+
+.botonh{
+  position: absolute;
+  top:70%;
+  margin:auto;
+  right: 43%;
 }
-a:visited {
-  background-color: cyan;
+
+.container-int{
+  display:flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  position:relative;
+  background-color:white;
+  width: 100%;
+  height:50vh;
+  font-size:40px;
+  color:black;
+  text-align: center;
+ 
+}
+
+.container-obj{
+  font-size:25px;
+  width:100%;
+  background-color:#ad5e5e;
+  height:85vh;
+  box-sizing: border-box;
+  border-bottom:black 2px solid;
+}
+ 
+.container-obj>h2{
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.car
+{
+  position:relative;
+  top:10%;
+  display:flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  width: 100%;
+}
+
+.datos{
+ margin: 5px;
+ background-color: #4e6994;
+ border:1px black solid; 
+ color: white; 
+ width: 40%;
+ text-align: center;
+
+}
+
+
+.datos-int{
+  margin:5px;
+  background-color: #4e6994;
+  text-align: center;
+  border: 1px black solid;
+  width: 30%;
+  color:white;
+  height: 50%;
+  font-size:25px;
+  position:relative;
+  top:10%;
+
+
 }
