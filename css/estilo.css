@@ -6,7 +6,7 @@ nav {
     color: #f8f9fa;
 }
 
-body {
+body, .respuesta{
   background-color: #4e6994;; /* fallback for old browsers */
   font-family: "Roboto", sans-serif;
   color:white;
@@ -43,7 +43,7 @@ body {
   box-sizing: border-box;
   font-size: 14px;
 }
-.form button {
+.form button, .pregunta {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
@@ -75,7 +75,7 @@ body {
 .container {
   position: relative;
   z-index: 1;
-  max-width: 300px;
+  /* max-width: 300px; */
   margin: 0 auto;
 }
 .container:before, .container:after {
@@ -104,4 +104,29 @@ body {
 }
 .container .info span .fa {
   color: #EF3B3A;
+}
+.pregunta{
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background-color: #ad5e5e;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.card{
+  border: none;
+}
+a:link {
+  text-decoration: none;
+  color: rgba(0,0,0,.5);
+}
+a:hover {
+  text-decoration: none;
+  color: rgba(0,0,0,.9);
+}
+a:visited {
+  background-color: cyan;
 }
