@@ -20,22 +20,22 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item">
-        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="index.php">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="perfil.html">Perfil</a>
+        <a class="nav-link" href="perfil.php">Perfil</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="login.html">Login</a>
+        <a class="nav-link" href="login.php">Login</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="registrar.html">Registrarse</a>
+        <a class="nav-link" href="registrar.php">Registrarse</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="contacto.html">Contacto</a>
+        <a class="nav-link" href="contacto.php">Contacto</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="faq.html"> F.A.Q <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="faq.php"> F.A.Q <span class="sr-only">(current)</span></a>
       </li>
     </ul>
   </div>

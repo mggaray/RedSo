@@ -1,3 +1,8 @@
+<?php 
+
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,9 +13,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilo.css">
-    <title>Redso-Perfil</title>
+    <title>Redso-Login</title>
   </head>
-  <body>
+  <body >
     <nav class="navbar navbar-expand-lg navbar-light">
   <a class="navbar-brand" href="#">RedSo</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,51 +25,43 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item">
-        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="index.php">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="perfil.html">Perfil</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="login.html">Login</a>
+        <a class="nav-link" href="perfil.php">Perfil</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="registrar.html"> Registrarse <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="login.php"> Login <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="contacto.html">Contacto</a>
+        <a class="nav-link" href="registrar.php">Registrarse</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="faq.html">F.A.Q</a>
+        <a class="nav-link" href="contacto.php">Contacto</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="faq.php">F.A.Q</a>
       </li>
     </ul>
   </div>
 </nav>
+
 <div class="login-page">
   <div class="form">
-    <h2 style="color:#ad5e5e;">Registrarse</h2>
-    <form class="login-form" method="post" action="login.html" enctype="multipart/form-data">
-      <input type="text" placeholder="Nombre" id="nombre" name="nombre" required/>
-      <input type="text" placeholder="Apellido"id="apellido" name="apellido" required />
-      <div class=reg-foto-perfil>
-          <label for="fotoperfil">Subir Foto de Perfil</label>
-          <input type="file" name="fotoperfil">
+    <form class="login-form" method="post" action="">
+      <label for="ususuario" style="color:black">Usuario</label>
+      <input type="text" placeholder="Ingrese su usuario" name="usuario" id="usuario"/>
+      <label for="pass" style="color:black">Contraseña</label>
+      <input type="password" placeholder="Ingrese su contraseña" name="pass" id="pass"/>
+      <div class="recuerdame">
+          <input type="checkbox" name="recuerdame" >
+          <label for="recuerdame">Recuerdame</label>
       </div>
-      <input type="email" placeholder="E-mail"id="email" name="email" required/>
-      <input type="text" placeholder="Usuario"id="usuario" name="usuario" required/>
-      <input type="password" placeholder="Contraseña"id="pass" name="pass" required/>
-        <div class="recuerdame">
-            <input type="checkbox" name="recuerdame" placeholder="Recordar usuario?">
-            <label for="recuerdame">Recordar usuario?</label>
-        </div>
-      <button type="submit">Entrar</button><br>
-
-      <p class="message">¿Ya está registrado? <a href="login.html">Ingrese a su cuenta</a></p> <br>
+      <button>Entrar</button>
+      <p class="message">¿No está registrado? <a href="registrar.html">Crear una cuenta</a></p>
     </form>
   </div>
 </div>
-
-
 
 
 

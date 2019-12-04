@@ -20,29 +20,29 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item">
-        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="index.php">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="perfil.html">Perfil</a>
+        <a class="nav-link" href="perfil.php">Perfil</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="login.html">Login</a>
+        <a class="nav-link" href="login.php">Login</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="registrar.html">Registrarse</a>
+        <a class="nav-link" href="registrar.php">Registrarse</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="contacto.html"> Contacto <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="contacto.php"> Contacto <span class="sr-only">(current)</span>php</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="faq.html">F.A.Q</a>
+        <a class="nav-link" href="faq.php">F.A.Q</a>
       </li>
     </ul>
   </div>
 </nav>
 
 <div class="container">
-  <form id="contact-form" method="post" action="contacto.php" role="form">
+  <form id="contact-form" method="post" action="" role="form">
 
       <div class="messages"><h1>Contacto</h1></div>
 
