@@ -7,6 +7,7 @@ if ($_POST) {
   if(count($errores)==0){ 
     guardarUsuario($_POST);
     header('Location: login.php');
+    exit;
   }
 } 
 

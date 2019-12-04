@@ -1,4 +1,17 @@
 <?php 
+include_once('funciones.php'); 
+if ($_POST) {
+  if(verificarLogin($_POST)) {
+    if(isset($_POST["recuerdame"])) {
+      if($_POST["recuerdame"]=="SI") {
+        setcookie('usuario',$_POST["usuario"],time()+60*60*24*7); 
+        setcookie('pass',$_POST["pass"],time()+60*60*24*7);
+      }
+    }
+    header('Location:perfil.php');
+    exit;
+  }
+}
 
 
 ?>
@@ -50,12 +63,12 @@
   <div class="form">
     <form class="login-form" method="post" action="">
       <label for="ususuario" style="color:black">Usuario</label>
-      <input type="text" placeholder="Ingrese su usuario" name="usuario" id="usuario"/>
+      <input type="text" placeholder="Ingrese su usuario" name="usuario" id="usuario" value="<?php echo isset($_COOKIE["usuario"])?$_COOKIE["usuario"]:"" ?>"/>
       <label for="pass" style="color:black">Contraseña</label>
-      <input type="password" placeholder="Ingrese su contraseña" name="pass" id="pass"/>
+      <input type="password" placeholder="Ingrese su contraseña" name="pass" id="pass" value="<?php echo isset($_COOKIE["pass"])?$_COOKIE["pass"]:"" ?>"/>
       <div class="recuerdame">
-          <input type="checkbox" name="recuerdame" >
-          <label for="recuerdame">Recuerdame</label>
+          <input type="checkbox" name="recuerdame"style="display:inline;" value="SI" >
+          <label for="recuerdame" style="color:black;display:inline">Recuerdame</label>
       </div>
       <button>Entrar</button>
       <p class="message">¿No está registrado? <a href="registrar.html">Crear una cuenta</a></p>

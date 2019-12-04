@@ -52,8 +52,26 @@ function validarFormulario($unArray) {
         $errores["pass"]="La contraseña debe contener al menos 6 caracteres";
         } 
     } 
+
+    //valida repeticion de campos clave 
+
+    $usuarios=file_get_contents('usuarios.json'); 
+    $usuarios=explode(PHP_EOL,$usuarios); 
+    foreach ($usuarios as $usuario) { 
+        $usuario=json_decode($usuario,true);
+        if($usuario["usuario"]==$unArray["usuario"]) {
+           $errores["usuario"]="El usuario ya existe.Elija otro nombre de usuario";
+        }
+
+        if($usuario["email"]==$unArray["email"]) {
+            $errores["email"]="Ya hay una cuenta registrada con ese e-mail.";
+         }
+    }
+
     return $errores;
 } 
+
+
 
 //Guardar usuario en BBDD 
 function guardarUsuario($user){ 
@@ -68,5 +86,23 @@ function guardarUsuario($user){
     $usuarioNuevo=json_encode($usuarioNuevo); 
     file_put_contents('usuarios.json',$usuarioNuevo . PHP_EOL, FILE_APPEND);
 
+} 
+//Verifica el ingreso al login
+function verificarLogin($user){
+    $usuarios=file_get_contents('usuarios.json'); 
+    $usuarios=explode(PHP_EOL,$usuarios); 
+    foreach ($usuarios as $usuario) { 
+        $usuario=json_decode($usuario,true);
+        if($usuario["usuario"]==$user["usuario"]) {
+            if(password_verify($user["pass"],$usuario["pass"])) {
+                $_SESSION["nombre"]=$user["nombre"]; 
+                $_SESSION["apellido"]=$user["apellido"];
+                $_SESSION["email"]=$user["email"];
+                $_SESSION["usuario"]=$user["usuario"];
+                return true;
+            }
+        }
+    }
 }
+
 ?>
