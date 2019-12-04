@@ -42,17 +42,24 @@
 </nav>
 <div class="login-page">
   <div class="form">
-    <form class="login-form" method="post" action="login.html">
+    <h2 style="color:#ad5e5e;">Registrarse</h2>
+    <form class="login-form" method="post" action="login.html" enctype="multipart/form-data">
       <input type="text" placeholder="Nombre" id="nombre" name="nombre" required/>
       <input type="text" placeholder="Apellido"id="apellido" name="apellido" required />
+      <div class=reg-foto-perfil>
+          <label for="fotoperfil">Subir Foto de Perfil</label>
+          <input type="file" name="fotoperfil">
+      </div>
       <input type="email" placeholder="E-mail"id="email" name="email" required/>
       <input type="text" placeholder="Usuario"id="usuario" name="usuario" required/>
       <input type="password" placeholder="Contraseña"id="pass" name="pass" required/>
+        <div class="recuerdame">
+            <input type="checkbox" name="recuerdame" placeholder="Recordar usuario?">
+            <label for="recuerdame">Recordar usuario?</label>
+        </div>
       <button type="submit">Entrar</button><br>
 
       <p class="message">¿Ya está registrado? <a href="login.html">Ingrese a su cuenta</a></p> <br>
-
-      <button type="reset">Cancelar</button>
     </form>
   </div>
 </div>

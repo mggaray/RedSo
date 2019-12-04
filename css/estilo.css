@@ -1,4 +1,6 @@
 /* Estilos generales*/
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+ ----------------------------------------------------------------------------------------------------------------------------------------------- */
 nav {
   background-color: #ad5e5e;
 }
@@ -7,7 +9,7 @@ nav {
 }
 
 body, .respuesta {
-  background-color: #4e6994;; /* fallback for old browsers */
+  background-color: #4e6994; /* fallback for old browsers */
   font-family: "Roboto", sans-serif;
   color:white;
   -webkit-font-smoothing: antialiased;
@@ -15,7 +17,15 @@ body, .respuesta {
 }
 
 
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+ ----------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
 /*Estilo del login*/
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+ ----------------------------------------------------------------------------------------------------------------------------------------------- */
+
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 .login-page {
   width: 360px;
@@ -26,7 +36,7 @@ body, .respuesta {
   position: relative;
   z-index: 1;
   background: #FFFFFF;
-  max-width: 360px;
+  width: 450px;
   margin: 0 auto 100px;
   padding: 45px;
   text-align: center;
@@ -106,13 +116,56 @@ body, .respuesta {
   color: #EF3B3A;
 }
 
+.recuerdame
+{
+text-align:left;
+color: #4e6994;
+}
+
+.recuerdame>input
+{
+  position: relative; 
+  right: 10%; 
+  width: 30%;
+}
+
+.recuerdame>label
+{ 
+  position: relative;
+  right: 20%;
+  text-align: left;
+}
+
+.reg-foto-perfil
+{
+right: 20%;
+background:none;
+}
+
+.reg-foto-perfil>label
+{ position: relative;
+  color:#4e6994;
+  font-size: 12px;
+}
+
+.reg-foto-perfil>input
+{ position: relative;
+  width: 70%;
+  color:#ad5e5e;
+}
+/* HOME */
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+ ----------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
 .containerh {
-   height: 85vh;
    text-align: center;
    border-bottom:3px black solid;
    width: 100%;
-   height:90vh;
    background-color:white;
+   overflow: hidden;
 }
 .containerh h2{
   text-align: center;
@@ -125,11 +178,56 @@ body, .respuesta {
  border:3px #4e6994 solid;
 }
 
+.car
+{
+  position:relative;
+  top:20%;
+  display:flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  width: 100%;
+  margin-bottom:10%;
+  margin-top:10%;
+  
+}
+
+.btn-primary
+{
+  background-color:#4e6994;
+}
+
 .botonh{
-  position: absolute;
-  top:70%;
-  margin:auto;
-  right: 43%;
+  position: relative;
+  top:20%;
+  margin-bottom:5%;
+
+}
+
+
+.container-obj{
+  font-size:20px;
+  width:100%;
+  background-color:#ad5e5e;
+  height:70vh;
+  padding: 1.5%;
+  border-bottom:black 2px solid;
+  overflow:auto;
+
+}
+
+.container-obj>h2{
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.datos{
+ margin: 5px;
+ background-color: #4e6994;
+ border:1px black solid;
+ color: white;
+ width: 40%;
+ text-align: center;
 }
 
 .container-int{
@@ -142,59 +240,35 @@ body, .respuesta {
   height:50vh;
   font-size:40px;
   color:black;
-  text-align: center;
-
+  overflow: hidden;
 }
-
-.container-obj{
-  font-size:25px;
-  width:100%;
-  background-color:#ad5e5e;
-  height:85vh;
-  box-sizing: border-box;
-  border-bottom:black 2px solid;
-}
-
-.container-obj>h2{
-  text-align: center;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.car
-{
-  position:relative;
-  top:10%;
-  display:flex;
-  flex-flow: wrap row;
-  justify-content: center;
-  width: 100%;
-}
-
-.datos{
- margin: 5px;
- background-color: #4e6994;
- border:1px black solid;
- color: white;
- width: 40%;
- text-align: center;
-
-}
-
-
 .datos-int{
-  margin:5px;
-  background-color: #4e6994;
-  text-align: center;
-  border: 1px black solid;
-  width: 30%;
-  color:white;
-  height: 50%;
-  font-size:25px;
+  display:flex;
   position:relative;
+  justify-content: center;
+  margin:5px;
+  width: 30%;
+  height: 30%;
   top:10%;
-
-
+  font-size:25px;
+  border: 1px black solid;
+  color:white;
+  background-color: #4e6994;
 }
+
+.span-int{
+  position: relative;
+  top:20%;
+  bottom:20%;
+}
+
+
+/* CONTACTO */
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+ ----------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
 
 .pregunta{
   font-family: "Roboto", sans-serif;
@@ -220,6 +294,11 @@ body, .respuesta {
 }
 
 /* Perfil */
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+ ----------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
 .foto-perfil {
   width: 100%
 }
@@ -292,3 +371,4 @@ hr {
 
   }
 }
+
