@@ -6,6 +6,9 @@ nav {
 }
 .navbar-light .navbar-brand {
     color: #f8f9fa;
+    font-family: fantasy;
+    font-size:25px;
+
 }
 
 .navbar-light .nav-item .nav-link{

@@ -1,5 +1,4 @@
 <?php
-
 //Validar registro
 function validarFormulario($unArray) {
     $errores=[];
@@ -72,22 +71,75 @@ function validarFormulario($unArray) {
     return $errores;
 } 
 
+function contador(){
 
+$contador = 1;  
+    $contador += file_get_contents("contador.txt");
+file_put_contents("contador.txt", $contador);
+return $contador;
+}
 
 //Guardar usuario en BBDD 
-function guardarUsuario($user){ 
+function guardarUsuario($user){
+    $foto= subirFotoPerfil();
+    global $userid;
     $usuarioNuevo=[
     "nombre"=>$user['nombre'],
     "apellido"=>$user['apellido'],
     "email"=>$user['email'],
     "usuario"=>$user['usuario'],
-    "pass"=>password_hash($user['pass'],PASSWORD_DEFAULT)
+    "pass"=>password_hash($user['pass'],PASSWORD_DEFAULT),
+    "fotoperfil" =>$foto,
+    "id" =>$userid
     ]; 
 
     $usuarioNuevo=json_encode($usuarioNuevo); 
     file_put_contents('usuarios.json',$usuarioNuevo . PHP_EOL, FILE_APPEND);
-
 } 
+
+
+function subirFotoPerfil() {
+
+ if(isset($_FILES))
+  {  
+    global $userid;
+    $mensaje="";
+    if(($_FILES["fotoperfil"]["error"])==0)
+     {
+            $archivo= $_FILES["fotoperfil"]["tmp_name"];
+            $nombre= $_FILES["fotoperfil"]["name"];
+            $ext= pathinfo($nombre, PATHINFO_EXTENSION);
+    
+          // Verifica si la foto es muy pesada para subirla
+          if ($_FILES["fotoperfil"]["size"] > 500000) 
+          {
+            $mensaje="Archivo muy pesado";
+          }   
+         // verifica la extension es jpg jpeg o png
+              if($ext=="jpg" || $ext=="jpeg" || $ext=="png") 
+               {
+                $ext= pathinfo($nombre, PATHINFO_EXTENSION);
+                $ubicacionFoto= "img/pfp/".$userid.".".$ext;
+                move_uploaded_file($archivo, $ubicacionFoto);
+               }
+                else {$mensaje= "La foto debe ser extensión .jpg, .jpeg o .png";}        
+    }
+
+}
+if ($mensaje!="")
+{
+return $mensaje;
+} 
+if (move_uploaded_file($archivo, $target_file))
+  {
+   $mensaje= "La Foto ". basename($archivo). " Se ha subido con exito."; 
+  }
+  return $ubicacionFoto;  
+}
+  
+
+    
+
 //Verifica el ingreso al login
 function verificarLogin($user){
     session_start();
@@ -101,10 +153,14 @@ function verificarLogin($user){
                 $_SESSION["apellido"]=$usuario["apellido"];
                 $_SESSION["email"]=$usuario["email"];
                 $_SESSION["usuario"]=$usuario["usuario"];
+                $_SESSION["id"]=$usuario["id"];
+                $_SESSION["fotoperfil"]=$usuario["fotoperfil"];
                 return true;
             }
         }
     }
 }
+
+
 
 ?>

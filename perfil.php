@@ -57,7 +57,8 @@ if (!isset($_SESSION['usuario'])) {
 
 <div class="header-perfil">
   <br>
-  <img src="img/fotoperfil.jpg" class="foto-perfil">
+  
+  <img src= "<?php echo $_SESSION["fotoperfil"]?>" class="foto-perfil">
   <div class="info-perfil">
     <br><h1 class="nombre"><?= $_SESSION['usuario'] ?> </h1><hr>
     <ul class="info-perfil">

@@ -1,10 +1,11 @@
 
 <?php 
 include_once('funciones.php'); 
-$errores=[]; 
+$errores=[];
 if ($_POST) {
   $errores=validarFormulario($_POST);
-  if(count($errores)==0){ 
+  if(count($errores)==0){
+    $userid=contador();
     guardarUsuario($_POST);
     header('Location: login.php');
     exit;
@@ -70,6 +71,10 @@ if ($_POST) {
       <label for="email" style="color:black">E-Mail</label>
       <input type="email" placeholder="Ingrese su e-mail"id="email" name="email" value="<?=(isset($_POST['email']))?$_POST['email']:""?>" required/>
       <small class="text-danger"><?php echo(isset($errores["email"]))?$errores["email"]:"" ?></small><br>
+      <div class=reg-foto-perfil>
+          <label for="fotoperfil">Subir Foto de Perfil</label>
+          <input type="file" name="fotoperfil">
+      </div>
       
       <label for="usuario" style="color:black">Usuario</label>
       <input type="text" placeholder="Ingrese su usuario"id="usuario" name="usuario" value="<?=(isset($_POST['usuario']))?$_POST['usuario']:""?>" required/>
