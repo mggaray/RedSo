@@ -89,16 +89,17 @@ function guardarUsuario($user){
 } 
 //Verifica el ingreso al login
 function verificarLogin($user){
+    session_start();
     $usuarios=file_get_contents('usuarios.json'); 
     $usuarios=explode(PHP_EOL,$usuarios); 
     foreach ($usuarios as $usuario) { 
         $usuario=json_decode($usuario,true);
         if($usuario["usuario"]==$user["usuario"]) {
             if(password_verify($user["pass"],$usuario["pass"])) {
-                $_SESSION["nombre"]=$user["nombre"]; 
-                $_SESSION["apellido"]=$user["apellido"];
-                $_SESSION["email"]=$user["email"];
-                $_SESSION["usuario"]=$user["usuario"];
+                $_SESSION["nombre"]=$usuario["nombre"]; 
+                $_SESSION["apellido"]=$usuario["apellido"];
+                $_SESSION["email"]=$usuario["email"];
+                $_SESSION["usuario"]=$usuario["usuario"];
                 return true;
             }
         }

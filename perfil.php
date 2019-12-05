@@ -1,3 +1,14 @@
+<?php 
+session_start();
+if (!isset($_SESSION['usuario'])) {
+
+  header('Location: login.php');
+}
+ ?>
+
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -20,22 +31,25 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item">
-        <a class="nav-link" href="index.php">Home</a>
+        <a class="nav-link link-menu" href="index.php">Home</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="perfil.php"> Perfil <span class="sr-only">(current)</span></a>
+        <a class="nav-link link-menu" href="perfil.php"> Perfil <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item login">
+        <a class="nav-link link-menu" href="login.php">Login</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="login.php">Login</a>
+        <a class="nav-link link-menu" href="registrar.php">Registrarse</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="registrar.php">Registrarse</a>
+        <a class="nav-link link-menu" href="contacto.php">Contacto</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="contacto.php">Contacto</a>
+        <a class="nav-link link-menu" href="faq.php">F.A.Q</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="faq.php">F.A.Q</a>
+        <a class="nav-link link-menu" href="logout.php">Logout</a>
       </li>
     </ul>
   </div>
@@ -45,11 +59,11 @@
   <br>
   <img src="img/fotoperfil.jpg" class="foto-perfil">
   <div class="info-perfil">
-    <br><h1 class="nombre">Usuario </h1><hr>
+    <br><h1 class="nombre"><?= $_SESSION['usuario'] ?> </h1><hr>
     <ul class="info-perfil">
-      <br><li>Nombre: Nombre</li><br><hr>
-      <br><li>Apellido: Apelido</li><br><hr>
-      <br><li>Ciudad: Ciudad</li><br><hr>
+      <br><li>Nombre: <?= $_SESSION['nombre'] ?></li><br><hr>
+      <br><li>Apellido: <?= $_SESSION['apellido'] ?></li><br><hr>
+      <br><li>Ciudad: </li><br><hr>
       <br><li>Fecha de Nacimiento: dd/mm/aaaa</li>
     </ul>
   </div>
@@ -57,20 +71,20 @@
 <div class="posteos">
   <h2>Posteos</h2>
 <div class="post">
-  <h3 class="Usuario">Usuario</h3>
+  <h3 class="Usuario"><?= $_SESSION['usuario'] ?></h3>
   <hr>
   <p class="post-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem neque totam ab dolorum non labore dolor, officia vitae perspiciatis quam excepturi amet! Repellat tenetur impedit accusamus necessitatibus minima. Dolor, quidem.</p>
 </div>
 <div class="post">
-  <h3 class="Usuario">Usuario</h3><hr>
+  <h3 class="Usuario"><?= $_SESSION['usuario'] ?></h3><hr>
   <p class="post-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem neque totam ab dolorum non labore dolor, officia vitae perspiciatis quam excepturi amet! Repellat tenetur impedit accusamus necessitatibus minima. Dolor, quidem.</p>
 </div>
 <div class="post">
-  <h3 class="Usuario">Usuario</h3><hr>
+  <h3 class="Usuario"><?= $_SESSION['usuario'] ?></h3><hr>
   <p class="post-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem neque totam ab dolorum non labore dolor, officia vitae perspiciatis quam excepturi amet! Repellat tenetur impedit accusamus necessitatibus minima. Dolor, quidem.</p>
 </div>
 <div class="post">
-  <h3 class="Usuario">Usuario</h3><hr>
+  <h3 class="Usuario"><?= $_SESSION['usuario'] ?></h3><hr>
   <p class="post-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem neque totam ab dolorum non labore dolor, officia vitae perspiciatis quam excepturi amet! Repellat tenetur impedit accusamus necessitatibus minima. Dolor, quidem.</p>
 </div>
 </div>

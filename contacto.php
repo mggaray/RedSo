@@ -32,7 +32,7 @@
         <a class="nav-link" href="registrar.php">Registrarse</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="contacto.php"> Contacto <span class="sr-only">(current)</span>php</a>
+        <a class="nav-link" href="contacto.php"> Contacto <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="faq.php">F.A.Q</a>

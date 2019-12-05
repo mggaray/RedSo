@@ -8,15 +8,27 @@ nav {
     color: #f8f9fa;
 }
 
+.navbar-light .nav-item .nav-link{
+  color: #ffffff;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+  color: #CBCBCB;
+}
+.navbar-light .navbar-nav .active > .nav-link{
+  color: #6AFA00;
+}
 body, .respuesta {
   background-color: #4e6994; /* fallback for old browsers */
   font-family: "Roboto", sans-serif;
-  color:white;
+  color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-
+.card h5{
+  color: white;
+}
 /* --------------------------------------------------------------------------------------------------------------------------------------------------
  ----------------------------------------------------------------------------------------------------------------------------------------------- */
 
