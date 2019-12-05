@@ -60,19 +60,19 @@ if ($_POST) {
     <h2 style="color:#ad5e5e;">Registrarse</h2>
     <form class="login-form" method="post" action="" enctype="multipart/form-data">
     <label for="nombre" style="color:black">Nombre</label>
-      <input type="text" placeholder="Ingrese su nombre" id="nombre" name="nombre" required/>
+      <input type="text" placeholder="Ingrese su nombre" id="nombre" name="nombre" value="<?=(isset($_POST['nombre']))?$_POST['nombre']:""?>" required/>
       <small class="text-danger"><?php echo(isset($errores["nombre"]))?$errores["nombre"]:"" ?></small><br>
       
       <label for="apellido"style="color:black">Apellido</label>
-      <input type="text" placeholder="Ingrese su apellido"id="apellido" name="apellido" required />
+      <input type="text" placeholder="Ingrese su apellido"id="apellido" name="apellido" value="<?=(isset($_POST['apellido']))?$_POST['apellido']:""?>" required />
       <small class="text-danger"><?php echo(isset($errores["apellido"]))?$errores["apellido"]:"" ?></small><br>
       
       <label for="email" style="color:black">E-Mail</label>
-      <input type="email" placeholder="Ingrese su e-mail"id="email" name="email" required/>
+      <input type="email" placeholder="Ingrese su e-mail"id="email" name="email" value="<?=(isset($_POST['email']))?$_POST['email']:""?>" required/>
       <small class="text-danger"><?php echo(isset($errores["email"]))?$errores["email"]:"" ?></small><br>
       
       <label for="usuario" style="color:black">Usuario</label>
-      <input type="text" placeholder="Ingrese su usuario"id="usuario" name="usuario" required/>
+      <input type="text" placeholder="Ingrese su usuario"id="usuario" name="usuario" value="<?=(isset($_POST['usuario']))?$_POST['usuario']:""?>" required/>
       <small class="text-danger"><?php echo(isset($errores["usuario"]))?$errores["usuario"]:"" ?></small><br>
       
       <label for="pass" style="color:black">Contraseña</label>

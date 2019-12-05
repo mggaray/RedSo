@@ -38,6 +38,7 @@ function validarFormulario($unArray) {
         }
         //validar longitud del usuario
         if (strlen($unArray["usuario"])<2) {
+            $_POST['usuario']="";
         $errores["usuario"]="El usuario debe contener al menos 2 caracteres";
         } 
     } 
