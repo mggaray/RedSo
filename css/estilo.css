@@ -2,13 +2,17 @@
 /* --------------------------------------------------------------------------------------------------------------------------------------------------
  ----------------------------------------------------------------------------------------------------------------------------------------------- */
 nav {
-  background-color: #ad5e5e;
+  background-color:#F03A47;
 }
 .navbar-light .navbar-brand {
     color: #f8f9fa;
-    font-family: fantasy;
-    font-size:25px;
+    font-family: 'Sigmar One', cursive;
+    font-size:30px;
 
+} 
+
+.navbar-brand {
+  font-family: 'Sigmar One', cursive;
 }
 
 .navbar-light .nav-item .nav-link{
@@ -19,10 +23,10 @@ nav {
   color: #CBCBCB;
 }
 .navbar-light .navbar-nav .active > .nav-link{
-  color: #6AFA00;
+  color: black;
 }
 body, .respuesta {
-  background-color: #4e6994; /* fallback for old browsers */
+  background-color: #C2DCCF; /* fallback for old browsers */
   font-family: "Roboto", sans-serif;
   color: white;
   -webkit-font-smoothing: antialiased;
@@ -72,7 +76,7 @@ body, .respuesta {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #ad5e5e;
+  background: #F03A47;
   width: 100%;
   border: 0;
   padding: 15px;
@@ -91,7 +95,7 @@ body, .respuesta {
   font-size: 12px;
 }
 .form .message a {
-  color: #ad5e5e;
+  color: #F03A47;
   text-decoration: none;
 }
 .form .register-form {
@@ -101,7 +105,8 @@ body, .respuesta {
   position: relative;
   z-index: 1;
   /* max-width: 300px; */
-  margin: 0 auto;
+  margin: 0 auto; 
+  color:black;
 }
 .container:before, .container:after {
   content: "";
@@ -166,7 +171,7 @@ background:none;
 .reg-foto-perfil>input
 { position: relative;
   width: 70%;
-  color:#ad5e5e;
+  color:#F03A47;
 }
 /* HOME */
 /* --------------------------------------------------------------------------------------------------------------------------------------------------
@@ -222,7 +227,7 @@ background:none;
 .container-obj{
   font-size:20px;
   width:100%;
-  background-color:#ad5e5e;
+  background-color:#F03A47;
   height:70vh;
   padding: 1.5%;
   border-bottom:black 2px solid;
@@ -289,15 +294,16 @@ background:none;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background-color: #ad5e5e;
-  color: #FFFFFF;
+  background-color: #F03A47;
+  color:black;
   font-size: 14px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
 }
 .card{
-  border: none;
+  border: none; 
+  color:black;
 }
 #accordion a:link {
   text-decoration: none;
@@ -305,7 +311,11 @@ background:none;
 }
 #accordion a:hover {
   text-decoration: none;
-  color: rgba(0,0,0,.9);
+  color: rgba(0,0,0,.9); 
+} 
+
+.card-body.respuesta {
+  color:black;
 }
 
 /* Perfil */
@@ -364,6 +374,46 @@ hr {
 
 }
 
+
+
+/* Home deslogueado*/
+
+.main-index {
+  display:flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  overflow: hidden; 
+  font-size: 10px;
+}  
+
+.sub-index {
+  border:solid 1px;
+  overflow: hidden;
+  text-align: center; 
+  color:white; 
+  background-color:#002642; 
+  width: 80%; 
+  margin:1%; 
+  padding-top: 1%; 
+  padding-bottom: 1%;
+  word-wrap: break-word; 
+  font-size: 2em;
+}
+
+/* footer */ 
+
+.footer{
+  background: #152F4F;
+  color:white;
+  }  
+    ul {list-style-type: none;}
+    li a{
+      color: white;
+      transition: color .2s;
+    }
+  .copyright p{border-top:1px solid rgba(255,255,255,.1);} 
+
+
 @media (min-width:1024px) {
 
   .foto-perfil {
@@ -384,6 +434,13 @@ hr {
   float: left;
   width:30%;
 
+  } 
+  .sub-index {
+    width:45%;
   }
-}
+  
+}  
+
+
+
 

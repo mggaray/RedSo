@@ -24,6 +24,7 @@ if ($_POST) {
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilo.css">
+    <link href="https://fonts.googleapis.com/css?family=Abel|Sigmar+One&display=swap" rel="stylesheet">
     <title>Redso-Perfil</title>
   </head>
   <body>
@@ -58,7 +59,7 @@ if ($_POST) {
 </nav>
 <div class="login-page">
   <div class="form">
-    <h2 style="color:#ad5e5e;">Registrarse</h2>
+    <h2 style="color:#F03A47;">Registrarse</h2>
     <form class="login-form" method="post" action="" enctype="multipart/form-data">
     <label for="nombre" style="color:black">Nombre</label>
       <input type="text" placeholder="Ingrese su nombre" id="nombre" name="nombre" value="<?=(isset($_POST['nombre']))?$_POST['nombre']:""?>" required/>
