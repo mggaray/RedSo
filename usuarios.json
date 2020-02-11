@@ -2,3 +2,7 @@
 {"nombre":"Juanito","apellido":"Martinez","email":"juan12@gmail.com","usuario":"juani22","pass":"$2y$10$8hDdUUon5LRvZigs4yXnkuUCL15NVYkz6tVAfhdjGhKkd\/DkVjAlW","fotoperfil":"img\/pfp\/2.jpg","id":2}
 {"nombre":"Lorena","apellido":"Rodriguez","email":"Lore53@gmail.com","usuario":"loreee1","pass":"$2y$10$OjHbgdnHqwLwfZLn94hw6e5UYwUBsBnSlpR\/2K6RY2iH0lCIPYqmO","fotoperfil":"img\/pfp\/3.jpg","id":3}
 {"nombre":"Santiago","apellido":"Bruera","email":"santiago@bruera.com","usuario":"santibruera","pass":"$2y$10$uf2CTN2SHp5g0jzLV7A7Bel6.S76i8iEkC0WR0eGNPkkEU2ekiZeO","fotoperfil":"img\/pfp\/4.jpg","id":4}
+{"nombre":"Usuario","apellido":"Prueba","email":"usuario@prueba.com","usuario":"usuarioprueba","pass":"$2y$10$Obi5UkctJbT1f4dlzm2IieU\/\/NyVxIPaDCTjhNydqdzn9\/Ifgy\/42","fotoperfil":"img\/pfp\/5.png","id":5}
+{"nombre":"Test","apellido":"User","email":"test@user.com","usuario":"testuser","pass":"$2y$10$CteRHg9EPZGv8LX8CTt5NOa6taCzEUDAQhrT15NfQi6qr.ybqoFPC","fotoperfil":"img\/pfp\/6.png","id":6}
+{"nombre":"seba","apellido":"colo","email":"seba@email.com","usuario":"sebastian","pass":"$2y$10$j7KC9XmiDoJK1OCaFWDso.Ilj.fJ8dCa1ymSeaqO3.RSlq.IGaD.e","fotoperfil":"img\/pfp\/7.png","id":7}
+{"nombre":"asdasdas","apellido":"asdas","email":"sadsad@asdas.ar","usuario":"asdsadas","pass":"$2y$10$EtWX9RKKf.7Fw9zabNR.t.1t3L86N.38qaZO0Igvnm2FkaiAqIfJm","fotoperfil":null,"id":8}

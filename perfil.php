@@ -22,7 +22,7 @@ if (!isset($_SESSION['usuario'])) {
     <link href="https://fonts.googleapis.com/css?family=Abel|Sigmar+One&display=swap" rel="stylesheet">
     <title>Redso-Perfil</title>
   </head>
-  <body>
+  <body class="body-perfil">
     <nav class="navbar navbar-expand-lg navbar-light">
   <a class="navbar-brand" href="#">RedSo</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,21 +37,25 @@ if (!isset($_SESSION['usuario'])) {
       <li class="nav-item active">
         <a class="nav-link link-menu" href="perfil.php"> Perfil <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item login">
-        <a class="nav-link link-menu" href="login.php">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link link-menu" href="registrar.php">Registrarse</a>
-      </li>
       <li class="nav-item">
         <a class="nav-link link-menu" href="contacto.php">Contacto</a>
       </li>
       <li class="nav-item">
         <a class="nav-link link-menu" href="faq.php">F.A.Q</a>
       </li>
+      <?php if(isset($_SESSION['usuario'])): ?>
       <li class="nav-item">
         <a class="nav-link link-menu" href="logout.php">Logout</a>
+      </li> 
+      <?php endif; ?>
+      <?php if(!isset($_SESSION['usuario'])): ?>
+      <li class="nav-item btn-logreg pull-rigth">
+        <a class="nav-link link-menu " href="login.php">Login</a>
       </li>
+      <li class="nav-item btn-logreg pull-rigth">
+        <a class="nav-link link-menu" href="registrar.php">Registrarse</a>
+      </li>
+      <?php endif; ?>
     </ul>
   </div>
 </nav>

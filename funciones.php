@@ -51,6 +51,10 @@ function validarFormulario($unArray) {
         if (strlen($unArray["pass"])<=6) {
         $errores["pass"]="La contraseña debe contener al menos 6 caracteres";
         } 
+
+        if($unArray["pass"]!=$unArray["conpass"]){
+            $errores["conpass"]="Las contraseñas no coinciden";
+        }
     } 
 
     //valida repeticion de campos clave 
