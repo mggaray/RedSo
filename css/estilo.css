@@ -41,7 +41,15 @@ body, .respuesta {
   background-color: #5891b9 ; 
   margin-right:1%; 
   border-radius: 10%; 
-  border:  black solid 1px;
+  border:  black solid 1px; 
+  color:white;
+  transition: background-color .3s;
+
+} 
+
+.btn-logreg:hover {
+  background-color: white;
+  color:black;
 }
 /* --------------------------------------------------------------------------------------------------------------------------------------------------
  ----------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -407,6 +415,22 @@ hr {
   padding-bottom: 1%;
   word-wrap: break-word; 
   font-size: 2em;
+} 
+
+/* Home logueado */ 
+.loghom-container {
+  display:flex; 
+  overflow: hidden; 
+  flex-wrap: wrap; 
+  justify-content: center;
+} 
+
+.posteo {
+  color:black; 
+  background-color: white; 
+  width:80%; 
+  margin:2%; 
+  padding:2% ;
 }
 
 /* footer */ 
