@@ -77,20 +77,20 @@ if (!isset($_SESSION['usuario'])) {
 <div class="posteos">
   <h2>Posteos</h2>
 <div class="post">
-  <h3 class="Usuario"><?= $_SESSION['usuario'] ?></h3>
+  <h3 class="Usuario">AMIGO 1</h3>
   <hr>
   <p class="post-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem neque totam ab dolorum non labore dolor, officia vitae perspiciatis quam excepturi amet! Repellat tenetur impedit accusamus necessitatibus minima. Dolor, quidem.</p>
 </div>
 <div class="post">
-  <h3 class="Usuario"><?= $_SESSION['usuario'] ?></h3><hr>
+  <h3 class="Usuario">AMIGO 1</h3><hr>
   <p class="post-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem neque totam ab dolorum non labore dolor, officia vitae perspiciatis quam excepturi amet! Repellat tenetur impedit accusamus necessitatibus minima. Dolor, quidem.</p>
 </div>
 <div class="post">
-  <h3 class="Usuario"><?= $_SESSION['usuario'] ?></h3><hr>
+  <h3 class="Usuario">AMIGO 1</h3><hr>
   <p class="post-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem neque totam ab dolorum non labore dolor, officia vitae perspiciatis quam excepturi amet! Repellat tenetur impedit accusamus necessitatibus minima. Dolor, quidem.</p>
 </div>
 <div class="post">
-  <h3 class="Usuario"><?= $_SESSION['usuario'] ?></h3><hr>
+  <h3 class="Usuario">AMIGO 1</h3><hr>
   <p class="post-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem neque totam ab dolorum non labore dolor, officia vitae perspiciatis quam excepturi amet! Repellat tenetur impedit accusamus necessitatibus minima. Dolor, quidem.</p>
 </div>
 </div>

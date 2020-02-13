@@ -77,7 +77,7 @@ if (!isset($_SESSION['usuario'])) {
 <div class="amigos">
   <h2 class="amigos-title"> Amigos </h2><br>
   <ul class="lista-amigos">
-    <li><img src="img/chico.png">Amigo 1</li><hr>
+    <a href="perfil_amigo.php"><li><img src="img/chico.png">Amigo 1</li><hr></a>
     <li><img src="img/chico.png">Amigo 2</li><hr>
     <li><img src="img/chico.png">Amigo 3</li><hr>
     <li><img src="img/chico.png">Amigo 4</li><hr>
