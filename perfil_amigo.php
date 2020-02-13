@@ -75,21 +75,6 @@ if (!isset($_SESSION['usuario'])) {
   </div>
 </div>
 <div class="posteos">
-
-<div class="publicacion">
-    <form method="post" action="" enctype="multipart/form-data">
-        <div class="publicar">Publicación</div>
-        <div class="mensaje">
-            <textarea name="posteo" id="posteo"></textarea>
-        </div>
-        <div class="botones">
-            <button class="btn btn-secondary">Subir imagen</button>
-            <button type="submit" class="btn btn-dark">Publicar</button>
-        </div>
-    </form>
-</div>
-    <br>
-
   <h2>Posteos</h2>
 <div class="post">
   <h3 class="Usuario"><?= $_SESSION['usuario'] ?></h3>
