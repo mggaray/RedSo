@@ -22,30 +22,32 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item">
-        <a class="nav-link link-menu" href="index.php">Inicio</a>
+        <a class="nav-link link-menu" href="/home">Inicio</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link link-menu" href="perfil.php"> Perfil</a>
+        <a class="nav-link link-menu" href="/perfil"> Perfil</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link link-menu" href="contacto.php">Contacto</a>
+        <a class="nav-link link-menu" href="/contacto">Contacto</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link link-menu" href="faq.php">F.A.Q</a>
+        <a class="nav-link link-menu" href="/faq">F.A.Q</a>
       </li>
-      {{-- @if($usuarioLogueado) --}}
+
+      @auth
         <li class="nav-item">
           <a class="nav-link link-menu" href="/logout">Logout</a>
-        </li> 
-      {{-- @endif --}}
-      <?php if(!isset($_SESSION['usuario'])): ?>
-      <li class="nav-item  ">
-        <a class="nav-link link-menu" href="login.php"> <button class="btn-logreg">Login</button> </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link link-menu" href="registrar.php"> <button class="btn-logreg">Registrarse</button></a>
-      </li>
-      <?php endif; ?>
+        </li>
+      @endauth
+
+      @guest
+        <li class="nav-item  ">
+          <a class="nav-link link-menu" href="/login"> <button class="btn-logreg">Login</button> </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link-menu" href="/register"> <button class="btn-logreg">Registrarse</button></a>
+        </li>
+      @endguest
     </ul>
   </div>
 </nav>
