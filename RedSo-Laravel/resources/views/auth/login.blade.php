@@ -1,5 +1,9 @@
 @extends('layouts.plantilla')
 
+@section('titulo')
+    RedSo - Login
+@endsection
+
 @section('contenido')
 
 <div class="login-page">
@@ -37,11 +41,11 @@
                     Entrar
                 </button>
 
-                @if (Route::has('password.request'))
+                {{-- @if (Route::has('password.request'))
                     <a class="btn btn-link" href="{{ route('password.request') }}">
                         {{ __('Forgot Your Password?') }}
                     </a>
-                @endif
+                @endif --}}
 
 
 
