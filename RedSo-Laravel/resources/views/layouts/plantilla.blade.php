@@ -33,11 +33,11 @@
       <li class="nav-item">
         <a class="nav-link link-menu" href="faq.php">F.A.Q</a>
       </li>
-      <?php if(isset($_SESSION['usuario'])): ?>
-      <li class="nav-item">
-        <a class="nav-link link-menu" href="logout.php">Logout</a>
-      </li> 
-      <?php endif; ?>
+      {{-- @if($usuarioLogueado) --}}
+        <li class="nav-item">
+          <a class="nav-link link-menu" href="/logout">Logout</a>
+        </li> 
+      {{-- @endif --}}
       <?php if(!isset($_SESSION['usuario'])): ?>
       <li class="nav-item  ">
         <a class="nav-link link-menu" href="login.php"> <button class="btn-logreg">Login</button> </a>

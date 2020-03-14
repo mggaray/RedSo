@@ -1,1 +1,2 @@
 
+14/03/2020 02:03:47 am SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)

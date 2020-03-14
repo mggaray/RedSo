@@ -177,11 +177,11 @@ right: 20%;
 background:none;
 }
 
-.reg-foto-perfil>label
+/* .reg-foto-perfil>label
 { position: relative;
   color:#4e6994;
-  font-size: 12px;
-}
+  font-size: 20px;
+} */
 
 .reg-foto-perfil>input
 { position: relative;
@@ -337,6 +337,9 @@ background:none;
 /* --------------------------------------------------------------------------------------------------------------------------------------------------
  ----------------------------------------------------------------------------------------------------------------------------------------------- */
 .body-perfil {
+  background-color: #002642;
+}
+body {
   background-color: #002642;
 }
 

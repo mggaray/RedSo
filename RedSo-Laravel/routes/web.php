@@ -11,6 +11,9 @@
 |
 */
 
+// use App\Http\Controllers\Auth\LoginController;
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -19,6 +22,7 @@ Route::get("perfil", function(){
     return view ("perfil");
 });
 
+Route::get("logout", "Auth\LoginController@logout");
 
 
 

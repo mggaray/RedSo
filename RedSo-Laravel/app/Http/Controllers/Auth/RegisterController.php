@@ -49,7 +49,9 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'nombre' => ['required', 'string', 'max:255'],
+            'usuario' => ['required', 'string', 'max:255'],
+            'apellido' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -61,12 +63,21 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
-    {
-        return User::create([
-            'name' => $data['name'],
+    protected function create(array $data){
+        $user = User::create([
+
+            'nombre' => $data['nombre'],
+            'usuario' =>$data['usuario'],
             'email' => $data['email'],
+            'apellido' => $data['apellido'],
             'password' => Hash::make($data['password']),
         ]);
+
+        if (request()->hasFile("foto_perfil")) {
+            $foto_perfil = request()->file("foto_perfil")->getClientOriginalName();
+            request()->file("foto_perfil")->storeAs("foto_perfil",$user->id."/".$foto_perfil, '');
+            $user->update(["foto_perfil"=>$foto_perfil]);
+        }
+        return $user;
     }
 }
