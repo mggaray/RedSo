@@ -338,10 +338,16 @@ background:none;
  ----------------------------------------------------------------------------------------------------------------------------------------------- */
 .body-perfil {
   background-color: #002642;
+  overflow:auto;
+  text-align: center;
+  margin: auto;
 }
-body {
-  background-color: #002642;
+
+.perfil{
+  margin: 0px;
+  padding: 0px;
 }
+
 
 
 .foto-perfil {
@@ -362,8 +368,7 @@ hr {
 }
 
 .posteos {
-  text-align: center;
-  align-items:center;
+  margin: 0 auto;
 }
 
 .post {
@@ -393,7 +398,6 @@ hr {
   padding: 0px;
 
 }
-
 
 
 /* Home deslogueado*/
