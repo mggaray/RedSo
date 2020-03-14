@@ -18,8 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get("perfil", function(){
-    return view ("perfil");
+Route::get("perfil", "PerfilController@perfil");
+
+Route::get("faq", function(){
+    return view ("faq");
 });
 
 Route::get("logout", "Auth\LoginController@logout");
