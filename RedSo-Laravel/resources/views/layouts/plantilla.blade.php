@@ -22,7 +22,12 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item">
-        <a class="nav-link link-menu" href="/home">Inicio</a>
+        @auth
+        <a class="nav-link link-menu" href="/">Inicio</a>
+        @endauth
+        @guest
+        <a class="nav-link link-menu" href="/">Inicio</a>
+        @endguest
       </li>
       <li class="nav-item">
         <a class="nav-link link-menu" href="/perfil"> Perfil</a>
