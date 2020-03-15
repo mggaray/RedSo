@@ -14,9 +14,7 @@
 // use App\Http\Controllers\Auth\LoginController;
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', "HomeController@index");
 
 Route::get("perfil", "PerfilController@perfil");
 
@@ -27,7 +25,9 @@ Route::get("faq", function(){
 Route::get("logout", "Auth\LoginController@logout");
 
 
-
+Route::get('contacto', function () {
+    return view('contacto');
+});
 
 
 
