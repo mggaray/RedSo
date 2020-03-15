@@ -350,9 +350,11 @@ background:none;
 
 
 
-.foto-perfil {
-  width: 100%
+
+.foto-perfil img{
+  width: 100%;
 }
+
 .nombre {
   text-align: center;
 }
