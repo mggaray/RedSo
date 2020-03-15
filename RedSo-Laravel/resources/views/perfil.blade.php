@@ -8,9 +8,11 @@
  @section('contenido')
  <div class="body-perfil">
    <div class="header-perfil">
-     <br>
-     <img src= "">
-     <div class="info-perfil">
+    <br>
+    <div class="foto-perfil">
+        <img src= "/storage/foto_perfil/{{$usuarioLogueado->id}}/{{$usuarioLogueado->foto_perfil}}">
+    </div>
+    <div class="info-perfil">
        <br><h1 class="nombre">{{$usuarioLogueado->nombre}} </h1><hr>
        <ul class="info-perfil">
          <br><li>Nombre: {{$usuarioLogueado->nombre}}</li><br><hr>
@@ -18,24 +20,10 @@
          <br><li>Ciudad: </li><br><hr>
          <br><li>Fecha de Nacimiento: dd/mm/aaaa</li>
        </ul>
-     </div>
+    </div>
    </div>
    <div class="posteos">
- 
-     <div class="publicacion">
-         <form method="post" action="" enctype="multipart/form-data">
-             <div class="publicar">Publicación</div>
-             <div class="mensaje">
-                 <textarea name="posteo" id="posteo"></textarea>
-             </div>
-             <div class="botones">
-                 <button class="btn btn-secondary">Subir imagen</button>
-                 <button type="submit" class="btn btn-dark">Publicar</button>
-             </div>
-         </form>
-     </div>
-     <br>
-       
+      
      <h2>Posteos</h2>
      <div class="post">
        <h3 class="Usuario">{{$usuarioLogueado->usuario}}</h3>
