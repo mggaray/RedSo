@@ -51,7 +51,7 @@
 
 
 
-        <p class="message">¿No está registrado? <a href="registrar.html">Crear una cuenta</a></p>
+        <p class="message">¿No está registrado? <a href="/register">Crear una cuenta</a></p>
       </form>
     </div>
   </div>
