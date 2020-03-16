@@ -43,10 +43,6 @@
             @enderror
         </div>
 
-        <div class=reg-foto-perfil>
-            <label for="foto_perfil" style="color:black">Subir Foto de Perfil</label>
-            <input type="file" name="foto_perfil">
-        </div>
         
         <div>
             <label for="usuario" style="color:black">Usuario</label>
@@ -75,6 +71,33 @@
 
         <div>
             <input id="password-confirm" placeholder="Ingrese su contraseña" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+        </div> 
+
+        <div>
+            <label for="cumpleanios" style="color:black">Fecha de Nacimiento</label>
+            <input type="date" placeholder="Ingrese su fecha de nacimiento" class="form-control @error('cumpleanios') is-invalid @enderror" id="cumpleanios" name="cumpleanios" value="{{ old('cumpleanios') }}" required autocomplete="usuario"/>
+            @error('cumpleanios')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+        </div>
+
+        <h2 style="color:#F03A47;">Datos opcionales</h2>
+
+        <div class=reg-foto-perfil>
+            <label for="foto_perfil" style="color:black">Subir Foto de Perfil</label>
+            <input type="file" name="foto_perfil">
+        </div> 
+
+        <div>
+            <label for="ciudad" style="color:black">Ciudad</label>
+            <input type="text" placeholder="Ingrese su ciudad" class="form-control @error('ciudad') is-invalid @enderror" id="ciudad" name="ciudad" value="{{ old('ciudad') }}" required autocomplete="ciudad"/>
+            @error('ciudad')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
         </div>
 
   
@@ -82,7 +105,7 @@
             Registrarse
         </button>
   
-        <p class="message">¿Ya está registrado? <a href="login">Ingrese a su cuenta</a></p> <br>
+        <p class="message">¿Ya está registrado? <a href="/login">Ingrese a su cuenta</a></p> <br>
       </form>
     </div>
   </div>
