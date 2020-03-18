@@ -39,9 +39,9 @@ class CreateUsersTable extends Migration
         Schema::create('posteos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
-            $table->date('fecha');
+            $table->date('fechaCreacion');
             $table->text('contenido');
-
+            $table->text("nombreImagen")->nullable();
             $table->foreign('user_id')->references('id')->on('users');
         });
 

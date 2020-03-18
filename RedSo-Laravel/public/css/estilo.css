@@ -508,3 +508,19 @@ hr {
   border-radius: 10% 50%;
   width: 49%;
 }
+
+.erroresPublicacion{
+  display: flex;
+  margin: auto;
+  width: 50%;
+  z-index: 20;
+  background-color: #f03a47;
+  animation: fadein 3.5s;
+  margin-bottom:5px;
+  text-align: left;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

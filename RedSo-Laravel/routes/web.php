@@ -29,8 +29,12 @@ Route::get('contacto', function () {
     return view('contacto');
 });
 
+Route::get('/home', function(){
+    return view('home');
+});
 
 
+Route::post('/home', 'HomeController@postear');
 
 Auth::routes();
 
