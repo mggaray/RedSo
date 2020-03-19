@@ -45,12 +45,12 @@ class User extends Authenticatable
 
     public function seguidos()
     {
-        return $this->belongsToMany('App\User', 'amigos', 'id_usuario', 'id_amigo');
+        return $this->belongsToMany('App\User', 'amigos', 'user_id', 'seguido_id');
     } 
 
     public function seguidores()
     {
-        return $this->belongsToMany('App\User', 'amigos', 'id_amigo', 'id_usuario');
+        return $this->belongsToMany('App\User', 'amigos', 'seguido_id', 'user_id');
     } 
 
     public function sendPasswordResetNotification($token)

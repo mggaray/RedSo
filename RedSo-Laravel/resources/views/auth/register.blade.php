@@ -92,7 +92,7 @@
 
         <div>
             <label for="ciudad" style="color:black">Ciudad</label>
-            <input type="text" placeholder="Ingrese su ciudad" class="form-control @error('ciudad') is-invalid @enderror" id="ciudad" name="ciudad" value="{{ old('ciudad') }}" required autocomplete="ciudad"/>
+            <input type="text" placeholder="Ingrese su ciudad" class="form-control @error('ciudad') is-invalid @enderror" id="ciudad" name="ciudad" value="{{ old('ciudad') }}"  autocomplete="ciudad"/>
             @error('ciudad')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>

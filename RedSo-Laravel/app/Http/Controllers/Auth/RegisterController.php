@@ -81,7 +81,8 @@ class RegisterController extends Controller
             $foto_perfil = request()->file("foto_perfil")->getClientOriginalName();
             request()->file("foto_perfil")->storeAs("foto_perfil",$user->id."/".$foto_perfil, '');
             $user->update(["foto_perfil"=>$foto_perfil]);
-        }
+        } 
+        
         return $user;
     }
 }

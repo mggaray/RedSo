@@ -388,6 +388,25 @@ hr {
 .Usuario {
   text-align: left;
 }
+.amigos{
+  display: flex; 
+  flex-wrap: wrap;
+} 
+
+.seguidores {
+  width: 100%; 
+  margin-bottom: 10%;
+  
+}  
+
+.busqueda {
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+
+.segleft {
+  border-right: solid 2px black;
+}
 
 .amigos-title {
   text-align: center;
@@ -453,10 +472,44 @@ hr {
       color: white;
       transition: color .2s;
     }
-  .copyright p{border-top:1px solid rgba(255,255,255,.1);} 
+  .copyright p{border-top:1px solid rgba(255,255,255,.1);}  
+
+  /********************************* BUSQUEDA *********************************************************************/ 
+  .container-busqueda {
+    display: flex; 
+    flex-wrap: wrap; 
+    margin: auto; 
+    justify-content: center; 
+    color: black;
+  }  
+
+  .ul-busqueda{
+    list-style: none;
+  }
+
+  .form-busqueda {
+    width: 85%;
+  }
+
+  .input-busqueda {
+  
+    size:50;
+
+  } 
+
+  .encontrados {
+    width: 85%;
+  }
+  
 
 
-@media (min-width:1024px) {
+
+@media (min-width:1024px) {  
+
+
+  .seguidores {
+    width: 48%;
+  }
 
   .foto-perfil {
     width: 30%;
@@ -473,10 +526,14 @@ hr {
     width: 30%;
   }
   .lista-amigos {
-  float: left;
-  width:30%;
+  width:45%;
 
   } 
+
+  .busqueda {
+    margin-top: 10%;
+  }
+
   .sub-index {
     width:45%;
   }
@@ -507,4 +564,20 @@ hr {
 .publicacion .botones .btn{
   border-radius: 10% 50%;
   width: 49%;
+}
+
+.erroresPublicacion{
+  display: flex;
+  margin: auto;
+  width: 50%;
+  z-index: 20;
+  background-color: #f03a47;
+  animation: fadein 3.5s;
+  margin-bottom:5px;
+  text-align: left;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
