@@ -11,9 +11,6 @@
 |
 */
 
-// use App\Http\Controllers\Auth\LoginController;
-
-
 Route::get('/', "HomeController@index");
 
 Route::get("perfil", "PerfilController@perfil");
