@@ -61,11 +61,11 @@ class HomeController extends Controller
       $posteo->user_id=Auth::user()->id; 
       $posteo->fechaCreacion=Carbon::now();    
       $posteo->contenido=$req["posteo"];
-      if($req->file("imagen")!=null){
+       if($req->file("imagen")!=null){
         $ruta= $req->file("imagen")->store("public");
         $rutaImagen=basename($ruta);   
-      }
-      $rutaImagen=null;
+       }
+       else{$rutaImagen=null;}
       $posteo->nombreImagen=$rutaImagen;
       $posteo->save();
       return redirect("home");
