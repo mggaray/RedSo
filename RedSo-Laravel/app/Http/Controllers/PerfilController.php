@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Posteo;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Auth; 
 use App\User;
+
 
 class PerfilController extends Controller
 {
@@ -18,8 +18,12 @@ class PerfilController extends Controller
 
     public function perfil()
     {
-        $usuarioLogueado = Auth::user();
-        $vac = compact('usuarioLogueado');
+        $usuarioLogueado = Auth::user(); 
+        $posteos = Posteo::where('user_id','=',$usuarioLogueado['id']) 
+        ->orderBy('fechaCreacion','desc')
+        ->simplePaginate(5); 
+        
+        $vac = compact('usuarioLogueado','posteos');
         return view('perfil', $vac);
     } 
 
@@ -39,6 +43,9 @@ class PerfilController extends Controller
     public function mostrarUser(Request $req) {
         $usuario = User::find($req['id']);  
         $usuarioLogueado = Auth::user(); 
+        $posteos = Posteo::where('user_id','=',$usuario['id']) 
+        ->orderBy('fechaCreacion','desc')
+        ->simplePaginate(10);
 
       if ($usuario['id'] == $usuarioLogueado['id']) {
           return redirect()->to('perfil');
@@ -51,7 +58,7 @@ class PerfilController extends Controller
             break;
             }
         }
-        $vac = compact('usuario','bandera'); 
+        $vac = compact('usuario','bandera','posteos'); 
         return view('perfilUser',$vac); 
     } 
 

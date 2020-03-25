@@ -5,7 +5,7 @@ namespace App;
 use App\Notifications\ResetPasswordNotification;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Foundation\Auth\User as Authenticatable; 
 
 class User extends Authenticatable
 { 
@@ -40,7 +40,7 @@ class User extends Authenticatable
 
     public function posteos()
     {
-        return $this->hasMany(Posteo::class,'id_usuario');
+        return $this->hasMany(Posteo::class,'user_id');
     } 
 
     public function seguidos()

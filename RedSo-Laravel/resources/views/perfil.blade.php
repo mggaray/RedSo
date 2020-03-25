@@ -17,44 +17,45 @@
       
       @section('posteos')
      <h2>Posteos</h2>
+     
+     @forelse($posteos as $posteo)
      <div class="post">
        <h3 class="Usuario">{{$usuarioLogueado->usuario}}</h3>
        <hr>
-       <p class="post-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem neque totam ab dolorum non labore dolor, officia vitae perspiciatis quam excepturi amet! Repellat tenetur impedit accusamus necessitatibus minima. Dolor, quidem.</p>
+     <p class="post-text">{{$posteo['contenido']}}</p>
      </div>
-     <div class="post">
-       <h3 class="Usuario">{{$usuarioLogueado->usuario}}</h3><hr>
-       <p class="post-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem neque totam ab dolorum non labore dolor, officia vitae perspiciatis quam excepturi amet! Repellat tenetur impedit accusamus necessitatibus minima. Dolor, quidem.</p>
-     </div>
-     <div class="post">
-       <h3 class="Usuario">{{$usuarioLogueado->usuario}}</h3><hr>
-       <p class="post-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem neque totam ab dolorum non labore dolor, officia vitae perspiciatis quam excepturi amet! Repellat tenetur impedit accusamus necessitatibus minima. Dolor, quidem.</p>
-     </div>
-     <div class="post">
-       <h3 class="Usuario">{{$usuarioLogueado->usuario}}</h3><hr>
-       <p class="post-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem neque totam ab dolorum non labore dolor, officia vitae perspiciatis quam excepturi amet! Repellat tenetur impedit accusamus necessitatibus minima. Dolor, quidem.</p>
-     </div> 
+    @empty  
+    <div class="post">
+      <h3 class="Usuario">No hiciste ningun posteo</h3>
+      <hr>
+    <p class="post-text">Haz tu primer <a href="/home">posteo</a>!!</p>
+    
+    </div>  
+    @endforelse
+    {{$posteos->links()}}
    @endsection
 
 
    @section('amigos')
      <div class="seguidores segleft">
-      <h2 class="amigos-title"> Seguidos </h2><br>
+      <h2 class="amigos-title">{{$usuarioLogueado->seguidos->count()}} <b>Seguidos</b> </h2><br>
       <ul class="lista-amigos">
-        @forelse($usuarioLogueado->seguidos as $seguido)
+        @forelse($usuarioLogueado->seguidos->take(7) as $seguido)
       <li><img src="/img/chico.png">{{$seguido['usuario']}}</li><hr> 
       @empty 
       Este usuario no sigue a nadie 
       @endforelse
-      </ul>  
+      </ul>
+      <a href="/busquedaUser"><button type="button" class="btn btn-primary busqueda">Ver seguidos</button></a>  
       <a href="/busquedaUser"><button type="button" class="btn btn-primary busqueda">Buscar usuarios</button></a>
+
 
     </div> <br> 
 
     <div class="seguidores ">
-      <h2 class="amigos-title"> Seguidores </h2><br>
+      <h2 class="amigos-title">{{$usuarioLogueado->seguidores->count()}} <b>Seguidores</b> </h2><br>
       <ul class="lista-amigos">
-        @forelse($usuarioLogueado->seguidores as $seguidor)
+        @forelse($usuarioLogueado->seguidores->take(7) as $seguidor)
         <li><img src="/img/chico.png">{{$seguidor['usuario']}}</li><hr>
         @empty 
         Este usuario no tiene seguidores

@@ -10,7 +10,7 @@
         @if($usuario->foto_perfil == null) 
         <img src="/img/chico.png">
         @else
-        <img src= "/storage/foto_perfil/{{$usuario->id}}/{{$usuario->foto_perfil}}"> 
+        <img src= "{{$usuario->foto_perfil}}"> 
         @endif
         @endsection
         
@@ -33,29 +33,27 @@
 
       @section('posteos')
      <h2>Posteos</h2>
+     @forelse($posteos as $posteo)
      <div class="post">
        <h3 class="Usuario">{{$usuario->usuario}}</h3>
        <hr>
-       <p class="post-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem neque totam ab dolorum non labore dolor, officia vitae perspiciatis quam excepturi amet! Repellat tenetur impedit accusamus necessitatibus minima. Dolor, quidem.</p>
+     <p class="post-text">{{$posteo['contenido']}}</p>
      </div>
-     <div class="post">
-       <h3 class="Usuario">{{$usuario->usuario}}</h3><hr>
-       <p class="post-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem neque totam ab dolorum non labore dolor, officia vitae perspiciatis quam excepturi amet! Repellat tenetur impedit accusamus necessitatibus minima. Dolor, quidem.</p>
-     </div>
-     <div class="post">
-       <h3 class="Usuario">{{$usuario->usuario}}</h3><hr>
-       <p class="post-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem neque totam ab dolorum non labore dolor, officia vitae perspiciatis quam excepturi amet! Repellat tenetur impedit accusamus necessitatibus minima. Dolor, quidem.</p>
-     </div>
-     <div class="post">
-       <h3 class="Usuario">{{$usuario->usuario}}</h3><hr>
-       <p class="post-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem neque totam ab dolorum non labore dolor, officia vitae perspiciatis quam excepturi amet! Repellat tenetur impedit accusamus necessitatibus minima. Dolor, quidem.</p>
-     </div> 
+    @empty  
+    <div class="post">
+      <h3 class="Usuario">No hiciste ningun posteo</h3>
+      <hr>
+    <p class="post-text">Haz tu primer <a href="/home">posteo</a>!!</p>
+    
+    </div>  
+    @endforelse
+    {{$posteos->links()}}
    @endsection
 
 
    @section('amigos')
      <div class="seguidores segleft">
-      <h2 class="amigos-title"> Seguidos </h2><br>
+      <h2 class="amigos-title">{{$usuario->seguidos->count()}} Seguidos </h2><br>
       <ul class="lista-amigos">
         @forelse($usuario->seguidos as $seguido)
       <li><img src="/img/chico.png">{{$seguido['usuario']}}</li><hr> 
@@ -64,11 +62,11 @@
       @endforelse
       </ul>  
       <a href="/busquedaUser"><button type="button" class="btn btn-primary busqueda">Buscar usuarios</button></a>
-
+      
     </div> <br> 
 
     <div class="seguidores ">
-      <h2 class="amigos-title"> Seguidores </h2><br>
+      <h2 class="amigos-title">{{$usuario->seguidores->count()}} Seguidores </h2><br>
       <ul class="lista-amigos">
         @forelse($usuario->seguidores as $seguidor)
         <li><img src="/img/chico.png">{{$seguidor['usuario']}}</li><hr>

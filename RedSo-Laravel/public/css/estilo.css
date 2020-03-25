@@ -348,6 +348,10 @@ background:none;
   padding: 0px;
 }
 
+.post-text {
+  text-align: left; 
+  margin-left: 2%;
+}
 
 
 
