@@ -341,6 +341,7 @@ background:none;
   overflow:auto;
   text-align: center;
   margin: auto;
+  height: 100vh;
 }
 
 .perfil{
