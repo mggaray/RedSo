@@ -41,12 +41,14 @@
       <h2 class="amigos-title">{{$usuarioLogueado->seguidos->count()}} <b>Seguidos</b> </h2><br>
       <ul class="lista-amigos">
         @forelse($usuarioLogueado->seguidos->take(7) as $seguido)
-      <li><img src="/img/chico.png">{{$seguido['usuario']}}</li><hr> 
+        <img src="/img/chico.png"><a href="/users/{{$seguido->id}}"><li>{{$seguido['usuario']}}</li></a><hr> 
       @empty 
       Este usuario no sigue a nadie 
       @endforelse
       </ul>
+      @if($usuarioLogueado->seguidos->count()!=0)
       <a href="/busquedaUser"><button type="button" class="btn btn-primary busqueda">Ver seguidos</button></a>  
+      @endif
       <a href="/busquedaUser"><button type="button" class="btn btn-primary busqueda">Buscar usuarios</button></a>
 
 
@@ -56,12 +58,14 @@
       <h2 class="amigos-title">{{$usuarioLogueado->seguidores->count()}} <b>Seguidores</b> </h2><br>
       <ul class="lista-amigos">
         @forelse($usuarioLogueado->seguidores->take(7) as $seguidor)
-        <li><img src="/img/chico.png">{{$seguidor['usuario']}}</li><hr>
+      <img src="/img/chico.png"><a href="/users/{{$seguidor->id}}"><li>{{$seguidor['usuario']}}</li></a><hr>
         @empty 
         Este usuario no tiene seguidores
         @endforelse
-      </ul> 
-      <button type="button" class="btn btn-primary busqueda">Ver seguidores</button> 
+      </ul>  
+      @if($usuarioLogueado->seguidores->count()!=0)
+      <button type="button" class="btn btn-primary busqueda">Ver seguidores</button>  
+      @endif
     </div>
    @endsection
  </div>

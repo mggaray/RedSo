@@ -10,7 +10,7 @@
         @if($usuario->foto_perfil == null) 
         <img src="/img/chico.png">
         @else
-        <img src= "{{$usuario->foto_perfil}}"> 
+        <img src= "{{$usuario->foto_perfil}}">
         @endif
         @endsection
         
@@ -55,12 +55,13 @@
      <div class="seguidores segleft">
       <h2 class="amigos-title">{{$usuario->seguidos->count()}} Seguidos </h2><br>
       <ul class="lista-amigos">
-        @forelse($usuario->seguidos as $seguido)
-      <li><img src="/img/chico.png">{{$seguido['usuario']}}</li><hr> 
+        @forelse($usuario->seguidos->take(7) as $seguido)
+      <img src="/img/chico.png"><a href="/users/{{$seguido->id}}"><li>{{$seguido['usuario']}}</li></a><hr> 
       @empty 
       Este usuario no sigue a nadie 
       @endforelse
       </ul>  
+      <a href="/busquedaUser"><button type="button" class="btn btn-primary busqueda">Ver seguidos</button></a>  
       <a href="/busquedaUser"><button type="button" class="btn btn-primary busqueda">Buscar usuarios</button></a>
       
     </div> <br> 
@@ -68,8 +69,8 @@
     <div class="seguidores ">
       <h2 class="amigos-title">{{$usuario->seguidores->count()}} Seguidores </h2><br>
       <ul class="lista-amigos">
-        @forelse($usuario->seguidores as $seguidor)
-        <li><img src="/img/chico.png">{{$seguidor['usuario']}}</li><hr>
+        @forelse($usuario->seguidores->take(7) as $seguidor)
+      <img src="/img/chico.png"><a href="/users/{{$seguidor->id}}"><li>{{$seguidor['usuario']}}</li></a><hr>
         @empty 
         Este usuario no tiene seguidores
         @endforelse
