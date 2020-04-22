@@ -53,29 +53,28 @@
 
    @section('amigos')
      <div class="seguidores segleft">
-      <h2 class="amigos-title">{{$usuario->seguidos->count()}} Seguidos </h2><br>
+      <a href="#"><button type="button" class="btn btn-primary busqueda">Seguidos: <span><b>{{$usuario->seguidos->count()}}</b></span></button></a>  
       <ul class="lista-amigos">
         @forelse($usuario->seguidos->take(7) as $seguido)
-      <img src="/img/chico.png"><a href="/users/{{$seguido->id}}"><li>{{$seguido['usuario']}}</li></a><hr> 
-      @empty 
-      Este usuario no sigue a nadie 
+        <a href="/users/{{$seguido->id}}"><img src="/img/chico.png"></a><a href="/users/{{$seguido->id}}"class="text-white bg-dark"><li>{{$seguido['usuario']}}</li></a><hr> 
+      @empty  
+      
+      <span class="border border-danger">Este usuario no sigue a nadie </span>
       @endforelse
       </ul>  
-      <a href="/busquedaUser"><button type="button" class="btn btn-primary busqueda">Ver seguidos</button></a>  
-      <a href="/busquedaUser"><button type="button" class="btn btn-primary busqueda">Buscar usuarios</button></a>
+      
       
     </div> <br> 
 
     <div class="seguidores ">
-      <h2 class="amigos-title">{{$usuario->seguidores->count()}} Seguidores </h2><br>
+      <a href="#"><button type="button" class="btn btn-primary busqueda">Seguidores: <span><b>{{$usuario->seguidores->count()}} </b></span></button></a> 
       <ul class="lista-amigos">
         @forelse($usuario->seguidores->take(7) as $seguidor)
-      <img src="/img/chico.png"><a href="/users/{{$seguidor->id}}"><li>{{$seguidor['usuario']}}</li></a><hr>
+        <a href="/users/{{$seguidor->id}}"><img src="/img/chico.png"></a><a href="/users/{{$seguidor->id}}" class="text-white bg-dark"><li>{{$seguidor['usuario']}}</li></a><hr>
         @empty 
-        Este usuario no tiene seguidores
+        <span class="border border-danger">Este usuario no sigue a nadie </span>
         @endforelse
-      </ul> 
-      <button type="button" class="btn btn-primary busqueda">Ver seguidores</button> 
+      </ul>  
     </div>
    @endsection
  </div> 
