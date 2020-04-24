@@ -37,13 +37,14 @@
      <div class="post">
        <h3 class="Usuario">{{$usuario->usuario}}</h3>
        <hr>
-     <p class="post-text">{{$posteo['contenido']}}</p>
+     <p class="post-text">{{$posteo['contenido']}}</p> 
+     <p class="align-text-bottom text-right muted small">{{date('d-m-Y',strtotime($posteo->fechaCreacion))}}</p> 
      </div>
     @empty  
     <div class="post">
-      <h3 class="Usuario">No hiciste ningun posteo</h3>
+      <h3 class="Usuario">Este usuario no ha realizado posteos</h3>
       <hr>
-    <p class="post-text">Haz tu primer <a href="/home">posteo</a>!!</p>
+    <p class="post-text">Esperemos ver pronto que lo haga!</p> 
     
     </div>  
     @endforelse

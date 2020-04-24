@@ -25,6 +25,7 @@
           
           <form method="post" action="/home" enctype="multipart/form-data">
               {{ csrf_field() }}
+              <input type="hidden" name="origen" value="home">
               <div class="publicar">Publicación</div>
               <div class="mensaje">
                   <textarea name="posteo" id="posteo"></textarea>
@@ -43,7 +44,11 @@
       <div class="post">
       <h3 class="Usuario">{{$posteo->usuario}}</h3>
         <hr>
-      <p class="post-text">{{$posteo->contenido}}</p>
+      <p class="post-text">{{$posteo->contenido}}</p> 
+      
+      <p class="align-text-bottom text-right muted small">{{date('d/m/Y-H:i',strtotime($posteo->fechaCreacion))}}h</p> 
+
+      <a href="#" class="text-left align-text-bottom  muted small">Comentarios()</a>
       </div> 
       @empty 
       <h1>Sin posteos</h1>

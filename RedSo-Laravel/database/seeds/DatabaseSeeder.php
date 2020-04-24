@@ -21,11 +21,11 @@ class DatabaseSeeder extends Seeder
         //$posteos = factory(App\Posteo::class)->times(490)->create(); LUEGO VERIFICAR EN LA DB EL ID MAX Y MIN DE 
         //LA TABLA USUARIOS Y MODIFICAR EL POST_FACTORY USER_ID
 
-        //$seguidos = App\User::All();
+        $seguidos = App\User::All();
 
-      /*  App\User::All()->each(function ($user) use ($seguidos){
+       App\User::All()->each(function ($user) use ($seguidos){
             $user->seguidos()->saveMany($seguidos->random(100));
-         });*/
+         });
       }
     
 }

@@ -36,9 +36,9 @@ class HomeController extends Controller
            
             ->where('amigos.user_id','=',$usuarioLogueado->id)
             ->select('posteos.contenido','posteos.fechaCreacion','users.usuario')
-            ->orderBy('fechaCreacion')
-            ->simplePaginate(8);   
-         
+            ->orderBy('fechaCreacion','desc')
+            ->simplePaginate(8); 
+                     
             $vac = compact('usuarioLogueado','posteos');
             return view('home', $vac);
         }
@@ -77,8 +77,14 @@ class HomeController extends Controller
        }
        else{$rutaImagen=null;}
       $posteo->nombreImagen=$rutaImagen;
-      $posteo->save();
-      return redirect("home");
+      $posteo->save(); 
+
+      if($req["origen"]=="home") {
+      return redirect("home");} 
+
+      if($req["origen"]=="perfil") {
+        return redirect("perfil");} 
+      
     }
 
 }

@@ -6,7 +6,13 @@
 
 
 
-        @section('foto')<img src= "/storage/foto_perfil/{{$usuarioLogueado->id}}/{{$usuarioLogueado->foto_perfil}}"> @endsection
+        @section('foto')
+        @if($usuarioLogueado->foto_perfil == null) 
+        <img src="/img/chico.png">
+        @else
+        <img src= "/storage/foto_perfil/{{$usuarioLogueado->id}}/{{$usuarioLogueado->foto_perfil}}"> 
+        @endif
+        @endsection
         
         @section('usuario'){{$usuarioLogueado->usuario}} @endsection
        
@@ -16,6 +22,31 @@
         @section('fecha_nacimiento'){{$usuarioLogueado->cumpleanios}}@endsection
       
       @section('posteos')
+      <div class="publicacion">
+        @if(count($errors)>0)
+         <div class="erroresPublicacion">
+           <ul>
+             @foreach($errors->all() as $error)
+             <li>
+               {{$error}}
+             @endforeach
+             </li>
+           </ul>
+         </div>
+         @endif
+         
+         <form method="post" action="/home" enctype="multipart/form-data">
+             {{ csrf_field() }} 
+             <input type="hidden" name="origen" value="perfil">
+             <div class="publicar">Publicación</div>
+             <div class="mensaje">
+                 <textarea name="posteo" id="posteo"></textarea>
+             </div>
+             <div class="botones">
+                 <button type="submit" class="btn btn-dark">Publicar</button>
+             </div>
+         </form>
+     </div>
      <h2>Posteos</h2>
      
      @forelse($posteos as $posteo)
@@ -23,6 +54,7 @@
        <h3 class="Usuario">{{$usuarioLogueado->usuario}}</h3>
        <hr>
      <p class="post-text">{{$posteo['contenido']}}</p>
+     <p class="align-text-bottom text-right muted small">{{date('d-m-Y',strtotime($posteo->fechaCreacion))}}</p> 
      </div>
     @empty  
     <div class="post">
