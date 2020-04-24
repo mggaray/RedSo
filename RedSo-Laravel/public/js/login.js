@@ -16,7 +16,7 @@ window.onload = function(){
             boton.disabled = true;
         }
     }
-    
+
     email.oninput = function() {
         let valor = email.value;
         let valido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valor)
@@ -40,5 +40,6 @@ window.onload = function(){
             passwordValido = true;
         }
         estadoBoton();
+   
     }
 }
