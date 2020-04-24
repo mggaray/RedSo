@@ -38,24 +38,17 @@
       </div>
       <br>
 
-      <h2>Posteos</h2>
+      <h2>Posteos</h2> 
+      @forelse($posteos as $posteo)
       <div class="post">
-        <h3 class="Usuario">{{$usuarioLogueado->usuario}}</h3>
+      <h3 class="Usuario">{{$posteo->usuario}}</h3>
         <hr>
-        <p class="post-text"></p>
-      </div>
-      <div class="post">
-        <h3 class="Usuario">{{$usuarioLogueado->usuario}}</h3><hr>
-        <p class="post-text"></p>
-      </div>
-      <div class="post">
-        <h3 class="Usuario">{{$usuarioLogueado->usuario}}</h3><hr>
-        <p class="post-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem neque totam ab dolorum non labore dolor, officia vitae perspiciatis quam excepturi amet! Repellat tenetur impedit accusamus necessitatibus minima. Dolor, quidem.</p>
-      </div>
-      <div class="post">
-        <h3 class="Usuario">{{$usuarioLogueado->usuario}}</h3><hr>
-        <p class="post-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem neque totam ab dolorum non labore dolor, officia vitae perspiciatis quam excepturi amet! Repellat tenetur impedit accusamus necessitatibus minima. Dolor, quidem.</p>
-      </div>
+      <p class="post-text">{{$posteo->contenido}}</p>
+      </div> 
+      @empty 
+      <h1>Sin posteos</h1>
+      @endforelse 
+   {{$posteos->links()}}
     </div>
   </div>
 </div> 

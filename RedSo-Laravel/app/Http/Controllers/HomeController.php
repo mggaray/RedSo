@@ -3,7 +3,8 @@ namespace App\Http\Controllers;
 use App\Posteo;
 use Illuminate\Http\Request;
 use Auth;
-use Carbon\Carbon;
+use Carbon\Carbon; 
+use DB;
 
 
 class HomeController extends Controller
@@ -28,8 +29,17 @@ class HomeController extends Controller
     public function index()
     {
         $usuarioLogueado = Auth::user();
-        if (isset($usuarioLogueado)) {
-            $vac = compact('usuarioLogueado');
+        if (isset($usuarioLogueado)) {  
+            $posteos = DB::table('posteos') 
+            ->join('amigos','amigos.seguido_id','=',"posteos.user_id")  
+            ->join('users','amigos.seguido_id','=','users.id')
+           
+            ->where('amigos.user_id','=',$usuarioLogueado->id)
+            ->select('posteos.contenido','posteos.fechaCreacion','users.usuario')
+            ->orderBy('fechaCreacion')
+            ->simplePaginate(8);   
+         
+            $vac = compact('usuarioLogueado','posteos');
             return view('home', $vac);
         }
         else {

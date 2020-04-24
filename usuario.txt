@@ -1,0 +1,4 @@
+usuario | email | password
+santibruera97 | santibruera97@gmail.com | 4586641santi
+testuser1 | testuser1@testuser.com | usuariotesteo 
+testuser2 | testuser2@testuser.com | usuariotesteo 
