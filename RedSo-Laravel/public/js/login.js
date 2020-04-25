@@ -11,9 +11,13 @@ window.onload = function(){
     function estadoBoton() {
         if (passwordValido == true && emailValido == true) {
             boton.removeAttribute("disabled");
+
+            return true;
         }
         else{
             boton.disabled = true;
+            
+            return false;
         }
     }
 
@@ -32,7 +36,7 @@ window.onload = function(){
 
     password.oninput = function() {
         let valor = password.value.length;
-        if (valor < 8) {
+        if (valor < 8 || valor == "") {
             document.querySelector('.alertaPassword').innerHTML="<small style='color:red;'><b>La contraseña debe tener al menos 8 caracteres</b></small>";
             passwordValido = false;  
         }else{
@@ -41,5 +45,15 @@ window.onload = function(){
         }
         estadoBoton();
    
+    }
+
+    let formulario = document.querySelector('.formulario');
+    
+    
+    formulario.onsubmit = function () {
+
+        if (!estadoBoton()) {
+            event.preventDefault();
+        }
     }
 }
