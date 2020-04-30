@@ -46,17 +46,18 @@
         <hr>
       <p class="post-text">{{$posteo->contenido}}</p> 
       
-      <p class="align-text-bottom text-right muted small">{{date('d/m/Y-H:i',strtotime($posteo->fechaCreacion))}}h</p> 
+      <p class="align-text-bottom text-right muted small">{{date('d/m/Y',strtotime($posteo->fechaCreacion))}}&nbsp;&nbsp;<b>{{date('H:i',strtotime($posteo->fechaCreacion))}}h</b></p> 
 
-      <a href="#" class="text-left align-text-bottom  muted small">Comentarios()</a> 
-      <form action="">
-        <div class="form-group">
-          
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> <br>
+      <a href="#" class="text-left align-text-bottom  muted small">Comentarios</a> 
+      <form action="/comentar" method="POST"> 
+        @csrf
+        <div class="form-group"> 
+          <input type="hidden" name="postId" value={{$posteo->id}}>
+          <textarea class="form-control" id="comentario" rows="3" name="comentario"></textarea> <br>
           <button type="submit" class="btn btn-primary">Comentar</button>
       </form>
       <span class="border-bottom"></span>
-      
+      </div> 
       </div> 
       @empty 
       <h1>Sin posteos</h1>
