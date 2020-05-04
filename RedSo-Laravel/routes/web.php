@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', "HomeController@index");
+Route::get('/', "HomeController@index"); 
+Route::post('/comentar', 'homeController@comentar');
 
 Route::get("perfil", "PerfilController@perfil"); 
 
@@ -43,4 +44,6 @@ Route::post('/home', 'HomeController@postear');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home'); 
+
+
