@@ -54,3 +54,6 @@
         </div>
       </div>
 @endsection
+@section('scripts')
+<script src="{{asset('/js/faq.js')}}"></script>
+@endsection
