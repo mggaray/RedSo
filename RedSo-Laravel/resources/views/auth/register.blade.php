@@ -11,6 +11,7 @@
         
         <div>
             <input id="nombre" type="text" placeholder="Ingrese su nombre" class="form-control @error('nombre') is-invalid @enderror" name="nombre" value="{{ old('nombre') }}" required autocomplete="nombre" autofocus>
+            <div class="alertaNombre"></div>
 
             @error('nombre')
                 <span class="invalid-feedback" role="alert">
@@ -24,6 +25,7 @@
 
         <div>
             <input id="apellido" type="text" placeholder="Ingrese su apellido" class="form-control @error('apellido') is-invalid @enderror" name="apellido" value="{{ old('apellido') }}" required autocomplete="apellido" autofocus>
+            <div class="alertaApellido"></div>
 
             @error('apellido')
                 <span class="invalid-feedback" role="alert">
@@ -37,6 +39,7 @@
 
         <div>
             <input id="email" type="email" placeholder="Ingrese su e-mail" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+            <div class="alertaEmail"></div>
 
             @error('email')
                 <span class="invalid-feedback" role="alert">
@@ -50,6 +53,7 @@
         <div>
             <label for="usuario" style="color:black">Usuario</label>
             <input type="text" placeholder="Ingrese su usuario" class="form-control @error('usuario') is-invalid @enderror" id="usuario" name="usuario" value="{{ old('usuario') }}" required autocomplete="usuario"/>
+            <div class="alertaUsuario"></div>
             @error('usuario')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -63,6 +67,7 @@
 
         <div>
             <input id="password" type="password" placeholder="Ingrese su contraseña" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+            <div class="alertaPassword"></div>
 
             @error('password')
                 <span class="invalid-feedback" role="alert">
@@ -82,6 +87,7 @@
         <div>
             <label for="cumpleanios" style="color:black">Fecha de Nacimiento</label>
             <input type="date" placeholder="Ingrese su fecha de nacimiento" class="form-control @error('cumpleanios') is-invalid @enderror" id="cumpleanios" name="cumpleanios" value="{{ old('cumpleanios') }}" required autocomplete="usuario"/>
+            <div class="alertaCumpleanios"></div>
             @error('cumpleanios')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -116,6 +122,9 @@
       </form>
     </div>
   </div>
+  @endsection
+  @section('scripts')
+    <script src="{{asset('/js/registro.js')}}"></script>
   @endsection
 
   @section('scripts')
