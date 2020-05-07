@@ -39,14 +39,17 @@ class HomeController extends Controller
             ->select('posteos.contenido','posteos.fechaCreacion','users.usuario','posteos.id')
             ->orderBy('fechaCreacion','desc')
             ->simplePaginate(8); 
+
+            $calesita = $posteos->take(10);
                      
-            $vac = compact('usuarioLogueado','posteos');
+            $vac = compact('usuarioLogueado','posteos','calesita');
             return view('home', $vac);
         }
         else {
             return view('/index');
          }
         }
+
 
     public function postear(Request $req)
     {  

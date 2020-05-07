@@ -38,6 +38,28 @@
           </form>
       </div>
       <br>
+      <div class="ultimos-posteos contenedor">
+        <div class="contenedor-posteos-controles">
+          <h3>Últimos posteos</h3>
+          <div class="indicadores">
+
+          </div>
+        </div>
+  
+        <div class="contenedor-principal">
+          <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+          
+          <div class="contenedor-carousel">
+            <div class="carousel">
+              <div class="pelicula">
+                <a href="#"><img src="img/1.png" alt=""></a>
+              </div>
+            </div>
+          </div>
+  
+          <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+        </div>
+      </div>
 
       <h2>Posteos</h2> 
       @forelse($posteos as $posteo)
@@ -67,4 +89,8 @@
   </div>
 </div> 
 
+@endsection
+
+@section('scripts')
+  <script src="https://kit.fontawesome.com/c57a089669.js" crossorigin="anonymous"></script>
 @endsection

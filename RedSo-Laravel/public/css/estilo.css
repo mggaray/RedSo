@@ -501,6 +501,60 @@ hr {
     width: 85%;
   }
 
+  /* ----- ----- ----- CARROUSEL ----- ----- ----- */
+
+  .ultimos-posteos{
+    overflow: hidden;
+  }
+
+  .contenedor-principal
+  .contenedor-posteos-controles{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  .contenedor-posteos-controles .indicadores button{
+    background: #FFFFFF;
+    height: 3px;
+    width: 10px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+  }
+
+  .contenedor-posteos-controles .indicadores button.activo{
+    background: blue;
+  }
+
+  .ultimos-posteos .contenedor-principal{
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .ultimos-posteos .contenedor-principal .flecha-izquierda,
+  .ultimos-posteos .contenedor-principal .flecha-derecha {
+    position: absolute;
+    border: none;
+    background: rgba(0,0,0,0.9);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% -25%);
+    line-height: 40px;
+    width: 50px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: 0.9s ease all;
+  }
+
+  .ultimos-posteos .contenedor-principal .flecha-izquierda{
+    left: 0;
+  }
+  .ultimos-posteos .contenedor-principal .flecha-derecha{
+    right: 0;
+  }
+
 
 
 @media (min-width:1024px) {  
