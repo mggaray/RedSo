@@ -298,40 +298,35 @@ background:none;
 }
 
 
-/* CONTACTO */
+/* FAQ */
 /* --------------------------------------------------------------------------------------------------------------------------------------------------
  ----------------------------------------------------------------------------------------------------------------------------------------------- */
 
 
 
 
-.pregunta{
+.preguntas{
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
   background-color: #F03A47;
-  color:black;
+  color:white;
   font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer;
-}
-.card{
-  border: none; 
-  color:black;
-}
-#accordion a:link {
-  text-decoration: none;
-  color: rgba(0,0,0,.5);
-}
-#accordion a:hover {
-  text-decoration: none;
-  color: rgba(0,0,0,.9); 
-} 
+  border: 1px solid #000000;
 
-.card-body.respuesta {
-  color:black;
 }
+
+.preguntas h5{
+  height: 40px;
+  line-height: 50px;
+}
+
+.FAQ .respuesta {
+  font-family: "Roboto", sans-serif;
+  color: black;
+  padding: 5px;
+}
+
 
 /* Perfil */
 /* --------------------------------------------------------------------------------------------------------------------------------------------------
@@ -505,7 +500,6 @@ hr {
   .encontrados {
     width: 85%;
   }
-  
 
 
 
