@@ -297,6 +297,9 @@ background:none;
   bottom:20%;
 }
 
+.posteos .post .Usuario a{
+  color: #000000;
+}
 
 /* FAQ */
 /* --------------------------------------------------------------------------------------------------------------------------------------------------
@@ -570,6 +573,10 @@ hr {
     overflow: scroll;
     overflow-x: hidden;
     height: 300px;
+  }
+
+  .contenedor-principal .contenedor-carousel .carousel .posteo a {
+    color: #000000;
   }
 
 @media (min-width:1024px) {  

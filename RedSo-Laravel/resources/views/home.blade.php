@@ -64,7 +64,7 @@
       <h2>Posteos</h2> 
       @forelse($posteos as $posteo)
       <div class="post">
-      <h3 class="Usuario">{{$posteo->usuario}}</h3>
+      <h3 class="Usuario"><a href="/users/{{$posteo->id}}">{{$posteo->usuario}}</a></h3>
         <hr>
       <p class="post-text">{{$posteo->contenido}}</p> 
       
