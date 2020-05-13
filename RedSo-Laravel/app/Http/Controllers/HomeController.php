@@ -40,7 +40,7 @@ class HomeController extends Controller
             ->orderBy('fechaCreacion','desc')
             ->simplePaginate(8); 
 
-            $calesita = $posteos->take(10);
+            $calesita = $posteos->take(5);
                      
             $vac = compact('usuarioLogueado','posteos','calesita');
             return view('home', $vac);

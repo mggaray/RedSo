@@ -51,8 +51,8 @@
           
           <div class="contenedor-carousel">
             <div class="carousel">
-              <div class="pelicula">
-                <a href="#"><img src="img/1.png" alt=""></a>
+              <div class="posteo">
+                <div id="divUltimosPosteos"></div>
               </div>
             </div>
           </div>
@@ -93,4 +93,6 @@
 
 @section('scripts')
   <script src="https://kit.fontawesome.com/c57a089669.js" crossorigin="anonymous"></script>
+  <script src="{{asset('/js/carousel.js')}}"></script>
+  <script>let posts = <?php echo json_encode($calesita); ?>;</script>
 @endsection
