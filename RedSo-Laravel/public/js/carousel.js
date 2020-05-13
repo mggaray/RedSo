@@ -1,13 +1,6 @@
 window.onload = function () {
 
 let indice = 0;
-// let asd= posts[1]['fechaCreacion'];
-// let asdf = new this.Date(asd);
-// let asdfg = ("0"+asdf.getDate()).slice(-2) + "/" + ("0"+(asdf.getMonth() + 1)).slice(-2) + "/" + asdf.getFullYear() + " " + ("0"+asdf.getHours()).slice(-2) + ":" + ("0"+asdf.getMinutes()).slice(-2);
-// console.log(asdfg);
-
-
-
 
 function innerPosteo(post,fecha,hora) {
     var divPosteo = document.getElementById('divUltimosPosteos');
