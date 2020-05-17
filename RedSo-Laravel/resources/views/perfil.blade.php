@@ -76,7 +76,11 @@
       <div class="container">
       <ul class="lista-amigos">
         @forelse($usuarioLogueado->seguidos->take(7) as $seguido)
-        <a href="/users/{{$seguido->id}}"><img src="/img/chico.png"></a><a href="/users/{{$seguido->id}}" class="text-white bg-dark"><li>{{$seguido['usuario']}}</li></a><hr> 
+       
+        <li>
+          <a href="/users/{{$seguido->id}}"><img src={{ !$seguido->foto_perfil ?'/img/chico.png'  : $seguido->foto_perfil }}>
+          {{$seguido['usuario']}}
+        </li></a><hr> 
       @empty 
       <span class="border border-danger">Este usuario no sigue a nadie </span>
       
@@ -96,7 +100,7 @@
         @forelse($usuarioLogueado->seguidores->take(7) as $seguidor)
         <a href="/users/{{$seguidor->id}}"><img src="/img/chico.png"></a><a href="/users/{{$seguidor->id}}" class="text-white bg-dark"><li>{{$seguidor['usuario']}}</li></a><hr>
         @empty 
-        <span class="border border-danger">Este usuario no tiene seguidores</span>
+        {{-- <div class="border border-danger">Este usuario no tiene seguidores</div> --}}
         
         @endforelse
       </ul>
