@@ -29,8 +29,6 @@ body, .respuesta {
   background-color: #002642;
   font-family: "Roboto", sans-serif;
   color: white;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .card h5{
@@ -316,13 +314,6 @@ background:none;
   color: #000000;
 }
 
-/* FAQ */
-/* --------------------------------------------------------------------------------------------------------------------------------------------------
- ----------------------------------------------------------------------------------------------------------------------------------------------- */
-
-
-
-
 .preguntas{
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
@@ -339,9 +330,9 @@ background:none;
   line-height: 50px;
 }
 
-.FAQ .respuesta {
+.faq p {
   font-family: "Roboto", sans-serif;
-  color: black;
+  color: #cbcbcb;
   padding: 5px;
 }
 
@@ -594,6 +585,9 @@ hr {
     color: #000000;
   }
 
+  .contacto, .faq{
+    color: white;
+  }
 @media (min-width:1024px) {  
 
 

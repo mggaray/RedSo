@@ -6,7 +6,7 @@
 
 @section('contenido')
 
-<div class="container">
+<div class="container faq">
   <div class="row">
     <div class="col-sm-12">
       <h1>Preguntas Frecuentes</h1>
