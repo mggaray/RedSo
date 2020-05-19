@@ -36,7 +36,7 @@ class HomeController extends Controller
             ->join('users','amigos.seguido_id','=','users.id')
            
             ->where('amigos.user_id','=',$usuarioLogueado->id)
-            ->select('posteos.contenido','posteos.fechaCreacion','users.usuario','posteos.id AS posteosId', 'users.id')
+            ->select('posteos.contenido','posteos.fechaCreacion','users.usuario','users.foto_perfil','posteos.id AS posteosId', 'users.id')
             ->orderBy('fechaCreacion','desc')
             ->simplePaginate(8); 
 
