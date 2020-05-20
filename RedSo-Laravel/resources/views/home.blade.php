@@ -83,8 +83,10 @@
       </div> 
       @empty 
       <h1>Sin posteos</h1>
-      @endforelse 
-   {{$posteos->links()}}
+      @endforelse  
+      <div class="container-fluid">
+      {{$posteos->links()}}
+    </div>
     </div>
   </div>
 </div> 

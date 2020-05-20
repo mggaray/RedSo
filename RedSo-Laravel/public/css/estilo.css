@@ -1,6 +1,8 @@
 /* Estilos generales*/
 /* --------------------------------------------------------------------------------------------------------------------------------------------------
  ----------------------------------------------------------------------------------------------------------------------------------------------- */
+ 
+ 
  nav {
   background-color:#F03A47;
 }
@@ -30,7 +32,8 @@ body, .respuesta {
   font-family: "Roboto", sans-serif;
   color: white;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; 
+  overflow-x: hidden;
 }
 
 .card h5{
@@ -337,9 +340,10 @@ background:none;
 .body-perfil {
   background-color: #002642;
   overflow:auto;
+   overflow-x: hidden;
   text-align: center;
   margin: auto;
-  height: 100vh;
+  height: 100vh; 
 }
 
 .perfil{

@@ -13,7 +13,7 @@
     <title>@yield('titulo')</title> 
   </head>
 
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
   <a class="navbar-brand" href="#">RedSo</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -52,8 +52,16 @@
         <li class="nav-item">
           <a class="nav-link link-menu" href="/register"> <button class="btn-logreg">Registrarse</button></a>
         </li>
-      @endguest
+      @endguest 
+      
     </ul>
+    @auth
+    <form class="form-inline my-2 my-lg-0" action="/busquedaUser" method="POST"> 
+      @csrf
+      <input class="form-control mr-sm-2" type="text" placeholder="Buscar usuario" aria-label="Search" id="buscar" name="buscar">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button> 
+    </form> 
+    @endauth
   </div>
 </nav>
 <section>
