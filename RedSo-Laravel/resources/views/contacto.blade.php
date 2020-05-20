@@ -5,7 +5,7 @@
 @endsection
 
 @section('contenido')
-<div class="container">
+<div class="container contacto">
     <form id="contact-form" method="post" action="mailto:info@redso.com" role="form">
         @csrf
   

@@ -57,7 +57,10 @@
       <a href="#"><button type="button" class="btn btn-primary busqueda">Seguidos: <span><b>{{$usuario->seguidos->count()}}</b></span></button></a>  
       <ul class="lista-amigos">
         @forelse($usuario->seguidos->take(7) as $seguido)
-        <a href="/users/{{$seguido->id}}"><img src="/img/chico.png"></a><a href="/users/{{$seguido->id}}"class="text-white bg-dark"><li>{{$seguido['usuario']}}</li></a><hr> 
+        <li>
+          <a href="/users/{{$seguido->id}}"><img src={{ !$seguido->foto_perfil ?'/img/chico.png'  : $seguido->foto_perfil }}>
+          {{$seguido['usuario']}}
+        </li></a><hr>  
       @empty  
       
       <span class="border border-danger">Este usuario no sigue a nadie </span>
@@ -71,7 +74,10 @@
       <a href="#"><button type="button" class="btn btn-primary busqueda">Seguidores: <span><b>{{$usuario->seguidores->count()}} </b></span></button></a> 
       <ul class="lista-amigos">
         @forelse($usuario->seguidores->take(7) as $seguidor)
-        <a href="/users/{{$seguidor->id}}"><img src="/img/chico.png"></a><a href="/users/{{$seguidor->id}}" class="text-white bg-dark"><li>{{$seguidor['usuario']}}</li></a><hr>
+        <li>
+          <a href="/users/{{$seguidor->id}}"><img src={{ !$seguidor->foto_perfil ?'/img/chico.png'  : $seguidor->foto_perfil }}>
+          {{$seguidor['usuario']}}
+        </li></a><hr>
         @empty 
         <span class="border border-danger">Este usuario no sigue a nadie </span>
         @endforelse

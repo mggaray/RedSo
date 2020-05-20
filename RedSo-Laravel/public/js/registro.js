@@ -6,21 +6,16 @@ window.onload = function(){
     let password = document.getElementById('password');
     let confirmarPassword = document.getElementById('password-confirm');
     let cumpleanios = document.getElementById('cumpleanios');
-    nombre.value = "";
-    apellido.value = "";
-    email.value = "";
-    usuario.value = "";
-    cumpleanios.value = "";
+    
+    let estados = [];
 
-    let estados = {
-        nombre: false,
-        apellido: false,
-        email: false,
-        usuario: false,
-        password: false,
-        confirmarPassword: false,
-        cumpleanios: false
-    }
+    estados['nombre'] = (nombre.value) ? true:false;
+    estados['apellido'] = (apellido.value) ? true:false;
+    estados['email'] = (email.value) ? true:false;
+    estados['usuario'] = (usuario.value) ? true:false;
+    estados['password'] = (password.value) ? true:false;
+    estados['confirmarPassword'] = (confirmarPassword.value) ? true:false;
+    estados['cumpleanios'] = (cumpleanios.value) ? true:false;
 
     let boton = document.querySelector('.enviar')
     boton.disabled = true;
@@ -99,6 +94,8 @@ window.onload = function(){
 
     password.oninput = function() {
         let valor = password.value.length;
+        let valorPassword = password.value;
+        let valorConfirmar = confirmarPassword.value;
         if (valor < 8 || valor == "") {
             document.querySelector('.alertaPassword').innerHTML="<small style='color:red;'><b>La contraseña debe tener al menos 8 caracteres</b></small>";
             estados['password'] = false;
@@ -106,27 +103,38 @@ window.onload = function(){
             document.querySelector('.alertaPassword').innerHTML=" ";
             estados['password'] = true;
         }
+
+        if (valorPassword != valorConfirmar) {
+            document.querySelector('.alertaConfirmarPassword').innerHTML="<small style='color:red;'><b>Las contraseñas no coinciden</b></small>";
+            estados['password'] = false;
+            estados['confirmarPassword'] = false;
+        }else{
+            document.querySelector('.alertaConfirmarPassword').innerHTML=" ";
+            estados['password'] = true;
+            estados['confirmarPassword'] = true;
+        }
         estadoBoton();
    
     }
 
     confirmarPassword.oninput = function() {
-        let valorPassword = password.value;
-        let valorConfirmar = confirmarPassword.value;
+        valorPassword = password.value;
+        valorConfirmar = confirmarPassword.value;
         if (valorPassword != valorConfirmar) {
             document.querySelector('.alertaConfirmarPassword').innerHTML="<small style='color:red;'><b>Las contraseñas no coinciden</b></small>";
             estados['confirmarPassword'] = false;  
+            estados['password'] = false;  
         }else{
             document.querySelector('.alertaConfirmarPassword').innerHTML=" ";
             estados['confirmarPassword'] = true;
+            estados['password'] = true;  
         }
         estadoBoton();
     }
 
     cumpleanios.onchange = function() {
         let valor = cumpleanios.value;
-        console.log(valor);
-        
+
             if (!valor) {
             document.querySelector('.alertaCumpleanios').innerHTML="<small style='color:red;'><b>Complete el cumpleaños</b></small>";
             estados['cumpleanios'] = false;
@@ -137,6 +145,7 @@ window.onload = function(){
         }
         estadoBoton();
     }
+    
 
     let formulario = document.querySelector('.registro');
     formulario.onsubmit = function () {

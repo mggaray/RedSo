@@ -41,7 +41,7 @@
 
       @auth
         <li class="nav-item">
-          <a class="nav-link link-menu" href="/logout">Logout</a>
+          <a class="nav-link link-menu" href="/logout"><button class="btn-logout">Logout</button></a>
         </li>
       @endauth
 

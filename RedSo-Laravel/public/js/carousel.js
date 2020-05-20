@@ -20,9 +20,6 @@ function formatoFechaHora(post){
 let post = posts[indice];
 formatoFechaHora(post);
 innerPosteo(post, tiempo[0],tiempo[1]);
-console.log(posts[indice]);
-
-
 
   document.querySelector('.flecha-derecha').onclick = function() {
 

@@ -1,8 +1,32 @@
 /* Estilos generales*/
 /* --------------------------------------------------------------------------------------------------------------------------------------------------
  ----------------------------------------------------------------------------------------------------------------------------------------------- */
+<<<<<<< HEAD
  
  
+=======
+* {
+  /*Scrollbar Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #152F4F #F03A47;
+}
+
+/*Scrollbar Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: #F03A47;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #152F4F;
+  border-radius: 20px;
+  border: 1px solid #F03A47;
+}
+
+
+
+>>>>>>> 48689a3e56b639a74e7d5ea0d1960aaea13f45c6
  nav {
   background-color:#F03A47;
 }
@@ -28,12 +52,15 @@
   color: black;
 }
 body, .respuesta {
-  background-color: #C2DCCF; /* fallback for old browsers */
+  background-color: #002642;
   font-family: "Roboto", sans-serif;
   color: white;
+<<<<<<< HEAD
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
   overflow-x: hidden;
+=======
+>>>>>>> 48689a3e56b639a74e7d5ea0d1960aaea13f45c6
 }
 
 .card h5{
@@ -51,6 +78,21 @@ body, .respuesta {
 } 
 
 .btn-logreg:hover {
+  background-color: white;
+  color:black;
+}
+
+.btn-logout {
+  background-color: #000 ; 
+  margin-right:1%; 
+  border-radius: 10%; 
+  border:  black solid 1px; 
+  color:white;
+  transition: background-color .3s;
+  transition: color .3s;
+} 
+
+.btn-logout:hover {
   background-color: white;
   color:black;
 }
@@ -195,6 +237,10 @@ background:none;
 /* --------------------------------------------------------------------------------------------------------------------------------------------------
  ----------------------------------------------------------------------------------------------------------------------------------------------- */
 
+ .Usuario img{
+   height: 100px;
+   padding-right: 50px
+ }
 
 
 
@@ -304,13 +350,6 @@ background:none;
   color: #000000;
 }
 
-/* FAQ */
-/* --------------------------------------------------------------------------------------------------------------------------------------------------
- ----------------------------------------------------------------------------------------------------------------------------------------------- */
-
-
-
-
 .preguntas{
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
@@ -327,9 +366,9 @@ background:none;
   line-height: 50px;
 }
 
-.FAQ .respuesta {
+.faq p {
   font-family: "Roboto", sans-serif;
-  color: black;
+  color: #cbcbcb;
   padding: 5px;
 }
 
@@ -422,7 +461,7 @@ hr {
 .lista-amigos {
 
   list-style-type: none;
-  margin:2%;
+  margin:auto;
   padding: 0px;
 
 }
@@ -583,6 +622,9 @@ hr {
     color: #000000;
   }
 
+  .contacto, .faq{
+    color: white;
+  }
 @media (min-width:1024px) {  
 
 
@@ -602,12 +644,17 @@ hr {
 
   .posteos {
     float:left;
-    width: 30%;
+    width: 40%;
   }
   .lista-amigos {
-  width:45%;
-
+  width:70%;
   } 
+  .lista-amigos span, img{
+    width:100%;
+    } 
+    .lista-amigos img{
+      /* width:100%; */
+      } 
 
   .busqueda {
     margin-top: 10%;

@@ -10,7 +10,7 @@
       <label for="nombre" style="color:black">Nombre</label>
         
         <div>
-            <input id="nombre" type="text" placeholder="Ingrese su nombre" class="form-control @error('nombre') is-invalid @enderror" name="nombre" value="{{ old('nombre') }}" required autocomplete="nombre" autofocus>
+            <input id="nombre" type="text" placeholder="Ingrese su nombre" class="form-control @error('nombre') is-invalid @enderror" name="nombre" value="{{ old('nombre') }}" required autocomplete="nombre">
             <div class="alertaNombre"></div>
 
             @error('nombre')
@@ -24,7 +24,7 @@
         <label for="apellido"style="color:black">Apellido</label>
 
         <div>
-            <input id="apellido" type="text" placeholder="Ingrese su apellido" class="form-control @error('apellido') is-invalid @enderror" name="apellido" value="{{ old('apellido') }}" required autocomplete="apellido" autofocus>
+            <input id="apellido" type="text" placeholder="Ingrese su apellido" class="form-control @error('apellido') is-invalid @enderror" name="apellido" value="{{ old('apellido') }}" required autocomplete="apellido">
             <div class="alertaApellido"></div>
 
             @error('apellido')
@@ -66,7 +66,7 @@
         <label for="password" style="color:black">Contraseña</label>
 
         <div>
-            <input id="password" type="password" placeholder="Ingrese su contraseña" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+            <input id="password" type="password" placeholder="Ingrese su contraseña" class="form-control @error('password') is-invalid @enderror" name="password" required>
             <div class="alertaPassword"></div>
 
             @error('password')
@@ -80,13 +80,13 @@
         <label for="password-confirm" style="color:black">Confirmar contraseña</label>
 
         <div>
-            <input id="password-confirm" placeholder="Ingrese su contraseña" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+            <input id="password-confirm" placeholder="Ingrese su contraseña" type="password" class="form-control" name="password_confirmation" required>
         </div> 
         <div class="alertaConfirmarPassword"></div>
 
         <div>
             <label for="cumpleanios" style="color:black">Fecha de Nacimiento</label>
-            <input type="date" placeholder="Ingrese su fecha de nacimiento" class="form-control @error('cumpleanios') is-invalid @enderror" id="cumpleanios" name="cumpleanios" value="{{ old('cumpleanios') }}" required autocomplete="usuario"/>
+            <input type="date" placeholder="Ingrese su fecha de nacimiento" class="form-control @error('cumpleanios') is-invalid @enderror" id="cumpleanios" name="cumpleanios" value="{{ old('cumpleanios') }}"/>
             <div class="alertaCumpleanios"></div>
             @error('cumpleanios')
                 <span class="invalid-feedback" role="alert">
@@ -105,7 +105,7 @@
 
         <div>
             <label for="ciudad" style="color:black">Ciudad</label>
-            <input type="text" placeholder="Ingrese su ciudad" class="form-control @error('ciudad') is-invalid @enderror" id="ciudad" name="ciudad" value="{{ old('ciudad') }}"  autocomplete="ciudad"/>
+            <input type="text" placeholder="Ingrese su ciudad" class="form-control @error('ciudad') is-invalid @enderror" id="ciudad" name="ciudad" value="{{ old('ciudad')}} "  autocomplete="ciudad"/>
             @error('ciudad')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>

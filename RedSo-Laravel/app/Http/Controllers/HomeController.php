@@ -36,7 +36,7 @@ class HomeController extends Controller
             ->join('users','amigos.seguido_id','=','users.id')
            
             ->where('amigos.user_id','=',$usuarioLogueado->id)
-            ->select('posteos.contenido','posteos.fechaCreacion','users.usuario','posteos.id', 'users.id')
+            ->select('posteos.contenido','posteos.fechaCreacion','users.usuario','users.foto_perfil','posteos.id AS posteosId', 'users.id')
             ->orderBy('fechaCreacion','desc')
             ->simplePaginate(8); 
 
@@ -110,7 +110,7 @@ class HomeController extends Controller
 
               /*Guarda en DB*/ 
 
-              $comentario = new Comentario();
+              $comentario = new Comentario(); 
               $comentario->post_id=$req['postId'];   
               $comentario->contenido=$req["comentario"]; 
               $comentario->user_id = Auth::user()->id;
