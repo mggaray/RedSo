@@ -70,7 +70,6 @@
         
         <p class="align-text-bottom text-right muted small">{{date('d/m/Y',strtotime($posteo->fechaCreacion))}}&nbsp;&nbsp;<b>{{date('H:i',strtotime($posteo->fechaCreacion))}}h</b></p> 
 
-<<<<<<< HEAD
       <a href="#" class="text-left align-text-bottom  muted small">Comentarios</a> 
       <form action="/comentar" method="POST"> 
         @csrf
@@ -88,24 +87,6 @@
       <div class="container-fluid">
       {{$posteos->links()}}
     </div>
-=======
-        <a href="/comentar" class="text-left align-text-bottom  muted small">Comentarios</a> 
-        <form action="/comentar" method="POST"> 
-          @csrf
-          <div class="form-group"> 
-            <input type="hidden" name="postId" value={{$posteo->posteosId}}>
-            <textarea class="form-control" id="comentario" rows="3" name="comentario"></textarea> <br>
-            <button type="submit" class="btn btn-primary">Comentar</button>
-        </form>
-        <span class="border-bottom"></span>
-        </div> 
-        </div> 
-        @empty 
-        <h1>Sin posteos</h1>
-        @endforelse 
-    {{$posteos->links()}}
-      </div>
->>>>>>> 48689a3e56b639a74e7d5ea0d1960aaea13f45c6
     </div>
   </div> 
 

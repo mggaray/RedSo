@@ -1,10 +1,6 @@
 /* Estilos generales*/
 /* --------------------------------------------------------------------------------------------------------------------------------------------------
  ----------------------------------------------------------------------------------------------------------------------------------------------- */
-<<<<<<< HEAD
- 
- 
-=======
 * {
   /*Scrollbar Firefox */
   scrollbar-width: thin;
@@ -26,7 +22,6 @@
 
 
 
->>>>>>> 48689a3e56b639a74e7d5ea0d1960aaea13f45c6
  nav {
   background-color:#F03A47;
 }
@@ -55,12 +50,9 @@ body, .respuesta {
   background-color: #002642;
   font-family: "Roboto", sans-serif;
   color: white;
-<<<<<<< HEAD
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
   overflow-x: hidden;
-=======
->>>>>>> 48689a3e56b639a74e7d5ea0d1960aaea13f45c6
 }
 
 .card h5{
