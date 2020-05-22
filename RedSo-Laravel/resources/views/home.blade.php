@@ -74,7 +74,7 @@
       <form action="/comentar" method="POST"> 
         @csrf
         <div class="form-group"> 
-          <input type="hidden" name="postId" value={{$posteo->id}}>
+          <input type="hidden" name="postId" value={{$posteo->posteoId}}>
           <textarea class="form-control" id="comentario" rows="3" name="comentario"></textarea> <br>
           <button type="submit" class="btn btn-primary">Comentar</button>
       </form>
