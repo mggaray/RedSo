@@ -59,6 +59,7 @@
         @forelse($usuario->seguidos->take(7) as $seguido)
         <li>
           <a href="/users/{{$seguido->id}}"><img src={{(Storage::exists("/foto_perfil/$seguido->id/$seguido->foto_perfil")) ? "/storage/foto_perfil/$seguido->id/$seguido->foto_perfil" :'/img/chico.png'}}>
+            <br>
           {{$seguido['usuario']}}
         </li></a><hr>  
       @empty  
@@ -76,6 +77,7 @@
         @forelse($usuario->seguidores->take(7) as $seguidor)
         <li>
           <a href="/users/{{$seguidor->id}}"><img src={{(Storage::exists("/foto_perfil/$seguidor->id/$seguidor->foto_perfil")) ? "/storage/foto_perfil/$seguidor->id/$seguidor->foto_perfil" :'/img/chico.png'}}>
+            <br>
           {{$seguidor['usuario']}}
         </li></a><hr>
         @empty 

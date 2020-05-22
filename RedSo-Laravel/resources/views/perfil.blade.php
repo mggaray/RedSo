@@ -78,6 +78,7 @@
         @forelse($usuarioLogueado->seguidos->take(7) as $seguido)
         <li>
           <a href="/users/{{$seguido->id}}"><img src={{(Storage::exists("/foto_perfil/$seguido->id/$seguido->foto_perfil")) ? "/storage/foto_perfil/$seguido->id/$seguido->foto_perfil" :'/img/chico.png'}}>
+            <br>
           {{$seguido['usuario']}}
         </li></a><hr> 
       @empty 
@@ -97,7 +98,11 @@
       <div class="container">
       <ul class="lista-amigos">
         @forelse($usuarioLogueado->seguidores->take(7) as $seguidor)
-        <a href="/users/{{$seguidor->id}}"><img src={{(Storage::exists("/foto_perfil/$seguidor->id/$seguido->foto_perfil")) ? "/storage/foto_perfil/$seguidor->id/$seguido->foto_perfil" :'/img/chico.png'}}><hr>
+        <li>
+          <a href="/users/{{$seguidor->id}}"><img src={{(Storage::exists("/foto_perfil/$seguidor->id/$seguido->foto_perfil")) ? "/storage/foto_perfil/$seguidor->id/$seguidor->foto_perfil" :'/img/chico.png'}}>
+            <br>
+          {{$seguidor['usuario']}}
+        </li></a><hr>
         @empty 
         {{-- <div class="border border-danger">Este usuario no tiene seguidores</div> --}}
         

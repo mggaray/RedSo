@@ -20,7 +20,9 @@
   border: 1px solid #F03A47;
 }
 
-
+body{
+  overflow-y: hidden;
+}
 
  nav {
   background-color:#F03A47;
@@ -231,7 +233,9 @@ background:none;
 
  .Usuario img{
    height: 100px;
-   padding-right: 50px
+   /* padding-right: 50px; */
+   margin-right: 50px;
+   width: 100px;
  }
 
 
@@ -391,6 +395,7 @@ background:none;
 
 .foto-perfil img{
   width: 100%;
+  max-width: 200px;
 }
 
 .nombre {
@@ -408,7 +413,8 @@ hr {
 }
 
 .posteos {
-  margin: 0 auto;
+  margin: 0 auto 20% auto;
+
 }
 
 .post {
@@ -561,12 +567,11 @@ hr {
 
   .ultimos-posteos .contenedor-principal .flecha-izquierda,
   .ultimos-posteos .contenedor-principal .flecha-derecha {
-    position: absolute;
+    position: relative;
     border: none;
     background: rgba(0,0,0,0.3);
     font-size: 40px;
-    height: 84%;
-    top: calc(50% -25%);
+    height: 302px;
     line-height: 40px;
     width: 50px;
     color: #FFFFFF;
@@ -580,10 +585,11 @@ hr {
   }
 
   .ultimos-posteos .contenedor-principal .flecha-izquierda{
-    left: -50px;
+    left: 0px;
+    z-index: 1000000;
   }
   .ultimos-posteos .contenedor-principal .flecha-derecha{
-    right: -50px;
+    right: 0px;
     z-index: 1000000;
   }
 
@@ -643,6 +649,7 @@ hr {
   } 
   .lista-amigos span, img{
     width:100%;
+    max-width: 200px;
     } 
     .lista-amigos img{
       width:120px;

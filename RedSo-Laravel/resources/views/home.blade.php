@@ -64,7 +64,7 @@
         <h2>Posteos</h2> 
         @forelse($posteos as $posteo)
         <div class="post">
-        <h3 class="Usuario"><a href="/users/{{$posteo->id}}"><img src="{{$posteo->foto_perfil}}" alt="">{{$posteo->usuario}}</a></h3>
+        <h3 class="Usuario"><a href="/users/{{$posteo->id}}"><img src="storage/foto_perfil/{{$posteo->id}}/{{$posteo->foto_perfil}}" alt="">{{$posteo->usuario}}</a></h3>
           <hr>
         <p class="post-text">{{$posteo->contenido}}</p> 
         
