@@ -20,9 +20,6 @@
   border: 1px solid #F03A47;
 }
 
-body{
-  overflow-y: hidden;
-}
 
  nav {
   background-color:#F03A47;
@@ -109,7 +106,7 @@ body, .respuesta {
   position: relative;
   z-index: 1;
   background: #FFFFFF;
-  width: 450px;
+  width: 100%;
   margin: 0 auto 100px;
   padding: 45px;
   text-align: center;
@@ -161,6 +158,7 @@ body, .respuesta {
   /* max-width: 300px; */
   margin: 0 auto; 
   color:black;
+  
 }
 .container:before, .container:after {
   content: "";
@@ -378,12 +376,16 @@ background:none;
    overflow-x: hidden;
   text-align: center;
   margin: auto;
-  height: 100vh; 
+  /* height: 100vh;  */
 }
 
 .perfil{
   margin: 0px;
   padding: 0px;
+}
+
+.body-perfil img{
+  max-width: 200px;
 }
 
 .post-text {

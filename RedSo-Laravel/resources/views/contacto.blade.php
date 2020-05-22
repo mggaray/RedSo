@@ -8,8 +8,8 @@
 <div class="container contacto">
     <form id="contact-form" method="post" action="mailto:info@redso.com" role="form">
         @csrf
-  
-        <div class="messages"><h1>Contacto</h1></div>
+        
+        <div class="messages"><h1>Contacto</h1></>
   
         <div class="controls">
   
