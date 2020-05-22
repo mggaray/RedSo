@@ -71,7 +71,6 @@
    @section('amigos')
      <div class="seguidores segleft">
       <a href="#"><button type="button" class="btn btn-primary busqueda">Seguidos: <span><b>{{$usuarioLogueado->seguidos->count()}}</b></span></button></a>  
-      <a href="/busquedaUser"><button type="button" class="btn btn-primary busqueda">Buscar usuarios</button></a>
       <h2 class="amigos-title"> </h2><br>
       <div class="container">
       <ul class="lista-amigos">
