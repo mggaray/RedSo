@@ -13,7 +13,7 @@ $factory->define(User::class, function (Faker $faker) {
         'apellido' =>$faker->lastName,
         'cumpleanios' =>$faker->date($format = 'Y-m-d', $max = 'now'),
         'ciudad' =>$faker->city,
-        'foto_perfil' =>$faker->imageUrl($width = 640, $height = 480), 
+        // 'foto_perfil' =>$faker->image($dir = '/tmp', $width = 400, $height = 400, ['selfie'], true), 
         'password' =>$faker->password
     ];
 });

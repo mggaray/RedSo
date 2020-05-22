@@ -7,10 +7,10 @@
 
 
         @section('foto')
-        @if($usuario->foto_perfil == null) 
+        @if($usuario->foto_perfil == null || !(Storage::exists("/foto_perfil/$usuario->id/$usuario->foto_perfil"))) 
         <img src="/img/chico.png">
         @else
-        <img src= "{{$usuario->foto_perfil}}">
+        <img src= "/storage/foto_perfil/{{$usuario->id}}/{{$usuario->foto_perfil}}">
         @endif
         @endsection
         
@@ -58,7 +58,7 @@
       <ul class="lista-amigos">
         @forelse($usuario->seguidos->take(7) as $seguido)
         <li>
-          <a href="/users/{{$seguido->id}}"><img src={{ !$seguido->foto_perfil ?'/img/chico.png'  : $seguido->foto_perfil }}>
+          <a href="/users/{{$seguido->id}}"><img src={{(Storage::exists("/foto_perfil/$seguido->id/$seguido->foto_perfil")) ? "/storage/foto_perfil/$seguido->id/$seguido->foto_perfil" :'/img/chico.png'}}>
           {{$seguido['usuario']}}
         </li></a><hr>  
       @empty  
@@ -75,7 +75,7 @@
       <ul class="lista-amigos">
         @forelse($usuario->seguidores->take(7) as $seguidor)
         <li>
-          <a href="/users/{{$seguidor->id}}"><img src={{ !$seguidor->foto_perfil ?'/img/chico.png'  : $seguidor->foto_perfil }}>
+          <a href="/users/{{$seguidor->id}}"><img src={{(Storage::exists("/foto_perfil/$seguidor->id/$seguido->foto_perfil")) ? "/storage/foto_perfil/$seguidor->id/$seguidor->foto_perfil" :'/img/chico.png'}}>
           {{$seguidor['usuario']}}
         </li></a><hr>
         @empty 
