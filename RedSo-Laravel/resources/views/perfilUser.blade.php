@@ -75,7 +75,7 @@
       <ul class="lista-amigos">
         @forelse($usuario->seguidores->take(7) as $seguidor)
         <li>
-          <a href="/users/{{$seguidor->id}}"><img src={{(Storage::exists("/foto_perfil/$seguidor->id/$seguido->foto_perfil")) ? "/storage/foto_perfil/$seguidor->id/$seguidor->foto_perfil" :'/img/chico.png'}}>
+          <a href="/users/{{$seguidor->id}}"><img src={{(Storage::exists("/foto_perfil/$seguidor->id/$seguidor->foto_perfil")) ? "/storage/foto_perfil/$seguidor->id/$seguidor->foto_perfil" :'/img/chico.png'}}>
           {{$seguidor['usuario']}}
         </li></a><hr>
         @empty 
