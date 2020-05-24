@@ -58,4 +58,8 @@ class User extends Authenticatable
         $this->notify(new ResetPasswordNotification($token));
     }
     
+    public function admin()
+    {
+        return $this->tipo_usuario === 'admin';
+    }
 }

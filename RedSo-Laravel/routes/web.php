@@ -11,6 +11,17 @@
 |
 */
 
+use App\Http\Controllers\PerfilController;
+
+// ------------------------------RUTA PANEL ADMIN
+// ------------------------------RUTA PANEL ADMIN
+// Route::group(['middleware' => 'admin'], function () {
+    // Route::get('/admin', "AdminController@index")
+// });
+// ------------------------------RUTA PANEL ADMIN
+// ------------------------------RUTA PANEL ADMIN
+
+
 Route::get('/', "HomeController@index"); 
 Route::post('/comentar', 'homeController@comentar');
 
@@ -47,3 +58,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home'); 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
