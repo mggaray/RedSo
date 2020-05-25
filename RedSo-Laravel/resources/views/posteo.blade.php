@@ -4,7 +4,7 @@
     Posteo de {{$posteo->user->usuario}} 
 @endsection  
 @section('contenido')  
-<div class="post">
+<div class="post-comentario">
     <h3 class="Usuario"><img src="/storage/foto_perfil/{{$posteo->user->id}}/{{$posteo->user->foto_perfil}}"alt="">{{$posteo->user->usuario}}</h3>
       <hr>
     <p class="post-text">{{$posteo->contenido}}</p> 
