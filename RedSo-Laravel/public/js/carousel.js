@@ -4,7 +4,7 @@ let indice = 0;
 
 function innerPosteo(post,fecha,hora) {
     var divPosteo = document.getElementById('divUltimosPosteos');
-    return divPosteo.innerHTML = "<div class='post'><h3 class='Usuario'><a href='/users/"+post['id']+"'>"+post['usuario']+"</a></h3><hr><p class='post-text'>"+post['contenido']+"</b></p><p class='align-text-bottom text-right muted small'>"+fecha+"&nbsp;&nbsp;<b>"+hora+"</b></p> </div> ";
+    return divPosteo.innerHTML = "<div class='post'><h3 class='Usuario'><a href='/users/"+post['id']+"'><img src='/storage/foto_perfil/"+post['id']+"/"+post['foto_perfil']+"'>"+post['usuario']+"</a></h3><hr><p class='post-text'>"+post['contenido']+"</b></p><p class='align-text-bottom text-right muted small'>"+fecha+"&nbsp;&nbsp;<b>"+hora+"</b></p> </div> ";
     
 }
 

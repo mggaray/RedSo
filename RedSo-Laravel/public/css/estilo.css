@@ -588,11 +588,11 @@ hr {
 
   .ultimos-posteos .contenedor-principal .flecha-izquierda{
     left: 0px;
-    z-index: 1000000;
+    z-index: auto;
   }
   .ultimos-posteos .contenedor-principal .flecha-derecha{
     right: 0px;
-    z-index: 1000000;
+    z-index: auto;
   }
 
   .contenedor-principal .contenedor-carousel {
