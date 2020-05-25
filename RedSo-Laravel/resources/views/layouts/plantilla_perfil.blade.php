@@ -30,4 +30,7 @@
     @yield('amigos')
    </div>
  </div>
- @endsection
+ @endsection 
+ @section("scripts") 
+  @yield("script") 
+@endsection

@@ -34,8 +34,19 @@
       @section('posteos')
      <h2>Posteos</h2>
      @forelse($posteos as $posteo)
-     <div class="post">
-       <h3 class="Usuario">{{$usuario->usuario}}</h3>
+     <div class="post">  
+       @if(Auth::user()->admin())
+      <form action="/eliminarPost" method="POST" class="borrarPost">  
+        @csrf
+        <input type="hidden" name="postId" value={{$posteo->id}}> 
+        <input type="hidden" name="userId" value={{$usuario->id}}>
+      <button type="button" class="close" aria-label="Close"> 
+        <span aria-hidden="true">&times;</span>
+      </button> 
+      </form>
+       
+      @endif
+       <h3 class="Usuario">{{$usuario->usuario}}</h3> 
        <hr>
      <p class="post-text">{{$posteo['contenido']}}</p> 
      <p class="align-text-bottom text-right muted small">{{date('d-m-Y',strtotime($posteo->fechaCreacion))}}</p> 
@@ -86,5 +97,9 @@
       </ul>  
     </div>
    @endsection
- </div> 
+ </div>   
+ <script src="{{asset('/js/perfil.js')}}" type="module"></script>
+
+ 
+
  

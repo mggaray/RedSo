@@ -82,5 +82,12 @@ class PerfilController extends Controller
         return view('perfil', $vac);
 
 
+    } 
+
+    public function borrarPosteo(Request $req) {
+        $post = Posteo::find($req['postId']);  
+        $post ->comentarios() ->delete();
+        $post -> delete(); 
+        return redirect('users/' . $req['userId']);
     }
 }

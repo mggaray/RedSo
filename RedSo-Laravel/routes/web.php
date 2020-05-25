@@ -33,7 +33,9 @@ Route::post('/busquedaUser', 'perfilController@buscarUsuario');
 Route::get('/users/{id}','perfilController@mostrarUser');  
 
 Route::get('/seguirUsuario/{id}', 'perfilController@agregarUsuario'); 
-Route::get('/dejarUsuario/{id}', 'perfilController@dejarUsuario');
+Route::get('/dejarUsuario/{id}', 'perfilController@dejarUsuario'); 
+
+Route::post('/eliminarPost','perfilController@borrarPosteo');
 
 
 Route::get("faq", function(){
@@ -65,4 +67,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home'); 
+
