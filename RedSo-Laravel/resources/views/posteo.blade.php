@@ -1,12 +1,11 @@
 @extends('layouts.plantilla') 
 
 @section('titulo') 
-    Posteo de {{$posteo->user}} 
+    Posteo de {{$posteo->user->usuario}} 
 @endsection  
-
 @section('contenido')  
 <div class="post">
-    <h3 class="Usuario">{{$posteo->user->usuario}}</h3>
+    <h3 class="Usuario"><img src="/storage/foto_perfil/{{$posteo->user->id}}/{{$posteo->user->foto_perfil}}"alt="">{{$posteo->user->usuario}}</h3>
       <hr>
     <p class="post-text">{{$posteo->contenido}}</p> 
     
@@ -15,9 +14,10 @@
     <a href="#" class="text-left align-text-bottom  muted small">Comentarios</a>  
 
 @forelse ($posteo->comentarios as $comentario)
+
     <div class="container border border-dark rounded mb-3">
         <div class="post">
-            <h3 class="Usuario">{{$comentario->user->usuario}}</h3>
+            <h3 class="Usuario"><img src="/storage/foto_perfil/{{$comentario->user->id}}/{{$comentario->user->foto_perfil}}"alt="">{{$comentario->user->usuario}}</h3>
             <hr>
             <p class="post-text">{{$comentario->contenido}}</p>
             <p class="align-text-bottom text-right muted small">{{date('d/m/Y',strtotime($comentario->created_at))}}&nbsp;&nbsp;<b>{{date('H:i',strtotime($comentario->created_at))}}h</b></p> 
@@ -26,7 +26,7 @@
     @empty 
     <h3>No hay comentarios</h3>
     @endforelse
-    <form action="/comentar" method="POST"> 
+    <form action="/comentarios/{{$posteo->id}}" method="POST"> 
       @csrf
       <div class="form-group"> 
         <input type="hidden" name="postId" value={{$posteo->id}}>

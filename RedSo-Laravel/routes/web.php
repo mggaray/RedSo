@@ -11,6 +11,7 @@
 |
 */
 
+use App\Http\Controllers\ComentariosController;
 use App\Http\Controllers\PerfilController;
 
 // ------------------------------RUTA PANEL ADMIN
@@ -52,6 +53,9 @@ Route::get('contacto', function () {
 Route::get('/home', function(){
     return view('home');
 });
+
+Route::get('/comentarios/{post_id}', 'ComentariosController@comentario');
+Route::post('/comentarios/{post_id}','ComentariosController@comentar');  
 
 Route::post('/home', 'HomeController@postear');
 
