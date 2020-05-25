@@ -31,8 +31,6 @@
                     <textarea name="posteo" id="posteo"></textarea>
                 </div>
                 <div class="botones">
-                    <label for="imagen">Agregar una imagen</label>
-                    <input type="file" name="imagen">
                     <button type="submit" class="btn btn-dark">Publicar</button>
                 </div>
             </form>

@@ -33,8 +33,8 @@
         <div class="alertaPassword"></div>
 
         <div class="recuerdame">
-            <input type="checkbox" name="recuerdame" style="display:inline;" value="SI" id="remember" {{ old('remember') ? 'checked' : '' }}>
-            <label for="recuerdame" style="color:black;display:inline">Recuerdame</label>
+            <input type="checkbox" name="remember" style="display:inline;" value="SI" id="remember" {{ old('remember') ? 'checked' : '' }}>
+            <label for="remember" style="color:black;display:inline">Recuerdame</label>
         </div>
         
         <div>
