@@ -100,7 +100,7 @@
 
         <div class=reg-foto-perfil>
             <label for="foto_perfil" style="color:black">Subir Foto de Perfil</label>
-            <input type="file" name="foto_perfil">
+            <input type="file" name="foto_perfil" accept="image/*">
         </div> 
 
         <div>
