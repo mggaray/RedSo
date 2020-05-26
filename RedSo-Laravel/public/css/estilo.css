@@ -20,9 +20,15 @@
   border: 1px solid #F03A47;
 }
 
+html{
+margin:0px;
+padding:0px;
+width: 100vw;
+}
 
  nav {
   background-color:#F03A47;
+  box-shadow: 0px 27px 29px -31px rgba(0,0,0,0.83);
 }
 
 .navbar-light .navbar-brand {
@@ -62,18 +68,18 @@ body, .respuesta {
 } 
 
 .btn-logreg {
-  background-color: #5891b9 ; 
+  background-color: #002642 ; 
   margin-right:1%; 
-  border-radius: 10%; 
-  border:  black solid 1px; 
+  border-radius: 10%;
+  border:none;
   color:white;
   transition: background-color .3s;
-
+  transition: color .3s;
 } 
 
 .btn-logreg:hover {
   background-color: white;
-  color:black;
+  color:#f03a47;
 }
 
 .btn-logout {
@@ -97,7 +103,7 @@ body, .respuesta {
 
 .btn-logout:hover {
   background-color: white;
-  color:black;
+  color:#f03a47;
 }
 /* --------------------------------------------------------------------------------------------------------------------------------------------------
  ----------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -502,24 +508,72 @@ hr {
 
 .main-index {
   display:flex;
+  background-color:whitesmoke;
+  color:#002642;
   flex-wrap: wrap; 
   justify-content: center; 
   overflow: hidden; 
   font-size: 12px;
+  width: 100vw;
+  box-shadow: 1px 9px 45px -10px #00000f;
 }  
 
 .sub-index {
   overflow: hidden;
   text-align: center; 
-  color:white; 
-  background-color:#002642; 
-  width: 80%; 
+  color:white;
+  width: 100vw; 
   margin:1%; 
   padding-top: 1%; 
   padding-bottom: 1%;
   word-wrap: break-word; 
   font-size: 2em;
 } 
+
+.sub-index p{
+  color:#002642;
+}
+
+.foto-index{
+align-self: center;
+width:100%;
+height: 60%;
+max-width: 1200px;
+border: 0.3px #b3b3b3 solid;
+border-radius: 5%;
+}
+
+.opciones-index{
+  display:flex;
+  width:100vw;
+  flex-direction:row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.opciones-index a{
+  color:#F03A47;
+  font-size: 1.4em;
+}
+
+.footer-index{
+  font-size: 0.8em;
+  display: flex;
+  flex-wrap:nowrap;
+  flex-direction:row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  overflow: hidden;
+  color:white;
+  width: 100vw;
+  min-height: 15vh;
+  padding:4%;
+}
+
+.copyright{
+  width: 100vw;
+}
+
 
 /* Home logueado */ 
 .loghom-container {
@@ -537,11 +591,15 @@ hr {
   height: 20%;
   }  
   
-    ul {list-style-type: none;}
-    li a{
+  ul {
+    list-style-type: none;
+    }
+
+  li a{
       color: white;
       transition: color .2s;
     }
+
   .copyright p{border-top:1px solid rgba(255,255,255,.1);}  
 
   /********************************* BUSQUEDA *********************************************************************/ 
