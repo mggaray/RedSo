@@ -15,11 +15,17 @@
         @endsection
         
         @section('usuario'){{$usuarioLogueado->usuario}} @endsection
-       
         @section('nombre'){{$usuarioLogueado->nombre}}@endsection
         @section('apellido') {{$usuarioLogueado->apellido}}@endsection
         @section('ciudad') {{$usuarioLogueado->ciudad}}@endsection
         @section('fecha_nacimiento'){{$usuarioLogueado->cumpleanios}}@endsection
+        @section('editar')
+        <div class="editarPerfil">
+        <a href= "/editarPerfil"><button class="btn-EditarPerfil" type="button"> Editar perfil</button></a>
+        </div>
+        @endsection
+     
+      
       
       @section('posteos')
       <div class="publicacion">

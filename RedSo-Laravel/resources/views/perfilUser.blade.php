@@ -2,9 +2,6 @@
  @section("titulo")
   RedSo - Perfil
   @endsection
- 
-
-
 
         @section('foto')
         @if($usuario->foto_perfil == null || !(Storage::exists("/foto_perfil/$usuario->id/$usuario->foto_perfil"))) 
@@ -12,7 +9,7 @@
         @else
         <img src= "/storage/foto_perfil/{{$usuario->id}}/{{$usuario->foto_perfil}}">
         @endif
-        @endsection
+          @endsection
         
         @section('usuario'){{$usuario->usuario}} 
         @if($bandera == false) 
@@ -27,10 +24,7 @@
         @section('apellido') {{$usuario->apellido}}@endsection
         @section('ciudad') {{$usuario->ciudad}}@endsection
         @section('fecha_nacimiento'){{$usuario->cumpleanios}}@endsection
-      
-      
-
-
+        
       @section('posteos')
      <h2>Posteos</h2>
      @forelse($posteos as $posteo)

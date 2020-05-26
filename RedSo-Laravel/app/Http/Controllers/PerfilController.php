@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use App\User;
 
 
+
 class PerfilController extends Controller
 {
     public function __construct()
@@ -26,6 +27,31 @@ class PerfilController extends Controller
         $vac = compact('usuarioLogueado','posteos');
         return view('perfil', $vac);
     } 
+
+    public function editarPerfil(){
+        $usuarioLogueado = Auth::user(); 
+        $vac= compact('usuarioLogueado');
+        return view('editarPerfil', $vac);
+    }
+
+    public function editarDatosPerfil(Request $data){
+        $usuario=Auth::user();
+            $usuario->nombre = $data['nombre'];
+            $usuario->usuario =$data['usuario'];
+            $usuario->apellido = $data['apellido'];
+            $usuario->ciudad =$data['ciudad'];
+            $usuario->cumpleanios =$data['cumpleanios'];
+
+            if (request()->hasFile("foto_perfil")) {
+                $foto_perfil = request()->file("foto_perfil")->getClientOriginalName();
+                request()->file("foto_perfil")->storeAs("foto_perfil",$usuario->id."/".$foto_perfil, '');
+                $usuario->update(["foto_perfil"=>$foto_perfil]);
+            } 
+
+        $usuario->save();
+        return redirect()->to('perfil');
+    }
+
 
     public function mostrarBusqueda(){
         $usuarios = []; 
@@ -80,8 +106,6 @@ class PerfilController extends Controller
         dd($posteos);
         $vac= compact("usuarioLogueado","posteos");
         return view('perfil', $vac);
-
-
     } 
 
     public function borrarPosteo(Request $req) {
@@ -90,4 +114,11 @@ class PerfilController extends Controller
         $post -> delete(); 
         return redirect('users/' . $req['userId']);
     }
+
 }
+
+
+
+
+    
+

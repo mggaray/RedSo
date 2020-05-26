@@ -37,6 +37,8 @@ Route::get('/dejarUsuario/{id}', 'perfilController@dejarUsuario');
 
 Route::post('/eliminarPost','perfilController@borrarPosteo');
 
+Route::get ('/editarPerfil', 'perfilController@editarPerfil');
+Route::post ('/editarDatosPerfil', 'PerfilController@editarDatosPerfil');
 
 Route::get("faq", function(){
     return view ("faq");

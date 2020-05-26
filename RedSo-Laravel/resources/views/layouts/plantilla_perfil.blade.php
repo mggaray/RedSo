@@ -20,6 +20,9 @@
          <br><li>Ciudad: @yield('ciudad')</li><br><hr>
          <br><li>Fecha de Nacimiento: @yield('fecha_nacimiento')</li>
        </ul>
+        <div class="edit">
+          @yield('editar')
+          </div>
     </div>
    </div>
 

@@ -24,6 +24,7 @@
  nav {
   background-color:#F03A47;
 }
+
 .navbar-light .navbar-brand {
     color: #f8f9fa;
     font-family: 'Sigmar One', cursive;
@@ -42,12 +43,14 @@
 .navbar-light .navbar-nav .nav-link:hover{
   color: #CBCBCB;
 }
+
 .navbar-light .navbar-nav .active > .nav-link{
   color: black;
 }
+
 body, .respuesta {
   background-color: #002642;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
@@ -74,14 +77,23 @@ body, .respuesta {
 }
 
 .btn-logout {
-  background-color: #000 ; 
+  background-color: #002642 ; 
   margin-right:1%; 
-  border-radius: 10%; 
-  border:  black solid 1px; 
+  border-radius: 10%;
+  border:none;
   color:white;
   transition: background-color .3s;
   transition: color .3s;
 } 
+
+.btn-busqueda{
+  background-color:#002642;
+  border:none;
+  color:white;
+  font-family: "Roboto", sans-serif;
+}
+
+
 
 .btn-logout:hover {
   background-color: white;
@@ -269,6 +281,13 @@ background:none;
   
 }
 
+.btn-EditarPerfil{
+  background-color: #f03a47;
+  border:none;
+  color:white;
+  font-size:10px;
+}
+
 .btn-primary
 {
   background-color:#4e6994;
@@ -345,7 +364,6 @@ background:none;
 }
 
 .preguntas{
-  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
   background-color: #F03A47;
@@ -423,6 +441,7 @@ hr {
   background-color: white;
   margin-bottom: 5%;
   color: black;
+  font-family: "Roboto", sans-serif;
   padding-left: 2%;
   padding-right: 2%;
   padding-top: 3%;
@@ -474,11 +493,10 @@ hr {
   flex-wrap: wrap; 
   justify-content: center; 
   overflow: hidden; 
-  font-size: 10px;
+  font-size: 12px;
 }  
 
 .sub-index {
-  border:solid 1px;
   overflow: hidden;
   text-align: center; 
   color:white; 
@@ -504,7 +522,9 @@ hr {
 .footer{
   background: #152F4F;
   color:white;
+  height: 20%;
   }  
+  
     ul {list-style-type: none;}
     li a{
       color: white;
@@ -671,8 +691,8 @@ hr {
   padding: 10px;
 }
 .publicacion .publicar{
-  background-color: #CBCBCB;
-  color: #000000;
+  color: white;
+  font-size: 1.5em;
   font-weight: bold;
 }
 
@@ -684,13 +704,10 @@ hr {
   resize: none;
 }
 
-.publicacion .botones{
-  background-color: #CBCBCB;
-}
 
 .publicacion .botones .btn{
-  border-radius: 10% 50%;
   width: 49%;
+  background-color: #F03A47;
 }
 
 .erroresPublicacion{
