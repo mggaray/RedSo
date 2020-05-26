@@ -439,6 +439,7 @@ hr {
 
 .post {
   background-color: white;
+  max-width: 1000px;
   margin-bottom: 5%;
   color: black;
   font-family: "Roboto", sans-serif;
@@ -447,6 +448,17 @@ hr {
   padding-top: 3%;
   margin-left: 2%;
   margin-right: 2%;
+  padding-bottom: 2%;
+}
+
+.post-comentario {
+  background-color: white;
+  max-width: 1000px;
+  margin: auto;
+  color: black;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 3%;
   padding-bottom: 2%;
 }
 

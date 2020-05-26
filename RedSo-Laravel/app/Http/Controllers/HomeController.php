@@ -116,10 +116,9 @@ class HomeController extends Controller
               $comentario->contenido=$req["comentario"]; 
               $comentario->user_id = Auth::user()->id;
               $comentario->save(); 
-              $posteo = Posteo::find($req['postId']);  
-              $vac = compact('posteo'); 
+
             
-              return view("posteo",$vac);
+              return redirect("/home");
 
     }
 

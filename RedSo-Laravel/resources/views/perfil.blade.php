@@ -71,6 +71,8 @@
        <hr>
      <p class="post-text">{{$posteo['contenido']}}</p>
      <p class="align-text-bottom text-right muted small">{{date('d-m-Y',strtotime($posteo->fechaCreacion))}}</p> 
+     @dump($posteo)
+     <a href="/comentarios/{{$posteo->id}}" class="text-left align-text-bottom  muted small">Comentarios</a>
      </div>
     @empty  
     <div class="post">

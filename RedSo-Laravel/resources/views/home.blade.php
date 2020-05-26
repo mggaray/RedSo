@@ -3,7 +3,6 @@
 @section('titulo')
     RedSo
 @endsection
-
 @section('contenido')
 
   <div class="body-perfil">
@@ -68,7 +67,7 @@
         
         <p class="align-text-bottom text-right muted small">{{date('d/m/Y',strtotime($posteo->fechaCreacion))}}&nbsp;&nbsp;<b>{{date('H:i',strtotime($posteo->fechaCreacion))}}h</b></p> 
 
-      <a href="#" class="text-left align-text-bottom  muted small">Comentarios</a> 
+      <a href="/comentarios/{{$posteo->posteoId}}" class="text-left align-text-bottom  muted small">Comentarios</a> 
       <form action="/comentar" method="POST"> 
         @csrf
         <div class="form-group"> 
