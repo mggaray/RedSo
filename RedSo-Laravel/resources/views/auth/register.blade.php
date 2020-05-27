@@ -107,6 +107,7 @@
                 </span>
             @enderror
         </div> 
+        <div class="alertaFoto"></div>
 
         <div>
             <label for="ciudad" style="color:black">Ciudad</label>

@@ -23,7 +23,7 @@
         @section('nombre'){{$usuario->nombre}}@endsection
         @section('apellido') {{$usuario->apellido}}@endsection
         @section('ciudad') {{$usuario->ciudad}}@endsection
-        @section('fecha_nacimiento'){{$usuario->cumpleanios}}@endsection
+        @section('fecha_nacimiento'){{date('d-m-Y',strtotime($usuario->cumpleanios))}}@endsection
         
       @section('posteos')
      <h2>Posteos</h2>

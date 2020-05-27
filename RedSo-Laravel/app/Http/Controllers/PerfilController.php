@@ -34,6 +34,20 @@ class PerfilController extends Controller
         return view('editarPerfil', $vac);
     }
 
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'nombre' => ['required', 'string', 'max:255'],
+            'usuario' => ['required', 'string', 'max:255'],
+            'apellido' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'], 
+            'ciudad' => ['nullable', 'string', 'max:255'], 
+            'cumpleanios' => ['required','date'],
+            'foto_perfil' => ['nullable', 'mimes:jpeg,bmp,png'],
+        ]);
+    }
+
     public function editarDatosPerfil(Request $data){
         $usuario=Auth::user();
             $usuario->nombre = $data['nombre'];
