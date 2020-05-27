@@ -468,6 +468,10 @@ hr {
   padding-bottom: 2%;
 }
 
+.post-comentario a {
+  color: black;
+}
+
 .Usuario {
   text-align: left;
 }

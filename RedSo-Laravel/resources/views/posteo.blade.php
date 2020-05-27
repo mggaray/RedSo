@@ -5,7 +5,7 @@
 @endsection  
 @section('contenido')  
 <div class="post-comentario">
-    <h3 class="Usuario"><img src="/storage/foto_perfil/{{$posteo->user->id}}/{{$posteo->user->foto_perfil}}"alt="">{{$posteo->user->usuario}}</h3>
+    <a href="/users/{{$posteo->user->id}}"><h3 class="Usuario"><img src="/storage/foto_perfil/{{$posteo->user->id}}/{{$posteo->user->foto_perfil}}"alt="">{{$posteo->user->usuario}}</h3></a>
       <hr>
     <p class="post-text">{{$posteo->contenido}}</p> 
     
@@ -17,7 +17,7 @@
 
     <div class="container border border-dark rounded mb-3">
         <div class="post">
-            <h3 class="Usuario"><img src="/storage/foto_perfil/{{$comentario->user->id}}/{{$comentario->user->foto_perfil}}"alt="">{{$comentario->user->usuario}}</h3>
+            <a href="/users/{{$comentario->user->id}}"><h3 class="Usuario"><img src="/storage/foto_perfil/{{$comentario->user->id}}/{{$comentario->user->foto_perfil}}"alt="">{{$comentario->user->usuario}}</h3></a>
             <hr>
             <p class="post-text">{{$comentario->contenido}}</p>
             <p class="align-text-bottom text-right muted small">{{date('d/m/Y',strtotime($comentario->created_at))}}&nbsp;&nbsp;<b>{{date('H:i',strtotime($comentario->created_at))}}h</b></p> 
