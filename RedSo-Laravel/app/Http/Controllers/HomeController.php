@@ -33,9 +33,11 @@ class HomeController extends Controller
         if (isset($usuarioLogueado)) {  
             $posteos = DB::table('posteos') 
             ->join('amigos','amigos.seguido_id','=',"posteos.user_id")  
-            ->join('users','amigos.seguido_id','=','users.id')
+            ->join('users','amigos.seguido_id','=','users.id') 
+            
            
-            ->where('amigos.user_id','=',$usuarioLogueado->id)
+            ->where('amigos.user_id','=',$usuarioLogueado->id) 
+            ->orWhere('posteos.user_id','=',$usuarioLogueado->id)
             ->select('posteos.contenido','posteos.fechaCreacion','users.usuario','users.foto_perfil','posteos.id AS posteoId', 'users.id')
             ->orderBy('fechaCreacion','desc')
             ->simplePaginate(8);  

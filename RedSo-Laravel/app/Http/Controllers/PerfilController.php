@@ -103,15 +103,19 @@ class PerfilController extends Controller
     {
         $usuarioLogueado = Auth::user();
         $posteos= Posteos::all();
-        dd($posteos);
         $vac= compact("usuarioLogueado","posteos");
         return view('perfil', $vac);
     } 
 
-    public function borrarPosteo(Request $req) {
-        $post = Posteo::find($req['postId']);  
+    public function borrarPosteo(Request $req) { 
+        
+        $post = Posteo::find($req['postId']); 
+        $postUserId=$post->user_id;
+        $usuarioLogueado = Auth::user();
+        if(($postUserId == $usuarioLogueado->id) || $usuarioLogueado->admin()) {
         $post ->comentarios() ->delete();
         $post -> delete(); 
+    }
         return redirect('users/' . $req['userId']);
     }
 

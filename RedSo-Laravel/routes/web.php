@@ -24,7 +24,7 @@ use App\Http\Controllers\PerfilController;
 
 
 Route::get('/', "HomeController@index"); 
-Route::post('/comentar', 'homeController@comentar');
+#Route::post('/comentar', 'homeController@comentar');
 
 Route::get("perfil", "PerfilController@perfil"); 
 
