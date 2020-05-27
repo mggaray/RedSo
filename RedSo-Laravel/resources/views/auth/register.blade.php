@@ -100,7 +100,12 @@
 
         <div class=reg-foto-perfil>
             <label for="foto_perfil" style="color:black">Subir Foto de Perfil</label>
-            <input type="file" name="foto_perfil" accept="image/*">
+            <input type="file" class="form-control @error('foto_perfil') is-invalid @enderror" name="foto_perfil" id="foto_perfil" accept="image/bmp,image/png,image/jpeg">
+            @error('foto_perfil')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
         </div> 
 
         <div>

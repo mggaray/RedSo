@@ -56,6 +56,7 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'], 
             'ciudad' => ['nullable', 'string', 'max:255'], 
             'cumpleanios' => ['required','date'],
+            'foto_perfil' => ['nullable', 'mimes:jpeg,bmp,png'],
         ]);
     }
 
