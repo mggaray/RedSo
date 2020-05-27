@@ -15,11 +15,10 @@
     <div class="info-perfil">
        <br><h1 class="nombre">@yield('usuario') </h1><hr>
        <ul class="info-perfil">
-         <br><li>Nombre: @yield('nombre')</li><br><hr>
-         <br><li>Apellido: @yield('apellido')</li><br><hr>
-         <br><li>Ciudad: @yield('ciudad')</li><br><hr>
-         <br><li>Fecha de Nacimiento: @yield('fecha_nacimiento')</li>
-       </ul>
+         <br><li><i class="fas fa-user"></i>&nbsp&nbsp&nbsp @yield('nombre') @yield('apellido')</li><br><hr>
+         <br><li><i class="fas fa-city"></i>&nbsp&nbsp&nbsp @yield('ciudad')</li><br><hr>
+         <br><li><i class="fas fa-birthday-cake"></i> &nbsp&nbsp&nbsp @yield('fecha_nacimiento')</li>
+       </ul> 
         <div class="edit">
           @yield('editar')
           </div>
@@ -35,5 +34,6 @@
  </div>
  @endsection 
  @section("scripts") 
+ <script src="https://kit.fontawesome.com/c57a089669.js" crossorigin="anonymous"></script>
   @yield("script") 
 @endsection
