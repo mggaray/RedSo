@@ -35,9 +35,10 @@ class ComentariosController extends Controller
              $comentario->user_id = Auth::user()->id;
              $comentario->save(); 
              $posteo = Posteo::find($req['postId']);  
-             $vac = compact('posteo'); 
-           
-             return view("posteo",$vac);
+             $vac = compact('posteo');  
+
+      
+                return view("posteo",$vac);   
 
    }
 

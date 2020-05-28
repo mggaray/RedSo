@@ -30,7 +30,7 @@ class HomeController extends Controller
     public function index()
     {
         $usuarioLogueado = Auth::user();
-        if (isset($usuarioLogueado)) {  
+        if (isset($usuarioLogueado)) {   
             $posteos = DB::table('posteos') 
             ->join('amigos','amigos.seguido_id','=',"posteos.user_id")  
             ->join('users','amigos.seguido_id','=','users.id') 
@@ -40,12 +40,18 @@ class HomeController extends Controller
             ->orWhere('posteos.user_id','=',$usuarioLogueado->id)
             ->select('posteos.contenido','posteos.fechaCreacion','users.usuario','users.foto_perfil','posteos.id AS posteoId', 'users.id')
             ->orderBy('fechaCreacion','desc')
-            ->simplePaginate(8);  
+            ->simplePaginate(20);  
             
 
-            $calesita = $posteos->take(5);
-                     
-            $vac = compact('usuarioLogueado','posteos','calesita');
+            $calesita = $posteos->take(5); 
+
+            $posteosTEST = collect([]); 
+            foreach ($posteos as $posteo) { 
+                $agregar = Posteo::find($posteo->posteoId);
+                $posteosTEST -> push($agregar);
+            }          
+
+            $vac = compact('usuarioLogueado','posteos','calesita','posteosTEST');
             return view('home', $vac);
         }
         else {

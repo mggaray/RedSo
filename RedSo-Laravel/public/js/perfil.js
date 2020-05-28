@@ -58,4 +58,21 @@ for(let i = 0;i<borrarComentario.length;i++) {
   }
 
 } 
+} 
+
+
+let comentarios = document.querySelectorAll('div.comentariosShow');
+let linkComentarios = document.querySelectorAll('a.comentarios-titulo')
+if(comentarios && linkComentarios) {  
+ 
+  for(let i =0;i<linkComentarios.length;i++) {
+    let cantComentarios = comentarios[i].querySelectorAll('form.borrarComentario').length; 
+    if(cantComentarios<6) {
+      linkComentarios[i].onclick = function(e) { 
+          e.preventDefault();
+          comentarios[i].classList.toggle('d-none');
+      }
+  }
+}
+
 }
