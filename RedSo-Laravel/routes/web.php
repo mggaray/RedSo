@@ -31,8 +31,7 @@ Route::get("perfil", "PerfilController@perfil");
 Route::get('/busquedaUser','perfilController@mostrarBusqueda'); 
 Route::post('/busquedaUser', 'perfilController@buscarUsuario');  
 
-
-
+Route::get('/seguidores','perfilController@mostrarSeguidores');
 Route::get('/users/{id}','perfilController@mostrarUser');  
 
 Route::get('/seguirUsuario/{id}', 'perfilController@agregarUsuario'); 

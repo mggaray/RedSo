@@ -91,13 +91,12 @@
 <div class="container">
    @section('amigos')
      <div class="seguidores segleft">
-      <a href="#"><button type="button" class="btn-amigos">Seguidos: <span><b>{{$usuarioLogueado->seguidos->count()}}</b></span></button></a>  
-      <h2 class="amigos-title"> </h2><br>
+      <a href="/seguidores"><button type="button" class="btn-amigos">Seguidos: <span><b>{{$usuarioLogueado->seguidos->count()}}</b></span></button></a>  
       <div class="container">
       <ul class="lista-amigos">
         @forelse($usuarioLogueado->seguidos->take(7) as $seguido)
         <li>
-          <a href="/users/{{$seguido->id}}"><img src={{(Storage::exists("/foto_perfil/$seguido->id/$seguido->foto_perfil")) ? "/storage/foto_perfil/$seguido->id/$seguido->foto_perfil" :'/img/chico.png'}}>
+          <a  class="nombre-amigo" href="/users/{{$seguido->id}}"><img class="img-amigos-perfil" src={{(Storage::exists("/foto_perfil/$seguido->id/$seguido->foto_perfil")) ? "/storage/foto_perfil/$seguido->id/$seguido->foto_perfil" :'/img/chico.png'}}>
             <br>
           {{$seguido['usuario']}}
         </li></a><hr> 
@@ -114,12 +113,12 @@
     </div> <br> 
 
     <div class="seguidores ">
-      <a href="#"><button type="button" class="btn-amigos">Seguidores: <span><b>{{$usuarioLogueado->seguidores->count()}} </b></span></button></a> 
+      <a href="/seguidores"><button type="button" class="btn-amigos">Seguidores: <span><b>{{$usuarioLogueado->seguidores->count()}} </b></span></button></a> 
       <div class="container">
       <ul class="lista-amigos">
         @forelse($usuarioLogueado->seguidores->take(7) as $seguidor)
         <li>
-          <a href="/users/{{$seguidor->id}}"><img src={{(Storage::exists("/foto_perfil/$seguidor->id/$seguido->foto_perfil")) ? "/storage/foto_perfil/$seguidor->id/$seguidor->foto_perfil" :'/img/chico.png'}}>
+          <a class="nombre-amigo" href="/users/{{$seguidor->id}}"><img class="img-amigos-perfil" src={{(Storage::exists("/foto_perfil/$seguidor->id/$seguido->foto_perfil")) ? "/storage/foto_perfil/$seguidor->id/$seguidor->foto_perfil" :'/img/chico.png'}}>
             <br>
           {{$seguidor['usuario']}}
         </li></a><hr>

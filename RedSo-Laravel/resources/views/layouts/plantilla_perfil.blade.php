@@ -16,13 +16,13 @@
        <br><h1 class="nombre">@yield('usuario') </h1><br>
        <div class="amigos-bottom"> 
          @isset($usuarioLogueado)
-        <a href="#"><button type="button" class="btn-amigos">Seguidos: <span><b>{{$usuarioLogueado->seguidos->count()}}</b></span></button></a>
-        <a href="#"><button type="button" class="btn-amigos">Seguidores: <span><b>{{$usuarioLogueado->seguidores->count()}} </b></span></button></a>  
+        <a href="/seguidores"><button type="button" class="btn-amigos">Seguidos <span><b>{{$usuarioLogueado->seguidos->count()}}</b></span></button></a>
+        <a href="/seguidores"><button type="button" class="btn-amigos">Seguidores <span><b>{{$usuarioLogueado->seguidores->count()}} </b></span></button></a>  
         @endisset 
 
         @isset($usuario)  
-        <a href="#"><button type="button" class="btn-amigos">Seguidos: <span><b>{{$usuario->seguidos->count()}}</b></span></button></a>
-        <a href="#"><button type="button" class="btn-amigos">Seguidores: <span><b>{{$usuario->seguidores->count()}} </b></span></button></a>  
+        <a href="#"><button type="button" class="btn-amigos">Seguidos <span><b>{{$usuario->seguidos->count()}}</b></span></button></a>
+        <a href="#"><button type="button" class="btn-amigos">Seguidores <span><b>{{$usuario->seguidores->count()}} </b></span></button></a>  
         @endisset
       </div>
        <hr>

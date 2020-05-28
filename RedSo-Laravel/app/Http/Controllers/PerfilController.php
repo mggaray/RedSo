@@ -34,6 +34,14 @@ class PerfilController extends Controller
         return view('editarPerfil', $vac);
     }
 
+    public function mostrarSeguidores(){
+        $usuarioLogueado = Auth::user();
+        $vac= compact ('usuarioLogueado');
+        return view('seguidores', $vac);
+    }
+
+
+    
     protected function validator(array $data)
     {
         return Validator::make($data, [

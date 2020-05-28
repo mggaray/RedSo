@@ -4,7 +4,7 @@
 * {
   /*Scrollbar Firefox */
   scrollbar-width: thin;
-  scrollbar-color: #152F4F #F03A47;
+  scrollbar-color: #002642 #F03A47;
 }
 
 /*Scrollbar Chrome/Edge/Safari */
@@ -233,7 +233,7 @@ body, .respuesta {
 .recuerdame
 {
 text-align:left;
-color: #4e6994;
+color: #002642;
 }
 
 .recuerdame>input
@@ -273,11 +273,10 @@ background:none;
 
  .Usuario img{
    height: 90px;
-   margin-right: 3%;
    width: 90px;
+   margin-right: 3%;
    border-radius: 5%;
  }
-
 
 
 .containerh {
@@ -287,15 +286,17 @@ background:none;
    background-color:white;
    overflow: hidden;
 }
+
 .containerh h2{
   text-align: center;
 }
+
 .titulo-home{
  font-size: 60px;
  text-align: center;
  color: #EF3B3A;
  padding: 10px;
- border:3px #4e6994 solid;
+ border:3px #002642 solid;
 }
 
 .car
@@ -320,7 +321,7 @@ background:none;
 
 .btn-primary
 {
-  background-color:#4e6994;
+  background-color:#002642;
 }
 
 .botonh{
@@ -350,7 +351,7 @@ background:none;
 
 .datos{
  margin: 5px;
- background-color: #4e6994;
+ background-color: #002642;
  border:1px black solid;
  color: white;
  width: 40%;
@@ -380,7 +381,7 @@ background:none;
   font-size:25px;
   border: 1px black solid;
   color:white;
-  background-color: #4e6994;
+  background-color: #002642;
 }
 
 .span-int{
@@ -450,11 +451,9 @@ background:none;
   margin-left: 2%;
 }
 
-
-
 .foto-perfil img{
-  width: 100%;
-  max-width: 200px;
+  width: 120px;
+  height: 120px;
   border-radius: 5%;
 }
 
@@ -565,46 +564,85 @@ a.comentarios-titulo:hover {
   color:white;
   margin: 10%;
   border-radius: 5%;
+  transition: 0.6s ease-out;
+  cursor: none;
+}
+
+
+.btn-amigos-user{
+  padding: 2%;
+  background-color: #f03a47;
+  border: none;
+  color:white;
+  margin: 10%;
+  border-radius: 5%;
+  transition: 0.6s ease-out;
+  cursor: none;
+}
+
+.btn-seguir-user{
+ background-color: #F03A47;
+ color: white;
+ border: none;
+ padding: 1%;
+ margin-top: 1%;
+ font-size: 0.5em;
+ border-radius: 5%;
+ transition: ease-out 0.8s all;
+}
+
+.btn-seguir-user:hover{
+  background-color: whitesmoke;
+  color: #F03A47;
+}
+
+.btn-amigos:hover{
+  background-color: whitesmoke;
+  color: #F03A47;
+}
+
+.img-amigos-perfil{
+  box-shadow: 1px 12px 20px -10px #00000f; 
+  width: 120px;
+  height: 120px;
+}
+
+.nombre-amigo{
+  color: white;
+  transition: ease-out 0.6s all;
+}
+
+.nombre-amigo:hover{
+  color: #F03A47;
+  text-decoration: none;
+}
+
+.segleft{
+  color: white;
+  border:none;
+}
+
+
+
+.no-sigue{
+  font-size: 1.4em;
+
 }
 
 .amigos-bottom{
   display:none;
 }
 
-@media only screen and (max-width: 1000px) {
-  /* For mobile phones: */
 
-
-      .header-perfil{
-        margin-bottom: 20%;
-      }
-
-      .amigos{
-        display:none;
-      }
-
-      .seguidores.segleft{
-        display:flex;
-        flex-direction: row;
-      }
-
-      .amigos-bottom{
-        display:flex;
-        flex-direction: row;
-        margin: 2%;
-        align-items: center;
-        justify-content: space-evenly;
-      }
-
-
-      .btn-amigos{
-        border-radius: 5%;
-        display:block;
-        padding:2%;
-        margin: 3%;
-      }
+/*-------------nav---------------*/
+.nav-link.link-menu:hover{
+  transition: ease-out 0.8s all;
 }
 
+a.nav-link.link-menu:hover{
+  transform:scale(1.25);
+  color:#002642;
+}
 
 
 /* Home deslogueado-------------------------------------------------------------------------------------------------------------------------------------*/
@@ -644,6 +682,7 @@ a.comentarios-titulo:hover {
   max-width: 1200px;
   border: 0.3px #b3b3b3 solid;
   border-radius: 5%;
+  box-shadow: 1px 9px 20px -10px #00000f;
 }
 
 .opciones-index{
@@ -689,7 +728,7 @@ a.comentarios-titulo:hover {
 /* footer */ 
 
 .footer{
-  background: #152F4F;
+  background: #002642;
   color:white;
   height: 20%;
   }  
@@ -922,13 +961,209 @@ a.comentarios-titulo:hover {
 }
 
 
+/*---------------------------PAGINA SEGUIDORES------------------------*/
+
+.seguidos-titulo{
+  text-align: center;
+  margin-bottom: 8%;
+  margin-top: 2%;
+}
+
+.seguidos-titulo b{
+  color: #F03A47;
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+.panel-seg{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100vw;
+}
+
+.panel-seguidores{
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 30vw;
+}
+
+.panel-seguidos{
+  display:flex;
+  flex-direction: column;
+  width: 30vw;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+}
+
+.panel-amigos{
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  padding: 0%;
+  margin-left: 0%;
+}
+
+.btn-panel-seguidores{
+    border-radius: 4%;
+    display:block;
+    padding:3%;
+    margin-bottom: 6%;
+    background-color: #F03A47;
+    border: none;
+    color: white;
+    align-items: center;
+    width: 100%;
+    box-shadow: 10px 10px 15px -6px rgba(0,0,0,0.48);
+    font-size: 1.3em;
+}
+
+.btn-dejar-seguir{
+  border: none;
+  padding: 5% 10% 5% 10%;
+  color:white;
+  background-color: #F03A47;
+  transition: 0.6s ease-out;
+  align-self: center;
+  justify-content: center;
+  border-radius: 3%;
+  box-shadow: 6px 6px 8px -6px rgba(0,0,0,0.30);
+}
+
+.btn-dejar-seguir:hover{
+  background-color: #002642;
+}
+
+.btn-dejar-seguir-mobile{
+  display: none;
+}
+
+.btn-seguir{
+  border: none;
+  padding: 5% 10% 5% 10%;
+  color:white;
+  background-color: #F03A47;
+  transition: 0.6s ease-out;
+  align-self: center;
+  justify-content: center;
+}
+
+.panel-container{
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  background-color: white;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-right: 5%;
+  padding: 3%;
+  border-radius: 3%;
+  align-items: center;
+  box-shadow: 10px 10px 15px -6px rgba(0,0,0,0.48);
+}
+
+.container-seguir{
+  margin:5%;
+  align-self: center;
+}
+
+.panel-nombre{
+  font-size: 1.6em;
+  text-align: center;
+  color:#002642;
+  width: 30%;
+  margin-left: 2%;
+  transition: ease-out 0.6s all;
+}
+
+a.panel-nombre:hover{
+  text-decoration: none;
+  color:#F03A47;
+}
+
+.panel-fotos{
+  border-radius: 5%;
+  margin: 5%;
+  align-self: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  /* For mobile phones: */
+
+      .header-perfil{
+        margin-bottom: 20%;
+      }
+
+      .amigos{
+        display:none;
+      }
+
+      .seguidores.segleft{
+        display:flex;
+        flex-direction: row;
+      }
+
+      .amigos-bottom{
+        display:flex;
+        flex-direction: row;
+        margin: 2%;
+        align-items: center;
+        justify-content: space-evenly;
+      }
 
 
+      .btn-amigos-mobile{
+        border-radius: 5%;
+        display:block;
+        padding:2%;
+        margin: 3%;
+        width: 8vw;
+        height: 5vh;
+      }
+
+      .btn-panel-seguidores{
+        width: 30vw;
+      }
 
 
+      .btn-dejar-seguir{
+       display: none;
+      }
 
+      .btn-dejar-seguir-mobile{
+        display: block;
+        background-color: #F03A47;
+        color: white;
+        width: 30px;
+        height: 30px;
+        border-radius: 40%;
+        border: none;
+        margin-left: 8vw;
+      }
 
+      .panel-nombre{
+       width: 60px;
+       font-size: 0.9em;
+      }
 
+      .panel-fotos{
+        width: 80px;
+        height: 80px;
+      }
+
+      .panel-container{
+        width: 150px;
+        height: 120px;
+      }
+
+      .panel-nombre{
+        width: 60px;
+      }
+}
 
 
 @keyframes fadein {

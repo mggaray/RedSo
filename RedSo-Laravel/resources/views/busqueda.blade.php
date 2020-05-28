@@ -34,3 +34,8 @@
 </div> 
 </div>
 @endsection
+
+@section("scripts") 
+ <script src="https://kit.fontawesome.com/c57a089669.js" crossorigin="anonymous"></script>
+  @yield("script") 
+@endsection

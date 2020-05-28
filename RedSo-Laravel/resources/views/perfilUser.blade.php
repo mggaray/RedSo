@@ -13,12 +13,12 @@
         
         
 
-        @section('usuario'){{$usuario->usuario}} 
+        @section('usuario'){{$usuario->usuario}}
+        <br> 
         @if($bandera == false) 
-      <a href="/seguirUsuario/{{$usuario['id']}}"><button type="button" class="btn btn-primary busqueda"> Seguir </button></a>
+      <a href="/seguirUsuario/{{$usuario['id']}}"><button type="button" class="btn-seguir-user"> Seguir </button></a>
       @else 
       <a href="/dejarUsuario/{{$usuario['id']}}"><button type="button" class="btn btn-danger">Dejar de Seguir</button></a>
-
       @endif
         @endsection
        
@@ -76,17 +76,17 @@
 
    @section('amigos')
      <div class="seguidores segleft">
-      <a href="#"><button type="button" class="btn btn-primary busqueda">Seguidos: <span><b>{{$usuario->seguidos->count()}}</b></span></button></a>  
+      <a href="#"><button type="button" class="btn-amigos-user">Seguidos: <span><b>{{$usuario->seguidos->count()}}</b></span></button></a>  
       <ul class="lista-amigos">
         @forelse($usuario->seguidos->take(7) as $seguido)
         <li>
-          <a href="/users/{{$seguido->id}}"><img src={{(Storage::exists("/foto_perfil/$seguido->id/$seguido->foto_perfil")) ? "/storage/foto_perfil/$seguido->id/$seguido->foto_perfil" :'/img/chico.png'}}>
+          <a class="nombre-amigo" href="/users/{{$seguido->id}}"><img class="img-amigos-perfil"  src={{(Storage::exists("/foto_perfil/$seguido->id/$seguido->foto_perfil")) ? "/storage/foto_perfil/$seguido->id/$seguido->foto_perfil" :'/img/chico.png'}}>
             <br>
           {{$seguido['usuario']}}
         </li></a><hr>  
       @empty  
       
-      <span class="border border-danger">Este usuario no sigue a nadie </span>
+      <span class="no-sigue">Este usuario no sigue a nadie </span>
       @endforelse
       </ul>  
       
@@ -94,11 +94,11 @@
     </div> <br> 
 
     <div class="seguidores ">
-      <a href="#"><button type="button" class="btn btn-primary busqueda">Seguidores: <span><b>{{$usuario->seguidores->count()}} </b></span></button></a> 
+      <a href="#"><button type="button" class="btn-amigos-user">Seguidores: <span><b>{{$usuario->seguidores->count()}} </b></span></button></a> 
       <ul class="lista-amigos">
         @forelse($usuario->seguidores->take(7) as $seguidor)
         <li>
-          <a href="/users/{{$seguidor->id}}"><img src={{(Storage::exists("/foto_perfil/$seguidor->id/$seguidor->foto_perfil")) ? "/storage/foto_perfil/$seguidor->id/$seguidor->foto_perfil" :'/img/chico.png'}}>
+          <a class="nombre-amigo" href="/users/{{$seguidor->id}}"><img  class="img-amigos-perfil" src={{(Storage::exists("/foto_perfil/$seguidor->id/$seguidor->foto_perfil")) ? "/storage/foto_perfil/$seguidor->id/$seguidor->foto_perfil" :'/img/chico.png'}}>
             <br>
           {{$seguidor['usuario']}}
         </li></a><hr>
