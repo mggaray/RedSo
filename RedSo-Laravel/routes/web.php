@@ -29,14 +29,18 @@ Route::get('/', "HomeController@index");
 Route::get("perfil", "PerfilController@perfil"); 
 
 Route::get('/busquedaUser','perfilController@mostrarBusqueda'); 
-Route::post('/busquedaUser', 'perfilController@buscarUsuario'); 
+Route::post('/busquedaUser', 'perfilController@buscarUsuario');  
+
+
 
 Route::get('/users/{id}','perfilController@mostrarUser');  
 
 Route::get('/seguirUsuario/{id}', 'perfilController@agregarUsuario'); 
 Route::get('/dejarUsuario/{id}', 'perfilController@dejarUsuario'); 
 
-Route::post('/eliminarPost','perfilController@borrarPosteo');
+Route::post('/eliminarPost','perfilController@borrarPosteo'); 
+Route::post('/eliminarComentario','ComentariosController@borrarComentario'); 
+Route::post('/hacerAdministrador', 'PerfilController@hacerAdministrador');
 
 Route::get ('/editarPerfil', 'perfilController@editarPerfil');
 Route::post ('/editarDatosPerfil', 'PerfilController@editarDatosPerfil');

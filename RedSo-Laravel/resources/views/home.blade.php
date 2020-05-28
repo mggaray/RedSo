@@ -60,7 +60,19 @@
 
         <h2>Posteos</h2> 
         @forelse($posteos as $posteo)
-        <div class="post">
+        <div class="post"> 
+          @if(Auth::user()->admin() || $usuarioLogueado->id == $posteo->id)
+          <form action="/eliminarPost" method="POST" class="borrarPost">  
+            @csrf
+            <input type="hidden" name="postId" value={{$posteo->posteoId}}> 
+            <input type="hidden" name="userId" value={{$posteo->id}}> 
+            <input type="hidden" name="desde" value="home"> 
+          <button type="button" class="close" aria-label="Close"> 
+            <span aria-hidden="true">&times;</span>
+          </button> 
+          </form>
+           
+          @endif 
         <h3 class="Usuario"><a href="/users/{{$posteo->id}}"><img src="storage/foto_perfil/{{$posteo->id}}/{{$posteo->foto_perfil}}" alt="">{{$posteo->usuario}}</a></h3>
           <hr>
         <p class="post-text">{{$posteo->contenido}}</p> 
@@ -92,5 +104,6 @@
 @section('scripts')
   <script src="https://kit.fontawesome.com/c57a089669.js" crossorigin="anonymous"></script>
   <script src="{{asset('/js/carousel.js')}}"></script>
-  <script>let posts = <?php echo json_encode($calesita); ?>;</script>
+  <script>let posts = <?php echo json_encode($calesita); ?>;</script> 
+   <script src="{{asset('/js/perfil.js')}}" type="module"></script>
 @endsection

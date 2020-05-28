@@ -16,7 +16,20 @@
 @forelse ($posteo->comentarios as $comentario)
 
     <div class="container border border-dark rounded mb-3">
-        <div class="post">
+        <div class="post"> 
+            @if(Auth::user()->admin() || Auth::id() == $comentario->user_id)
+            <form action="/eliminarComentario" method="POST" class="borrarComentario">  
+              @csrf
+              <input type="hidden" name="comentarioId" value={{$comentario->id}}> 
+              <input type="hidden" name="userId" value={{$posteo->user->id}}> 
+              <input type="hidden" name="postId" value={{$posteo->id}}> 
+              <input type="hidden" name="desde" value="posteo"> 
+            <button type="button" class="close" aria-label="Close"> 
+              <span aria-hidden="true">&times;</span>
+            </button> 
+            </form>
+             
+            @endif 
             <a href="/users/{{$comentario->user->id}}"><h3 class="Usuario"><img src="/storage/foto_perfil/{{$comentario->user->id}}/{{$comentario->user->foto_perfil}}"alt="">{{$comentario->user->usuario}}</h3></a>
             <hr>
             <p class="post-text">{{$comentario->contenido}}</p>
@@ -36,5 +49,8 @@
     <span class="border-bottom"></span>
     </div> 
     </div> 
-@endsection
+@endsection 
+
+
+   <script src="{{asset('/js/perfil.js')}}" type="module"></script>
 

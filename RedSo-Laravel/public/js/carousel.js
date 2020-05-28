@@ -1,3 +1,4 @@
+
 window.onload = function () {
 
 let indice = 0;
@@ -43,5 +44,7 @@ innerPosteo(post, tiempo[0],tiempo[1]);
         post = posts[indice];
         formatoFechaHora(post);
         innerPosteo(post, tiempo[0],tiempo[1]);
-    }
+    } 
+
+
 }

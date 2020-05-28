@@ -129,9 +129,25 @@ class PerfilController extends Controller
         if(($postUserId == $usuarioLogueado->id) || $usuarioLogueado->admin()) {
         $post ->comentarios() ->delete();
         $post -> delete(); 
-    }
+    } 
+
+    if($req['desde']=='home') {
+        return redirect('/');
+        }
+
+    else {
+
+        return redirect('users/' . $req['userId']); 
+        }
+    }  
+
+    public function hacerAdministrador(Request $req) {
+        $usuario = User::find($req['userId']); 
+        $usuario->tipo_usuario = 'admin'; 
+        $usuario->save(); 
         return redirect('users/' . $req['userId']);
-    }
+    } 
+    
 
 }
 
