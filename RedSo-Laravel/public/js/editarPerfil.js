@@ -4,7 +4,7 @@ window.onload = function(){
     let usuario = document.getElementById('usuario');
     let cumpleanios = document.getElementById('cumpleanios');
     let foto_perfil = document.getElementById('foto_perfil');
-    console.log(cumpleanios.value);
+    
     
     let estados = [];
 
@@ -38,9 +38,10 @@ window.onload = function(){
         return bandera;
         
     }
-
+    estadoBoton();
+    
     foto_perfil.onchange = function () {
-        if (!(/\.(jpg|png|gif)$/i).test(foto_perfil.name)) {
+        if (!(/\.(jpe?g|png|bmp)$/i).test(foto_perfil.value) ){
             foto_perfil.value = "";
             document.querySelector('.alertaFoto').innerHTML="<small style='color:red;'><b>El archivo a adjuntar no es una imagen</b></small>";
         }else{
