@@ -87,7 +87,7 @@
 <div class="container">
    @section('amigos')
      <div class="seguidores segleft">
-      <a href="#"><button type="button" class="btn btn-primary busqueda">Seguidos: <span><b>{{$usuarioLogueado->seguidos->count()}}</b></span></button></a>  
+      <a href="#"><button type="button" class="btn-amigos">Seguidos: <span><b>{{$usuarioLogueado->seguidos->count()}}</b></span></button></a>  
       <h2 class="amigos-title"> </h2><br>
       <div class="container">
       <ul class="lista-amigos">
@@ -110,7 +110,7 @@
     </div> <br> 
 
     <div class="seguidores ">
-      <a href="#"><button type="button" class="btn btn-primary busqueda">Seguidores: <span><b>{{$usuarioLogueado->seguidores->count()}} </b></span></button></a> 
+      <a href="#"><button type="button" class="btn-amigos">Seguidores: <span><b>{{$usuarioLogueado->seguidores->count()}} </b></span></button></a> 
       <div class="container">
       <ul class="lista-amigos">
         @forelse($usuarioLogueado->seguidores->take(7) as $seguidor)

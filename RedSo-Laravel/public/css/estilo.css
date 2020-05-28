@@ -21,10 +21,15 @@
 }
 
 html{
-margin:0px;
-padding:0px;
-width: 100vw;
+  margin:0px;
+  padding:0px;
+  width: 100vw;
 }
+
+a{
+  transition: 0.6s all;
+}
+
 
  nav {
   background-color:#F03A47;
@@ -73,9 +78,23 @@ body, .respuesta {
   border-radius: 10%;
   border:none;
   color:white;
-  transition: background-color .3s;
-  transition: color .3s;
+  transition:all 0.6s;
 } 
+
+.btn-comentar {
+  background-color: #002642 ; 
+  margin-right:1%; 
+  border-radius: 10%;
+  border:none;
+  color:white;
+  padding:1%;
+  transition: all 0.8s;
+} 
+
+.btn-comentar:hover {
+  background-color:#F03A47;
+  color:white;
+}
 
 .btn-logreg:hover {
   background-color: white;
@@ -88,8 +107,7 @@ body, .respuesta {
   border-radius: 10%;
   border:none;
   color:white;
-  transition: background-color .3s;
-  transition: color .3s;
+  transition:all 0.6s;
 } 
 
 .btn-busqueda{
@@ -97,14 +115,20 @@ body, .respuesta {
   border:none;
   color:white;
   font-family: "Roboto", sans-serif;
+  border-radius: 10%;
+  transition:0.6s all;
 }
 
-
+.btn-busqueda:hover{
+  background-color: white;
+  color:#f03a47;
+}
 
 .btn-logout:hover {
   background-color: white;
   color:#f03a47;
 }
+
 /* --------------------------------------------------------------------------------------------------------------------------------------------------
  ----------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -248,10 +272,10 @@ background:none;
  ----------------------------------------------------------------------------------------------------------------------------------------------- */
 
  .Usuario img{
-   height: 100px;
-   /* padding-right: 50px; */
-   margin-right: 50px;
-   width: 100px;
+   height: 90px;
+   margin-right: 3%;
+   width: 90px;
+   border-radius: 5%;
  }
 
 
@@ -369,6 +393,13 @@ background:none;
   color: #000000;
 }
 
+.posteos .post .Usuario a:hover{
+  color:#F03A47;
+  text-decoration: none;
+
+}
+
+
 .preguntas{
   text-transform: uppercase;
   outline: 0;
@@ -395,9 +426,10 @@ background:none;
 /* --------------------------------------------------------------------------------------------------------------------------------------------------
  ----------------------------------------------------------------------------------------------------------------------------------------------- */
 .body-perfil {
+  border-radius: 5%;
   background-color: #002642;
   overflow:auto;
-   overflow-x: hidden;
+  overflow-x: hidden;
   text-align: center;
   margin: auto;
   /* height: 100vh;  */
@@ -410,6 +442,7 @@ background:none;
 
 .body-perfil img{
   max-width: 200px;
+  border-radius: 5%;
 }
 
 .post-text {
@@ -422,6 +455,7 @@ background:none;
 .foto-perfil img{
   width: 100%;
   max-width: 200px;
+  border-radius: 5%;
 }
 
 .nombre {
@@ -440,10 +474,12 @@ hr {
 
 .posteos {
   margin: 0 auto 20% auto;
+  border-radius: 1%;
 
 }
 
 .post {
+  border-radius: 1%;
   background-color: white;
   max-width: 1000px;
   margin-bottom: 5%;
@@ -455,9 +491,11 @@ hr {
   margin-left: 2%;
   margin-right: 2%;
   padding-bottom: 2%;
+  box-shadow: 10px 10px 15px -6px rgba(0,0,0,0.48);
 }
 
 .post-comentario {
+  border-radius: 1%;
   background-color: white;
   max-width: 1000px;
   margin: auto;
@@ -472,12 +510,25 @@ hr {
   color: black;
 }
 
+a.comentarios-titulo {
+  font-size: 1.2em;
+  color:#002642;
+  text-decoration: none;
+}
+
+a.comentarios-titulo:hover {
+  color:#F03A47;
+}
+
+
 .Usuario {
   text-align: left;
 }
+
 .amigos{
   display: flex; 
   flex-wrap: wrap;
+  
 } 
 
 .seguidores {
@@ -507,8 +558,56 @@ hr {
 
 }
 
+.btn-amigos{
+  padding: 2%;
+  background-color: #f03a47;
+  border: none;
+  color:white;
+  margin: 10%;
+  border-radius: 5%;
+}
 
-/* Home deslogueado*/
+.amigos-bottom{
+  display:none;
+}
+
+@media only screen and (max-width: 1000px) {
+  /* For mobile phones: */
+
+
+      .header-perfil{
+        margin-bottom: 20%;
+      }
+
+      .amigos{
+        display:none;
+      }
+
+      .seguidores.segleft{
+        display:flex;
+        flex-direction: row;
+      }
+
+      .amigos-bottom{
+        display:flex;
+        flex-direction: row;
+        margin: 2%;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+
+
+      .btn-amigos{
+        border-radius: 5%;
+        display:block;
+        padding:2%;
+        margin: 3%;
+      }
+}
+
+
+
+/* Home deslogueado-------------------------------------------------------------------------------------------------------------------------------------*/
 
 .main-index {
   display:flex;
@@ -539,12 +638,12 @@ hr {
 }
 
 .foto-index{
-align-self: center;
-width:100%;
-height: 60%;
-max-width: 1200px;
-border: 0.3px #b3b3b3 solid;
-border-radius: 5%;
+  align-self: center;
+  width:100%;
+  height: 60%;
+  max-width: 1200px;
+  border: 0.3px #b3b3b3 solid;
+  border-radius: 5%;
 }
 
 .opciones-index{
@@ -633,89 +732,7 @@ border-radius: 5%;
     width: 85%;
   }
 
-  /* ----- ----- ----- CARROUSEL ----- ----- ----- */
-
-  .contenedor-principal
-  .contenedor-posteos-controles{
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-  }
-
-  .contenedor-posteos-controles .indicadores button{
-    background: #FFFFFF;
-    height: 3px;
-    width: 10px;
-    cursor: pointer;
-    border: none;
-    margin-right: 2px;
-  }
-
-  .contenedor-posteos-controles .indicadores button.activo{
-    background: blue;
-  }
-
-  .ultimos-posteos .contenedor-principal{
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-
-  .ultimos-posteos .contenedor-principal .flecha-izquierda,
-  .ultimos-posteos .contenedor-principal .flecha-derecha {
-    position: relative;
-    border: none;
-    background: rgba(0,0,0,0.3);
-    font-size: 40px;
-    height: 302px;
-    line-height: 40px;
-    width: 50px;
-    color: #FFFFFF;
-    cursor: pointer;
-    transition: 0.9s ease all;
-  }
-
-  .ultimos-posteos .contenedor-principal .flecha-izquierda:hover,
-  .ultimos-posteos .contenedor-principal .flecha-derecha:hover {
-    background: rgba(0,0,0,0.9);
-  }
-
-  .ultimos-posteos .contenedor-principal .flecha-izquierda{
-    left: 0px;
-    z-index: auto;
-  }
-  .ultimos-posteos .contenedor-principal .flecha-derecha{
-    right: 0px;
-    z-index: auto;
-  }
-
-  .contenedor-principal .contenedor-carousel {
-    width: 100%;
-    padding: 20px 0;
-    overflow: hidden;
-    scroll-behavior: smooth;
-  }
-
-  .contenedor-principal .contenedor-carousel .carousel {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-
-  .contenedor-principal .contenedor-carousel .carousel .posteo {
-    color:black; 
-    background-color: white; 
-    width:100%; 
-    margin:2% 0%; 
-    padding:2%;
-    overflow: scroll;
-    overflow-x: hidden;
-    height: 300px;
-  }
-
-  .contenedor-principal .contenedor-carousel .carousel .posteo a {
-    color: #000000;
-  }
-
+ 
   .contacto, .faq{
     color: white;
   }
@@ -740,6 +757,7 @@ border-radius: 5%;
     float:left;
     width: 40%;
   }
+
   .lista-amigos {
   width:70%;
   } 
@@ -763,7 +781,9 @@ border-radius: 5%;
 .publicacion{
   margin-top: 20px;
   padding: 10px;
+  border-radius: 3%;
 }
+
 .publicacion .publicar{
   color: white;
   font-size: 1.5em;
@@ -776,13 +796,22 @@ border-radius: 5%;
   border: 0;
   vertical-align: top;
   resize: none;
+  border-radius: 1%;
+  box-shadow: 10px 10px 15px -6px rgba(0,0,0,0.48);
 }
 
 
 .publicacion .botones .btn{
   width: 49%;
   background-color: #F03A47;
+  box-shadow: 10px 10px 15px -6px rgba(0,0,0,0.48);
+  transition: 0.6s ease-out;
 }
+
+.publicacion .botones .btn:hover{
+  transform: scale(1.1);
+}
+
 
 .erroresPublicacion{
   display: flex;
@@ -790,10 +819,117 @@ border-radius: 5%;
   width: 50%;
   z-index: 20;
   background-color: #f03a47;
-  animation: fadein 3.5s;
+  animation: fadein 2s;
   margin-bottom:5px;
   text-align: left;
+  border-radius: 5%;
 }
+
+ /* ----- ----- ----- CARROUSEL ----- ----- ----- */
+
+
+ .contenedor-carousel{
+  border-radius: 5%;
+}
+
+.contenedor-principal
+.contenedor-posteos-controles{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.contenedor-posteos-controles .indicadores button{
+  background: #FFFFFF;
+  height: 3px;
+  width: 10px;
+  cursor: pointer;
+  border: none;
+  margin-right: 2px;
+}
+
+.contenedor-posteos-controles .indicadores button.activo{
+  background: blue;
+}
+
+.ultimos-posteos .contenedor-principal{
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-shadow: none;
+}
+
+#divUltimosPosteos .post{
+  box-shadow: none;
+}
+  
+.ultimos-posteos .contenedor-principal .flecha-izquierda,
+.ultimos-posteos .contenedor-principal .flecha-derecha {
+  position: relative;
+  border: none;
+  background: rgba(0,0,0,0.3);
+  font-size: 40px;
+  height: 302px;
+  line-height: 40px;
+  width: 50px;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: 0.9s ease all;
+}
+
+.ultimos-posteos .contenedor-principal .flecha-izquierda:hover,
+.ultimos-posteos .contenedor-principal .flecha-derecha:hover {
+  background: rgba(0,0,0,0.9);
+}
+
+.ultimos-posteos .contenedor-principal .flecha-izquierda{
+  left: 0px;
+  z-index: auto;
+  border-radius: 5%;
+}
+.ultimos-posteos .contenedor-principal .flecha-derecha{
+  right: 0px;
+  z-index: auto;
+  border-radius: 5%;
+}
+
+.contenedor-principal .contenedor-carousel {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  border-radius: 3%;
+}
+
+.contenedor-principal .contenedor-carousel .carousel {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.contenedor-principal .contenedor-carousel .carousel .posteo {
+  color:black; 
+  background-color: white; 
+  width:100%; 
+  margin:2% 0%; 
+  padding:2%;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 300px;
+}
+
+.contenedor-principal .contenedor-carousel .carousel .posteo a {
+  color: #000000;
+}
+
+
+
+
+
+
+
+
+
+
 
 @keyframes fadein {
   from { opacity: 0; }

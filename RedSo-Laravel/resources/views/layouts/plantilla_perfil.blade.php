@@ -13,7 +13,12 @@
         @yield('foto')
     </div>
     <div class="info-perfil">
-       <br><h1 class="nombre">@yield('usuario') </h1><hr>
+       <br><h1 class="nombre">@yield('usuario') </h1><br>
+       <div class="amigos-bottom">
+        <a href="#"><button type="button" class="btn-amigos">Seguidos: <span><b>{{$usuarioLogueado->seguidos->count()}}</b></span></button></a>
+        <a href="#"><button type="button" class="btn-amigos">Seguidores: <span><b>{{$usuarioLogueado->seguidores->count()}} </b></span></button></a> 
+      </div>
+       <hr>
        <ul class="info-perfil">
          <br><li><i class="fas fa-user"></i>&nbsp&nbsp&nbsp @yield('nombre') @yield('apellido')</li><br><hr>
          <br><li><i class="fas fa-city"></i>&nbsp&nbsp&nbsp @yield('ciudad')</li><br><hr>

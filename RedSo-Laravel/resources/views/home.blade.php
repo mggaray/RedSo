@@ -67,13 +67,13 @@
         
         <p class="align-text-bottom text-right muted small">{{date('d/m/Y',strtotime($posteo->fechaCreacion))}}&nbsp;&nbsp;<b>{{date('H:i',strtotime($posteo->fechaCreacion))}}h</b></p> 
 
-      <a href="/comentarios/{{$posteo->posteoId}}" class="text-left align-text-bottom  muted small">Comentarios</a> 
+      <a href="/comentarios/{{$posteo->posteoId}}" class="comentarios-titulo">Comentarios</a> 
       <form action="/comentarios/{{$posteo->posteoId}}" method="POST"> 
         @csrf
         <div class="form-group"> 
           <input type="hidden" name="postId" value={{$posteo->posteoId}}>
           <textarea class="form-control" id="comentario" rows="3" name="comentario"></textarea> <br>
-          <button type="submit" class="btn btn-primary">Comentar</button>
+          <button type="submit" class=" btn-comentar">Comentar</button>
       </form>
       <span class="border-bottom"></span>
       </div> 
