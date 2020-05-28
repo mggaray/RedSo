@@ -11,6 +11,8 @@
         @endif
           @endsection
         
+        
+
         @section('usuario'){{$usuario->usuario}} 
         @if($bandera == false) 
       <a href="/seguirUsuario/{{$usuario['id']}}"><button type="button" class="btn btn-primary busqueda"> Seguir </button></a>
@@ -21,9 +23,23 @@
         @endsection
        
         @section('nombre'){{$usuario->nombre}}@endsection
-        @section('apellido') {{$usuario->apellido}}@endsection
+        @section('apellido') {{$usuario->apellido}} @if($usuario->admin())  
+        <span class="badge badge-warning">Administrador</span>
+        @endif @endsection
         @section('ciudad') {{$usuario->ciudad}}@endsection
-        @section('fecha_nacimiento'){{date('d-m-Y',strtotime($usuario->cumpleanios))}}@endsection
+        @section('fecha_nacimiento'){{date('d-m-Y',strtotime($usuario->cumpleanios))}} <br><br><br>
+        @if(Auth::user()->admin())  
+          @unless($usuario->admin())  
+          <form action="/hacerAdministrador" method="POST"> 
+            @csrf
+          <button type="submit" class="btn btn-warning">Hacer administrador</button> 
+          <input type="hidden" name="userId" value={{$usuario->id}}>
+          </form>
+          @endunless
+        @endif
+        @endsection 
+
+        
         
       @section('posteos')
      <h2>Posteos</h2>

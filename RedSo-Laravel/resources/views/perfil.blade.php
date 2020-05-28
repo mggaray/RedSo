@@ -14,9 +14,13 @@
         @endif
         @endsection
         
-        @section('usuario'){{$usuarioLogueado->usuario}} @endsection
+        
+
+        @section('usuario'){{$usuarioLogueado->usuario}}  @endsection 
         @section('nombre'){{$usuarioLogueado->nombre}}@endsection
-        @section('apellido') {{$usuarioLogueado->apellido}}@endsection
+        @section('apellido') {{$usuarioLogueado->apellido}} @if($usuarioLogueado->admin())  
+        <span class="badge badge-warning">Administrador</span>
+        @endif @endsection
         @section('ciudad') {{$usuarioLogueado->ciudad}}@endsection
         @section('fecha_nacimiento'){{date('d-m-Y',strtotime($usuarioLogueado->cumpleanios))}} @endsection
         @section('editar')

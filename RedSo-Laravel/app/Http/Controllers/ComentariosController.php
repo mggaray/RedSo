@@ -48,5 +48,20 @@ class ComentariosController extends Controller
             $vac = compact('posteo'); 
                 
             return view("posteo",$vac);
-    }
+    } 
+
+    public function borrarComentario(Request $req) { 
+        
+        $comentario = Comentario::find($req['comentarioId']); 
+        $comentarioUserId=$comentario->user_id;
+        $usuarioLogueado = Auth::user();
+        if(($comentarioUserId == $usuarioLogueado->id) || $usuarioLogueado->admin()) {
+        $comentario -> delete(); 
+    } 
+    $posteo = Posteo::find($req['postId']);  
+    $vac = compact('posteo'); 
+  
+    return view("posteo",$vac);
+        
+    } 
 }
