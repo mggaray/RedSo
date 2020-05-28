@@ -35,12 +35,9 @@
             </form>
         </div>
         <br>
-        <div class="ultimos-posteos contenedor">
-          <div class="contenedor-posteos-controles">
+        <div class="ultimos-posteos contenedor d-md-none">
+          <div class="contenedor-posteos-titulo">
             <h3>Últimos posteos</h3>
-            <div class="indicadores">
-
-            </div>
           </div>
     
           <div class="contenedor-principal">
