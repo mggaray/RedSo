@@ -39,7 +39,8 @@ class HomeController extends Controller
             ->where('amigos.user_id','=',$usuarioLogueado->id) 
             ->orWhere('posteos.user_id','=',$usuarioLogueado->id)
             ->select('posteos.contenido','posteos.fechaCreacion','users.usuario','users.foto_perfil','posteos.id AS posteoId', 'users.id')
-            ->orderBy('fechaCreacion','desc')
+            ->orderBy('fechaCreacion','desc') 
+            ->distinct()
             ->simplePaginate(20);  
             
 

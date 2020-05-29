@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
         //EJECUTAR PRIMERO ESTA
 
 
-        $posteos = factory(App\Posteo::class)->times(150)->create(); 
+        $posteos = factory(App\Posteo::class)->times(500)->create(); 
         //LUEGO VERIFICAR EN LA DB EL ID MAX Y MIN DE LA TABLA USUARIOS Y MODIFICAR EL POST_FACTORY USER_ID
 
         $seguidos = App\User::All();
