@@ -6,7 +6,7 @@
 
 @section('contenido')
 <div class="container contacto">
-    <form id="contact-form" method="post" action="/contacto" role="form">
+    <form id="contact-form" method="post" action="/contacto" role="form" class="contacto">
         @csrf
         
         <div class="messages"><h1>Contacto</h1></>
@@ -82,4 +82,7 @@
   
     </form>
   </div>
+@endsection 
+@section('scripts')  
+<script src="{{asset('/js/contacto.js')}}" type="module"></script>
 @endsection
