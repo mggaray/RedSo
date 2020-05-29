@@ -745,36 +745,95 @@ a.nav-link.link-menu:hover{
   .copyright p{border-top:1px solid rgba(255,255,255,.1);}  
 
   /********************************* BUSQUEDA *********************************************************************/ 
-  .container-busqueda {
-    display: flex; 
-    flex-wrap: wrap; 
-    margin: auto; 
-    justify-content: center; 
-    color: black;
-  }  
+
+  .encontrados {
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+  }
+
+  .titulo-encontrados{
+    font-size: 3em;
+    align-self: center;
+    margin:5%;
+    margin-bottom: 2%;
+  }
 
   .ul-busqueda{
     list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-user{
+    align-items: center;
+    margin: 3%;
+    width: 50vw;
+    background-color: white;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 5%;
+    padding: 3%;
+    border-radius: 1%;
+    align-items: center;
+    box-shadow: 10px 10px 15px -6px rgba(0,0,0,0.48);
+  }
+  .nombre-busqueda{
+    color: #F03A47;
+    font-size: 1.8em;
+    align-self: center;
+    width: 80%;
+    transition: 0.4s all linear;
+  }
+
+  .nombre-busqueda:hover{
+    color: #F03A47;
+    text-decoration: none;
+    font-size: 2em;
+  }
+
+
+  .foto-busqueda{
+    border-radius: 3%;
+    width: 120px;
+    height: 120px;
+    float: right;
+  }
+
+  .datos-busqueda{
+    color: #002642;
   }
 
   .form-busqueda {
-    width: 85%;
+    margin-top: 5%;
+    display:flex;
+    width: 50vw;
+    color: white;
+    font-size: 1.5em;
+    align-content: center;
+    justify-content: center;
+    margin-right: 0px;
   }
 
-  .input-busqueda {
-  
-    size:50;
+  .btn-busqueda-completa{
+      background-color:#F03A47;
+      border:none;
+      color:white;
+      font-family: "Roboto", sans-serif;
+      border-radius: 10%;
+      transition:0.6s all;
+    }
+    
+    .btn-busqueda-completa:hover{
+      background-color: white;
+      color:#f03a47;
+    }
 
-  } 
-
-  .encontrados {
-    width: 85%;
-  }
-
- 
   .contacto, .faq{
     color: white;
   }
+
+
 @media (min-width:1024px) {  
 
 
@@ -1027,6 +1086,7 @@ a.nav-link.link-menu:hover{
   color:white;
   background-color: #F03A47;
   transition: 0.6s ease-out;
+  margin-left: 5vw;
   align-self: center;
   justify-content: center;
   border-radius: 3%;
@@ -1056,9 +1116,9 @@ a.nav-link.link-menu:hover{
   flex-direction: row;
   width: 80%;
   background-color: white;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  margin-right: 5%;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+  margin-right: 3vw;
   padding: 3%;
   border-radius: 3%;
   align-items: center;
@@ -1085,11 +1145,14 @@ a.panel-nombre:hover{
 }
 
 .panel-fotos{
+  width: 120px;
+  height: 120px;
   border-radius: 5%;
   margin: 5%;
   align-self: center;
   justify-content: center;
 }
+
 
 @media only screen and (max-width: 1000px) {
   /* For mobile phones: */
@@ -1151,8 +1214,8 @@ a.panel-nombre:hover{
       }
 
       .panel-fotos{
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
       }
 
       .panel-container{
@@ -1163,6 +1226,78 @@ a.panel-nombre:hover{
       .panel-nombre{
         width: 60px;
       }
+
+
+      ul.ul-busqueda{
+        list-style: none;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 0px;
+      }
+
+      .titulo-encontrados{
+        font-size: 1.3em;
+        text-align: center;
+      }
+
+      .container-user{
+        align-items: center;
+        font-size: 0.8em;
+        margin: 3%;
+        width: 80vw;
+        background-color: white;
+        margin: 5%;
+        padding: 3%;
+        border-radius: 1%;
+        align-items: center;
+        box-shadow: 10px 10px 15px -6px rgba(0,0,0,0.48);
+      }
+
+      .nombre-busqueda{
+        color: #F03A47;
+        font-size: 0.9em;
+        align-self: center;
+        width: 40%;
+        transition: 0.4s all linear;
+      }
+    
+      .nombre-busqueda:hover{
+        color: #F03A47;
+        text-decoration: none;
+        font-size: 1.3em;
+      }
+    
+    
+      .foto-busqueda{
+        border-radius: 3%;
+        margin-top:5%;
+        margin-right: 2%;
+        width: 60px;
+        height: 60px;
+        float: right;
+      }
+
+      .datos-busqueda{
+        color: #002642;
+      }
+
+      .form-busqueda{
+        margin: auto;
+        width: 70vw;
+        font-size: 0.9em;
+        align-self: center;
+        margin-bottom: 8%;
+        margin-top: 3%;
+      }
+
+
+
+
+
+
+
+
+
 }
 
 
