@@ -142,7 +142,7 @@
           {{$seguidor['usuario']}}
         </li></a><hr>
         @empty 
-        <span class="border border-danger">Este usuario no sigue a nadie </span>
+        <span class="no-sigue">Este usuario no tiene seguidores</span>
         @endforelse
       </ul>  
     </div>

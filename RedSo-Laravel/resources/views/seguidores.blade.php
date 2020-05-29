@@ -32,7 +32,7 @@
                     </div>
                 </li>
                     @empty 
-                        <span class="border border-danger">Este usuario no sigue a nadie </span>  
+                        <div class="no-sigue">Este usuario no sigue a nadie </div>  
                  @endforelse
                </ul>
             </div> 
@@ -44,7 +44,7 @@
                  <li>
                     <div class="panel-container">
                      <a class="panel-nombre" href="/users/{{$seguidor->id}}">
-                    <img class="panel-fotos" src={{(Storage::exists("/foto_perfil/$seguidor->id/$seguido->foto_perfil")) ? "/storage/foto_perfil/$seguidor->id/$seguidor->foto_perfil" :'/img/chico.png'}}>
+                    <img class="panel-fotos" src={{(Storage::exists("/foto_perfil/$seguidor->id/$seguidor->foto_perfil")) ? "/storage/foto_perfil/$seguidor->id/$seguidor->foto_perfil" :'/img/chico.png'}}>
                    {{$seguidor['usuario']}}</a>
                     </div>
                  </li>
