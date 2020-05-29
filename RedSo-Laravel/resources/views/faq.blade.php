@@ -10,28 +10,28 @@
   <div class="row">
     <div class="col-sm-12">
       <h1>Preguntas Frecuentes</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eius officia fugit asperiores explicabo. Neque fuga officiis dolores soluta. Praesentium, delectus voluptatibus maiores qui fugit molestias labore suscipit a earum ab quam in minus excepturi laudantium dignissimos doloribus rem tempora architecto! Adipisci rerum eius asperiores temporibus architecto laboriosam maxime ullam?</p>
+      <p>RedSo es una Red Social sin notificaciones, me gusta ni nada de eso. Un sitio para relajarse y compartir pensamientos, opiniones, anecdotas o lo que quieras!</p>
     </div>
     <div class="col-sm-12 FAQ">
       <div class="preguntas pregunta-1">
-        <h5>Pregunta 1</h5>
+        <h5>¿Por qué no tiene notificaciones ni me gusta?</h5>
       </div>
       <div class="respuesta-1 respuesta" >
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod similique vero molestias aliquid, molestiae consequuntur nulla laborum laboriosam accusantium, neque deserunt quia placeat eaque nesciunt possimus, suscipit non repellat? Itaque!</p>
+        <p>Las redes sociales pueden causar estrés, por eso hemos quitado varios de los factoras causantes de ello, como son las notificaciones y me gustas. En RedSo no tienes que preocuparte por ello.</p>
       </div>
 
       <div class="preguntas pregunta-2">
-        <h5>Pregunta 2</h5>
+        <h5>¿Qué contenido puedo ver en RedSo?</h5>
       </div>
       <div class="respuesta-2 respuesta">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod similique vero molestias aliquid, molestiae consequuntur nulla laborum laboriosam accusantium, neque deserunt quia placeat eaque nesciunt possimus, suscipit non repellat? Itaque!</p>
+        <p>Puedes seguir a los usuarios que tu quieras y verás solo el contenido de ellos. Así solo verás los posteos de quien tú elijas ver.</p>
       </div>
 
       <div class="preguntas pregunta-3">
-        <h5>Pregunta 3</h5>
+        <h5>¿Quién regula qué el contenido de RedSo sea apropiado?</h5>
       </div>
       <div class="respuesta-3 respuesta">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod similique vero molestias aliquid, molestiae consequuntur nulla laborum laboriosam accusantium, neque deserunt quia placeat eaque nesciunt possimus, suscipit non repellat? Itaque!</p>
+        <p>Existen múltiples usuarios administradores que pueden eliminar posteos o comentarios ofensivos o inapropiados.</p>
       </div>
 
     </div>
