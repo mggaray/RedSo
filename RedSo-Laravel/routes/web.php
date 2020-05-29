@@ -55,6 +55,8 @@ Route::get('contacto', function () {
     return view('contacto');
 }); 
 
+Route::post('contacto', "ContactoController@envio");
+
 Route::get('/home', function(){
     return view('home');
 });

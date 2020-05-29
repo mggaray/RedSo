@@ -6,7 +6,7 @@
 
 @section('contenido')
 <div class="container contacto">
-    <form id="contact-form" method="post" action="mailto:info@redso.com" role="form">
+    <form id="contact-form" method="post" action="/contacto" role="form">
         @csrf
         
         <div class="messages"><h1>Contacto</h1></>
@@ -17,24 +17,40 @@
                 <div class=" col-sm-12 col-md-6">
                     <div class="form-group">
                         <label for="form_name">Nombre *</label>
-                        <input id="form_name" type="text" name="nombre" class="form-control" placeholder="Ingrese su nombre *" required="required" data-error="Este campo es obligatorio." value="{{old('nombre')}}">
-                        <div class="help-block with-errors"></div>
+                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Ingrese su nombre *" required="required" data-error="Este campo es obligatorio." value="{{old('name')}}">
+                        @error('name')
+                            <span class="" role="alert">
+                                @dump($message)
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                     </div>
                 </div>
+
                 <div class="col-sm-12 col-md-6">
                     <div class="form-group">
-                        <label for="form_lastname">Apellido *</label>
-                        <input id="form_lastname" type="text" name="apellido" class="form-control" placeholder="Ingrese su apellido *" required="required" data-error="Este campo es obligatorio."value="{{old('apellido')}}">
-                        <div class="help-block with-errors"></div>
+                        <label for="form_email">Email *</label>
+                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Ingrese su email *" required="required" data-error="Este campo es obligatorio." value="{{old('email')}}">
+                        @error('email')
+                            <span class="" role="alert">
+                                @dump($message)
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12 col-md-6">
                     <div class="form-group">
-                        <label for="form_email">Email *</label>
-                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Ingrese su email *" required="required" data-error="Este campo es obligatorio." value="{{old('email')}}">
-                        <div class="help-block with-errors"></div>
+                        <label for="form_subject">Asunto *</label>
+                        <input id="form_subject" type="text" name="subject" class="form-control" placeholder="Ingrese un asunto *" required="required" data-error="Este campo es obligatorio."value="{{old('subject')}}">
+                        @error('subject')
+                            <span class="" role="alert">
+                                @dump($message)
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                     </div>
                 </div>
             </div>
@@ -42,8 +58,13 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="form_message">Mensaje *</label>
-                    <textarea id="form_message" name="mensaje" class="form-control" placeholder="Escriba su mensaje *" rows="4" required="required" data-error="Escriba un pensaje." value="{{old('mensaje')}}"></textarea>
-                        <div class="help-block with-errors"></div>
+                    <textarea id="form_message" name="content" class="form-control" placeholder="Escriba su mensaje *" rows="4" required="required" data-error="Escriba un pensaje." value="{{old('content')}}"></textarea>
+                    @error('content')
+                        <span class="" role="alert">
+                            {{-- @dump($message) --}}
+                            <strong>{{ $message }}</strong>
+                        </span>
+                @enderror
                     </div>
                 </div>
                 <div class="col-md-12">
@@ -57,7 +78,7 @@
                     </p>
                 </div>
             </div>
-        </div>
+        </>
   
     </form>
   </div>
